@@ -1,3 +1,4 @@
 # Tulip-Quant
 ## A financial quantitative strategy platform
-##junone has signuped
+## junone has signed
+## qiubinyang has signed
