@@ -30,3 +30,7 @@
 目标收益率：s_aim_benfit 
 历史达标率：s_rate_reach 
 策略走势图：s_img 
+策略来源：ce'lues_url
+策略创建日期：s_data
+策略总排行：s_rank_total
+策略分类排行：s_rank_specific
