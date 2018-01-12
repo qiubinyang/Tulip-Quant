@@ -12,12 +12,13 @@
 用户收藏的策略：uFavorite
 交易记录：uTransaction
 购买的策略：uSubscribe
+余额：uMoney
 
 >管理员
 
-账号：AdminId  
-管理员名：AdminName  
-密码：AdminPassword
+账号：adminId  
+管理员名：adminName  
+密码：adminPassword
 
 >strategy
 
@@ -40,4 +41,6 @@
 策略创建日期：sData   
 策略总排行：sRankTotal    
 策略分类排行：sRankSpecific  
+购买策略日期：bData
+购买时长：bTime
 
