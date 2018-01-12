@@ -3,10 +3,15 @@
 ## 登录注册页面
 >用户
 
-账号：UserId  
-用户名：username  
-密码：password
-手机号：userPhone
+账号：uId  
+用户名：uName  
+密码：uPassword
+手机号：uPhone
+用户的策略：uStrategyId
+用户头像：uPortrait
+用户收藏的策略：uFavorite
+交易记录：uTransaction
+购买的策略：uSubscribe
 
 >管理员
 
@@ -16,22 +21,23 @@
 
 >strategy
 
-策略id：s_id    
-策略名称：s_name   
-作者：s_auther   
-售价：s_price  
-年化收益：s_benefit_y  
-本月收益：s_benefit_m  
-今日收益：s_benefit_d    
-今年至今：s_benefit_toNow    
-最大回撤：s_withdraw     
-剩余数量：s_remain     
-建议资金：s_money_recomd     
-目标收益率：s_aim_benfit     
-历史达标率：s_rate_reach     
-策略走势图：s_img     
-策略来源：s_url    
-策略创建日期：s_data   
-策略总排行：s_rank_total    
-策略分类排行：s_rank_specific  
+策略id：sId    
+策略名称：sName   
+作者：sAuther   
+售价：sPrice  
+年化收益：sBenefitY  
+本月收益：sBenefitM  
+今日收益：sBenefitD   
+今年至今：sBenefitToNow    
+最大回撤：sWithdraw     
+剩余数量：sRemain     
+建议资金：sMoneyRecomd     
+目标收益率：sAimBenfit     
+历史达标率：sRateReach     
+策略走势图：sImg     
+策略来源(原始)：sUrlOrigin    
+策略来源（本站）sUrl
+策略创建日期：sData   
+策略总排行：sRankTotal    
+策略分类排行：sRankSpecific  
 
