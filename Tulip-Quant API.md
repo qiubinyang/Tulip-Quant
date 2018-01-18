@@ -38,17 +38,18 @@
 最大回撤：sWithdraw <br>
 剩余数量：sRemain <br>
 建议资金：sMoneyRecomd <br>
-目标收益率：sAimBenfit <br>
+目标收益率：sAimBenefit <br>
 历史达标率：sRateReach <br>
 策略走势图：sImg <br>
 策略来源(原始)：sUrlOrigin <br>
 策略来源（本站）：sUrl <br>
-策略创建日期：sData <br>
+策略创建日期：sDate <br>
 策略总排行：sRankTotal <br>
 策略分类排行：sRankSpecific <br>
-购买策略日期：bData <br>
+购买策略日期：bDate <br>
 购买时长：bTime <br>
 打赏日期：courageData <br>
-策略逻辑：sLogic<br>
-类别：sTag<br>
-
+策略逻辑：sLogic <br>
+类别：sTag <br>
+交易频率: sFrequency <br>
+订阅人数上限: sSubscribLimit <br>
