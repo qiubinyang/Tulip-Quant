@@ -49,6 +49,6 @@
 购买策略日期：bData <br>
 购买时长：bTime <br>
 打赏日期：courageData <br>
-策略逻辑：SLogic<br>
+策略逻辑：sLogic<br>
 类别：sTag<br>
 
