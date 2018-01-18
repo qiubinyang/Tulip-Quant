@@ -1,6 +1,7 @@
 # Tulip-Quant
 
 ## 登录注册页面
+---
 >用户
 
 账号：uId <br>
@@ -16,34 +17,34 @@
 余额：uMoney <br>
 累计金额：uTotal <br>
 
-
-
+---
 >管理员
 
 账号：adminId <br>
-管理员名：adminName <br>  
+管理员名：adminName <br>
 密码：adminPassword <br>
 
+---
 >strategy
 
-策略id：sId <br> 
+策略id：sId <br>
 策略名称：sName <br>
 作者：sAuther <br>
-售价：sPrice  <br> 
+售价：sPrice  <br>
 年化收益：sBenefitY <br>
 本月收益：sBenefitM <br>
 今日收益：sBenefitD <br>
 今年至今：sBenefitToNow <br>
 最大回撤：sWithdraw <br>
 剩余数量：sRemain <br>
-建议资金：sMoneyRecomd <br> 
+建议资金：sMoneyRecomd <br>
 目标收益率：sAimBenfit <br>
-历史达标率：sRateReach <br>  
+历史达标率：sRateReach <br>
 策略走势图：sImg <br>
-策略来源(原始)：sUrlOrigin <br> 
+策略来源(原始)：sUrlOrigin <br>
 策略来源（本站）sUrl <br>
 策略创建日期：sData <br>
-策略总排行：sRankTotal <br> 
+策略总排行：sRankTotal <br>
 策略分类排行：sRankSpecific <br>
 购买策略日期：bData <br>
 购买时长：bTime <br>
