@@ -16,6 +16,7 @@
 我的打赏：uCourage <br>
 余额：uMoney <br>
 累计金额：uTotal <br>
+用户的个性签名：uSign<br>
 
 ---
 >管理员
