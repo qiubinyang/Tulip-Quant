@@ -6,7 +6,7 @@
 
 账号：uId <br>
 用户名(即手机号)：uPhone <br>
-密码：uPassword <br>
+密码：password <br>
 昵称：uName <br>
 用户的策略：uStrategyId <br>
 用户头像：uPortrait <br>
