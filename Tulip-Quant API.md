@@ -1,13 +1,13 @@
-# Tulip-Quant
+# tulipQuant
 
 ## 登录注册页面
 ---
 >用户
 
 账号：uId <br>
-用户名：uName <br>
-密码：uPassword <br>
-手机号：uPhone <br>
+用户名(即手机号)：username <br>
+密码：password <br>
+昵称：nickname <br>
 用户的策略：uStrategyId <br>
 用户头像：uPortrait <br>
 用户收藏的策略：uFavorite <br>
