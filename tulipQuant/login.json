@@ -1,0 +1,12 @@
+
+// 登陆成功返回的json格式
+{
+	"success":true,
+	"user":[
+		{
+			"uPhone":"13486192688",
+			"uName":"Apiao",
+			"admin":true
+		}
+	]
+}

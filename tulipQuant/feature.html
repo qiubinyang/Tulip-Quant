@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/feature.css">
+    <!-- 网站小图标 -->
+    <link rel="shortcut icon" href="img/favicon3.ico">
+    <meta name="keywords" content="量化投资,量化交易,量化策略,量化平台,量化研究,量化分析,quantopian,量化,quant,quantify,tushare,程序化交易,量化投资平台,量化交易系统,优矿,聚宽,米筐,程序化交易软件,金融投资,股票交易,郁金香,投资平台,">
+    <meta name="description" content="御宽(tulipQuant)是一个集成了各大量化交易平台交易策略的平台,是策略提供者理想的分享策略并同时获取收益的平台，同时也是广大有志于量化投资的投资者构建自己交易体系、提升自身选股买卖能力的历练场！">
+</head>
+
+<body>
+    <!-- 导航栏1 -->
+    <header>
+        <div class="top inner-wrap clearfix">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;" class="act">特色功能</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">AR增强显示</a>
+                        <a href="/help/faq/">热门股票词云</a>
+                        <a href="/help/researchV3/">随手拍 出股票</a>
+                        <a href="/help/faq/">智能策略推荐</a>
+                        <a href="/help/researchV3/">精选研报</a>
+                        <a href="/help/researchV3/">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 欢迎页 -->
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title">TulipQuant 御宽</h1>
+        <h3 class="sub-title">特色功能</h3>
+            <a href="#AR" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+            </a>
+    </div>
+    <!-- 功能页导航栏 -->
+    <div class="nav-container">
+        <!-- affix -->
+        <nav id="main-navigation" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header" data-toggle="collapse" data-target="#main-navbar">
+                    <a class="navbar-brand smoothScroll" href="#home">
+                        <img class="logo" src="img/logo9.png" title="Logo" alt="TulipQuant logo">
+                    </a>
+                </div>
+                <div id="main-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a class="smoothScroll" href="index.html">首页</a></li>
+                        <li><a class="smoothScroll" href="#AR">AR增强显示</a></li>
+                        <li><a class="smoothScroll" href="#ciyun">热门股票词云</a></li>
+                        <li><a class="smoothScroll" href="#photo">随手拍 出股票</a></li>
+                        <li><a class="smoothScroll" href="#recommend">智能策略推荐</a></li>
+                        <li><a class="smoothScroll" href="#report">精选研报</a></li>
+                        <li><a class="smoothScroll" href="#news">舆情分析</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- 巨幕 -->
+    <div class="banner" id="AR">
+        <ul>
+            <li class="banner01">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+        <a href="#ciyun" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        </a>
+    </div>
+    <div class="banner" id="ciyun">
+        <ul>
+            <li class="banner02">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+        <a href="#photo" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        </a>
+    </div>
+    <div class="banner" id="photo">
+        <ul>
+            <li class="banner03">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+        <a href="#recommend" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        </a>
+    </div>
+    <div class="banner" id="recommend">
+        <ul>
+            <li class="banner01">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+        <a href="#report" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        </a>
+    </div>
+    <div class="banner" id="report">
+        <ul>
+            <li class="banner01">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+        <a href="#news" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        </a>
+    </div>
+    <div class="banner" id="news">
+        <ul>
+            <li class="banner01">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<!-- js -->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/feature.js"></script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- 欢迎页background -->
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/feature/TweenLite.min.js"></script>
+<script src="js/feature/EasePack.min.js"></script>
+<script src="js/feature/demo-1.js"></script>

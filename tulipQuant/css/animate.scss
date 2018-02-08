@@ -1,0 +1,43 @@
+
+#fh5co-counter,
+{
+	padding: 7em 0;
+	clear: both;
+	@media screen and (max-width: $screen-sm) {
+		padding: 3em 0;
+	}
+}
+.fh5co-counters {
+	padding: 7em 0;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	position: relative;
+	.overlay{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		content: '';
+		background: rgba($brand-black,.5);
+	}
+	.fh5co-counter {
+		font-size: 44px;
+		display: block;
+		color: rgba($brand-white,1);
+		font-family: $font-secondary;
+		width: 100%;
+		font-weight: 400;
+		margin-bottom: .1em;
+	}
+	.fh5co-counter-label {
+		color: rgba($brand-white,.8);
+		font-size: 16px;
+		margin-bottom: 2em;
+		display: block;
+		font-family: $font-secondary;
+	}
+	text-center {
+    text-align: center;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="no-js">
+    
+    <head>
+        <title>Admin Home Page</title>
+        <!-- Bootstrap -->
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/basic.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+    </head>
+    
+    <body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix " >
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">AR增强显示</a>
+                        <a href="/help/faq/">热门股票词云</a>
+                        <a href="/help/researchV3/">随手拍 出股票</a>
+                        <a href="/help/faq/">智能策略推荐</a>
+                        <a href="/help/researchV3/">精选研报</a>
+                        <a href="/help/researchV3/">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3" id="sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                        <li class="active">nav
+                            <a href="index.html"><i class="icon-chevron-right"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
+                        </li>
+                        <li>
+                            <a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
+                        </li>
+                        <li>
+                            <a href="form.html"><i class="icon-chevron-right"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
+                        </li>
+                        <li>
+                            <a href="editors.html"><i class="icon-chevron-right"></i> WYSIWYG Editors</a>
+                        </li>
+                        <li>
+                            <a href="interface.html"><i class="icon-chevron-right"></i> UI & Interface</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-success pull-right">731</span> Orders</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-success pull-right">812</span> Invoices</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-info pull-right">27</span> Clients</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-info pull-right">1,234</span> Users</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-info pull-right">2,221</span> Messages</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-info pull-right">11</span> Reports</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-important pull-right">83</span> Errors</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="badge badge-warning pull-right">4,231</span> Logs</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!--/span-->
+                <div class="span9" id="content">
+                    <div class="row-fluid">
+                        <div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <h4>Success</h4>
+                        	The operation completed successfully</div>
+                        	<div class="navbar">
+                            	<div class="navbar-inner">
+	                                <ul class="breadcrumb">
+	                                    <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+	                                    <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
+	                                    <li>
+	                                        <a href="#">Dashboard</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">Settings</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li class="active">Tools</li>
+	                                </ul>
+                            	</div>
+                        	</div>
+                    	</div>
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                                <div class="muted pull-left">Statistics</div>
+                                <div class="pull-right"><span class="badge badge-warning">View More</span>
+
+                                </div>
+                            </div>
+                            <div class="block-content collapse in">
+                                <div class="span3">
+                                    <div class="chart" data-percent="73">73%</div>
+                                    <div class="chart-bottom-heading"><span class="label label-info">Visitors</span>
+
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="chart" data-percent="53">53%</div>
+                                    <div class="chart-bottom-heading"><span class="label label-info">Page Views</span>
+
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="chart" data-percent="83">83%</div>
+                                    <div class="chart-bottom-heading"><span class="label label-info">Users</span>
+
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="chart" data-percent="13">13%</div>
+                                    <div class="chart-bottom-heading"><span class="label label-info">Orders</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <!-- block -->
+                            <div class="block">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">Users</div>
+                                    <div class="pull-right"><span class="badge badge-info">1,234</span>
+
+                                    </div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Vincent</td>
+                                                <td>Gabriel</td>
+                                                <td>@gabrielva</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        </div>
+                        <div class="span6">
+                            <!-- block -->
+                            <div class="block">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">Orders</div>
+                                    <div class="pull-right"><span class="badge badge-info">752</span>
+
+                                    </div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Product</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Coat</td>
+                                                <td>02/02/2013</td>
+                                                <td>$25.12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jacket</td>
+                                                <td>01/02/2013</td>
+                                                <td>$335.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Shoes</td>
+                                                <td>01/02/2013</td>
+                                                <td>$29.99</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <!-- block -->
+                            <div class="block">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">Clients</div>
+                                    <div class="pull-right"><span class="badge badge-info">17</span>
+
+                                    </div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Vincent</td>
+                                                <td>Gabriel</td>
+                                                <td>@gabrielva</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        </div>
+                        <div class="span6">
+                            <!-- block -->
+                            <div class="block">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">Invoices</div>
+                                    <div class="pull-right"><span class="badge badge-info">812</span>
+
+                                    </div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>02/02/2013</td>
+                                                <td>$25.12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>01/02/2013</td>
+                                                <td>$335.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>01/02/2013</td>
+                                                <td>$29.99</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+        </div>
+        <!--/.fluid-container-->
+        <!-- footer -->
+<footer class="tqfooter clear ">
+    <div class="inner auto_w">
+        <div class="wp19 fleft">
+            <div class="item title">关于</div>
+            <div class="item"><a href="/about?f=home&m=footer#aboutUs">关于我们</a></div>
+            <div class="item"><a href="/about?f=home&m=footer#joinUs">加入我们</a></div>
+            <div class="item"><a href="/about?f=home&m=footer#contactUs">联系我们</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">数据</div>
+            <div class="item"><a href="/help/data/index?f=home&m=footer">指数数据</a></div>
+            <div class="item"><a href="/help/data/fund?f=home&m=footer">基金数据</a></div>
+            <div class="item"><a href="/data/dict/gta?f=home&m=footer">国泰安数据</a></div>
+            <div class="item"><a href="/help/data/stock?f=home&m=footer">股票财务数据</a></div>
+            <div class="item"><a href="/help/data/futures?f=home&m=footer">金融期货数据</a></div>
+            <div class="item"><a href="/help/api/plateData?f=home&m=footer">行业概念数据</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">帮助</div>
+            <div class="item"><a href="/faq?f=home&m=footer">常见问题</a></div>
+            <div class="item"><a href="/api?f=home&m=footer">API文档</a></div>
+            <div class="item"><a href="/study#link=python?f=home&m=footer" target="_blank">Python教程</a></div>
+            <div class="item"><a href="/algorithm/apishare/list?f=home&m=footer" target="_blank">共享函数库</a></div>
+            <div class="item"><a href="/post/553?f=home&m=footer">系统更新日志</a></div>
+            <div class="item"><a href="/post/4089?f=home&m=footer">数据调整记录</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">友情链接</div>
+            <div class="item"><a href="https://quant.baidu.com?f=joinquant"> 百度因子量化平台</a></div>
+            <div class="item"><a href="http://tushare.org/index.html??f=joinquant">TuShare</a></div>
+            <div class="item"><a href="https://guorn.com/?f=joinquant">果仁网</a></div>
+        </div>
+        <div class="wp16 fleft">
+            <div class="item title" style="padding-left:5px">关注我们</div>
+            <div class="item"><a href="https://zhuanlan.zhihu.com/JoinQuant?f=home&m=footer"><img style="width:24px;" src="https://cdn.joinquant.net/common/img/zhi.png" alt="">知乎专栏</a></div>
+            <div class="item"><a href="https://xueqiu.com/JoinQuant/profile?f=home&m=footer"> <img style="width:24px;" src="https://cdn.joinquant.net/common/img/xq.png" alt="">雪球</a></div>
+        </div>
+        <div class="wp2 fleft last tright subscribe">
+            <div class="item inline-block pr_10 fleft">
+                <img class="mb_10" src="https://cdn.joinquant.net/themes/jq/static/common/img/wechat_no.png" alt="">
+                <p class="f14 tcenter">微信公众号</p>
+            </div>
+        </div>
+        <div class="copyright tcenter clear">Copyright 2018 &copy; tulipQuant 御宽 </div>
+    </div>
+</footer>
+        <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script src="assets/scripts.js"></script>
+        <script>
+        $(function() {
+            // Easy pie charts
+            $('.chart').easyPieChart({animate: 1000});
+        });
+        </script>
+    </body>
+
+</html>

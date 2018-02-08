@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽-策略广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+
+     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+     <!-- main css file -->
+    <link rel="stylesheet" href="css/celue.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="top inner-wrap clearfix">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;" class="act">量化策略</a>
+                    <div class="sub">
+                        <a href="#">策略商场</a>
+                        <a href="" data-toggle="modal" data-target="#myModal" id="sell">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html">AR增强显示</a>
+                        <a href="/help/faq/">热门股票词云</a>
+                        <a href="/help/researchV3/">随手拍 出股票</a>
+                        <a href="/help/faq/">智能策略推荐</a>
+                        <a href="/help/researchV3/">精选研报</a>
+                        <a href="/help/researchV3/">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <!-- 模态框头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">售卖我的策略</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- 模态框主体 -->
+                                <div class="modal-body">
+                                    <form action="" name="liveShop" method="post">
+                                        <ul class="form_ul">
+                                            <!-- <li class="name li">
+                                    <p class="li_p"><span class="li_span">策略名称：</span></p>
+                                    <input class="li_input js-input" type="text" placeholder="请填写策略名称">
+                                </li> -->
+                                            <li class="name li">
+                                                <b class="li_p"><div class="inline-block shuxian"></div>
+                                                <span class="li_span">策略原始链接：</span></b>
+                                                <input class="li_input js-input" type="text" placeholder="请提交所发布策略的原始链接">
+                                                <p class="tips">您只需提供曾发布策略的链接地址即可一键发布策略</p>
+                                            </li>
+                                            <li class="mentality li">
+                                                <b class="li_p"><div class="inline-block shuxian"></div>
+                                                    <span class="li_span">策略逻辑：</span ></b>
+                                                <textarea class="li_textarea js-input" type="text" name="liveShop[thought]" placeholder="请简要描述策略逻辑"></textarea>
+                                            </li>
+                                            <!--                     <li class="advantage li">
+                                    <p class="li_p"><span class="li_span">策略优势：</span></p>
+                                    <textarea class="li_textarea js-input" type="text" name="liveShop[advantage]" placeholder="请简要描述策略优势"></textarea>
+                                </li> -->
+                                              
+                                            <li class="tags li relative">
+                                                <b class="li_p"><div class="inline-block shuxian"></div>
+                                                    <span class="li_span">标签：</span></b>
+                                                <div class=" tagBox">
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">大市值 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">小市值 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">次新 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">价值 </label>
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">题材 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">成长 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">ST </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">趋势 </label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">沪深300</label> 
+                                                  <label class="tagItem"><input name="Tag" type="checkbox">蓝筹 </label> 
+                                                </div>
+                                            </li>
+                                            <li class="price li">
+                                                <b class="li_p"><div class="inline-block shuxian" style="border: 2px solid #fb8341"></div>
+                                                    <span class="li_span">策略拟售价：</span></b>
+                                                <input class="li_input number js-input" type="text" id="price" name="liveShop[price]" placeholder="例如：100">
+                                                <span class="li_span">元 / 月</span>
+                                                <p class="tips">御宽运营人员可能会调整策略售价</p>
+                                            </li>
+                                        </ul>
+                                </div>
+                                <!-- 模态框底部 -->
+                                <div class="modal-footer submit_box">
+                                    <button type="button" class="btn btn-submit" data-dismiss="modal">提交</button>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+    <!-- 巨幕 -->
+    <div class="banner">
+        <ul>
+            <li class="banner01">
+                <div class="hp-slogan">
+                    <div class="title">策 略 商 城</div>
+                    <p>优质策略|退款保障</p>
+                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
+                    <a href="" class="blue-btn" data-toggle="modal" data-target="#myModal">上架我的策略</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 条栏 -->
+    <div class="tiao_box">
+        <div class="clear auto_w">
+            <div class="col-lg-3 inline-block">
+                <img src="https://cdn.joinquant.com/themes/jq/static/algorithm/img/you.png" alt="">
+                <div class="inline-block">
+                    <p class="tiao_item_title">优秀策略</p>
+                    <p class="tiao_item_wo">聚宽只上架最优秀策略</p>
+                </div>
+            </div>
+            <div class="col-lg-3 inline-block">
+                <img src="https://cdn.joinquant.com/themes/jq/static/algorithm/img/bao.png" alt="">
+                <div class="inline-block">
+                    <p class="tiao_item_title">保证收益</p>
+                    <p class="tiao_item_wo">每个策略均承诺保底收益</p>
+                </div>
+            </div>
+            <div class="col-lg-3 inline-block">
+                <img src="https://cdn.joinquant.com/themes/jq/static/algorithm/img/tui.png" alt="">
+                <div class="inline-block">
+                    <p class="tiao_item_title">退款保障</p>
+                    <p class="tiao_item_wo">策略没有达标，无忧退款</p>
+                </div>
+            </div>
+            <div class="col-lg-3 inline-block">
+                <img src="https://cdn.joinquant.com/themes/jq/static/algorithm/img/tui.png" alt="">
+                <div class="inline-block">
+                    <p class="tiao_item_title">退款保障</p>
+                    <p class="tiao_item_wo">策略没有达标，无忧退款</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 策略栏 -->
+        <div class="strategy_box">
+            <div class="strategy auto_w">
+                <div class="title f26 clear">
+                    <span>策略精选</span>
+<!--                     <a href="https://www.joinquant.com/post/7672" class="title_a" target="_blank">常见问题></a>
+ -->                </div>
+                <div class="strategy_item">
+                    <div class="strategy_item_head clear">
+                        <div class="item_title fleft">
+                            <a href="specificStrategy.html" class="bold f20 stra_title" target="_blank">水滴石穿—大蓝筹中频交易策略</a>
+                            <div class="pt_10">
+                                <span class="tui cursor" title="如果策略没有达到目标收益，则退还当月费用">不达标退款</span>
+                                <span class="tui cursor" title="如果策略一直空仓，则退还当月费用">空仓退款</span>
+                                <span class="tui cursor" title="如果策略异常中止，则未使用的策略全额退款">退款无忧</span>
+                            </div>
+                        </div>
+                        <div class="item_title fright">
+                            <span class="fleft mr_10">策略作者：</span>
+                            <a class="fleft" href="/user/74a45ee599779f80429b83783e9e7cfe">        
+                                                    <img src="https://image.joinquant.com/2deb88af4d2ee16929ca31779df9236d" alt="" class="avatar">                       
+                            </a>
+                            <a class="fleft author" href="/user/74a45ee599779f80429b83783e9e7cfe">琪琪高</a>
+                        </div>
+                    </div>
+                    <div class="strategy_item_container clear">
+                        <div class="strategy_img_left fleft">
+                            <div class="toolbar">
+                                <span class="blue_square"></span>
+                                <span class="blue_tip">策略收益</span>
+                                <span class="red_square"></span>
+                                <span class="red_tip">基准收益</span>
+                            </div>
+                            <div class="strategy_img">
+                                <a href="/algorithm/live/shopdetail?postId=9140" target="_blank"><img src="https://image.joinquant.com/backtest_9bf70ce55acf613062d337944cdd747f.png?date=ee1ebe4f6cac4d61b479ccb4af7910dc" ></a>
+                            </div>
+                        </div>
+                        <div class="strategy_img_right fright">
+                            <div class="top tcenter">
+                                <p class="tips">本月收益</p>
+                                <p class="bold red" style="font-size:32px">10.44%</p>
+                                <p class="tips">（沪深300 ：<span class="red">3.21%</span>）</p>
+                            </div>
+                            <div class="middle tcenter clear">
+                                <div class="middle_item fleft">
+                                    <p class="tips">目标收益(每月) </p>
+                                    <p class="f20">HS300+3%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">年化收益</p>
+                                    <p class="f20">242.24%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">历史达标率 </p>
+                                    <p class="f20">
+                                        100%
+                                    </p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">适合资金</p>
+                                    <p class="f20">500000</p>
+                                </div>
+                            </div>
+                            <div class="bottom tcenter relative">
+                                <p class="num"><span class="tips">剩余数量：</span><span class="surplus">
+                                                18/20
+                                                </span></p>
+                                <button class="order " _amount="500" _backtestId="5885790" _liveshopId="166" _post_id="9140" issubinfo="false">500元/月，立即订购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy_item">
+                    <div class="strategy_item_head clear">
+                        <div class="item_title fleft">
+                            <a href="/algorithm/live/shopdetail?postId=2256" class="bold f20 stra_title" target="_blank">蚂蚁搬家03_精选策略</a>
+                            <div class="pt_10">
+                                <span class="tui cursor" title="如果策略没有达到目标收益，则退还当月费用">不达标退款</span>
+                                <span class="tui cursor" title="如果策略一直空仓，则退还当月费用">空仓退款</span>
+                                <span class="tui cursor" title="如果策略异常中止，则未使用的策略全额退款">退款无忧</span>
+                            </div>
+                        </div>
+                        <div class="item_title fright">
+                            <span class="fleft mr_10">策略作者：</span>
+                            <a class="fleft" href="/user/0c065a29d3f77d77574216e76ece7521">        
+                                                    <img src="https://image.joinquant.com/b902612ea09bdf430a87e71b42da8d1c" alt="" class="avatar">
+                                               
+                    </a>
+                            <a class="fleft author" href="/user/0c065a29d3f77d77574216e76ece7521">蚂蚁量化</a>
+                        </div>
+                    </div>
+                    <div class="strategy_item_container clear">
+                        <div class="strategy_img_left fleft">
+                            <div class="toolbar">
+                                <span class="blue_square"></span>
+                                <span class="blue_tip">策略收益</span>
+                                <span class="red_square"></span>
+                                <span class="red_tip">基准收益</span>
+                            </div>
+                            <div class="strategy_img">
+                                <a href="/algorithm/live/shopdetail?postId=2256" target="_blank"><img src="https://image.joinquant.com/backtest_1ea60b91cc2e1f370aad85dd11ce738b.png?date=fbe2bb5948b4dc4414d65a072bcf31cd" ></a>
+                            </div>
+                        </div>
+                        <div class="strategy_img_right fright">
+                            <div class="top tcenter">
+                                <p class="tips">本月收益</p>
+                                <p class="bold red" style="font-size:32px">6.27%</p>
+                                <p class="tips">（沪深300 ：<span class="red">3.21%</span>）</p>
+                            </div>
+                            <div class="middle tcenter clear">
+                                <div class="middle_item fleft">
+                                    <p class="tips">目标收益(每月) </p>
+                                    <p class="f20">3%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">年化收益</p>
+                                    <p class="f20">53.97%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">历史达标率 </p>
+                                    <p class="f20">
+                                        16.67%
+                                    </p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">适合资金</p>
+                                    <p class="f20">500000</p>
+                                </div>
+                            </div>
+                            <div class="bottom tcenter relative">
+                                <p class="num"><span class="tips">剩余数量：</span><span class="surplus">
+                                                29/50
+                                                </span></p>
+                                <button class="order " _amount="1000" _backtestId="720155" _liveshopId="15" _post_id="2256" issubinfo="false">1000元/月，立即订购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy_item">
+                    <div class="strategy_item_head clear">
+                        <div class="item_title fleft">
+                            <a href="/algorithm/live/shopdetail?postId=9140" class="bold f20 stra_title" target="_blank">水滴石穿—大蓝筹中频交易策略</a>
+                            <div class="pt_10">
+                                <span class="tui cursor" title="如果策略没有达到目标收益，则退还当月费用">不达标退款</span>
+                                <span class="tui cursor" title="如果策略一直空仓，则退还当月费用">空仓退款</span>
+                                <span class="tui cursor" title="如果策略异常中止，则未使用的策略全额退款">退款无忧</span>
+                            </div>
+                        </div>
+                        <div class="item_title fright">
+                            <span class="fleft mr_10">策略作者：</span>
+                            <a class="fleft" href="/user/74a45ee599779f80429b83783e9e7cfe">        
+                                                    <img src="https://image.joinquant.com/2deb88af4d2ee16929ca31779df9236d" alt="" class="avatar">                       
+                            </a>
+                            <a class="fleft author" href="/user/74a45ee599779f80429b83783e9e7cfe">琪琪高</a>
+                        </div>
+                    </div>
+                    <div class="strategy_item_container clear">
+                        <div class="strategy_img_left fleft">
+                            <div class="toolbar">
+                                <span class="blue_square"></span>
+                                <span class="blue_tip">策略收益</span>
+                                <span class="red_square"></span>
+                                <span class="red_tip">基准收益</span>
+                            </div>
+                            <div class="strategy_img">
+                                <a href="/algorithm/live/shopdetail?postId=9140" target="_blank"><img src="https://image.joinquant.com/backtest_9bf70ce55acf613062d337944cdd747f.png?date=ee1ebe4f6cac4d61b479ccb4af7910dc" ></a>
+                            </div>
+                        </div>
+                        <div class="strategy_img_right fright">
+                            <div class="top tcenter">
+                                <p class="tips">本月收益</p>
+                                <p class="bold red" style="font-size:32px">10.44%</p>
+                                <p class="tips">（沪深300 ：<span class="red">3.21%</span>）</p>
+                            </div>
+                            <div class="middle tcenter clear">
+                                <div class="middle_item fleft">
+                                    <p class="tips">目标收益(每月) </p>
+                                    <p class="f20">HS300+3%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">年化收益</p>
+                                    <p class="f20">242.24%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">历史达标率 </p>
+                                    <p class="f20">
+                                        100%
+                                    </p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">适合资金</p>
+                                    <p class="f20">500000</p>
+                                </div>
+                            </div>
+                            <div class="bottom tcenter relative">
+                                <p class="num"><span class="tips">剩余数量：</span><span class="surplus">
+                                                18/20
+                                                </span></p>
+                                <button class="order " _amount="500" _backtestId="5885790" _liveshopId="166" _post_id="9140" issubinfo="false">500元/月，立即订购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy_item">
+                    <div class="strategy_item_head clear">
+                        <div class="item_title fleft">
+                            <a href="/algorithm/live/shopdetail?postId=2256" class="bold f20 stra_title" target="_blank">蚂蚁搬家03_精选策略</a>
+                            <div class="pt_10">
+                                <span class="tui cursor" title="如果策略没有达到目标收益，则退还当月费用">不达标退款</span>
+                                <span class="tui cursor" title="如果策略一直空仓，则退还当月费用">空仓退款</span>
+                                <span class="tui cursor" title="如果策略异常中止，则未使用的策略全额退款">退款无忧</span>
+                            </div>
+                        </div>
+                        <div class="item_title fright">
+                            <span class="fleft mr_10">策略作者：</span>
+                            <a class="fleft" href="/user/0c065a29d3f77d77574216e76ece7521">        
+                                                    <img src="https://image.joinquant.com/b902612ea09bdf430a87e71b42da8d1c" alt="" class="avatar">
+                                               
+                    </a>
+                            <a class="fleft author" href="/user/0c065a29d3f77d77574216e76ece7521">蚂蚁量化</a>
+                        </div>
+                    </div>
+                    <div class="strategy_item_container clear">
+                        <div class="strategy_img_left fleft">
+                            <div class="toolbar">
+                                <span class="blue_square"></span>
+                                <span class="blue_tip">策略收益</span>
+                                <span class="red_square"></span>
+                                <span class="red_tip">基准收益</span>
+                            </div>
+                            <div class="strategy_img">
+                                <a href="/algorithm/live/shopdetail?postId=2256" target="_blank"><img src="https://image.joinquant.com/backtest_1ea60b91cc2e1f370aad85dd11ce738b.png?date=fbe2bb5948b4dc4414d65a072bcf31cd" ></a>
+                            </div>
+                        </div>
+                        <div class="strategy_img_right fright">
+                            <div class="top tcenter">
+                                <p class="tips">本月收益</p>
+                                <p class="bold red" style="font-size:32px">6.27%</p>
+                                <p class="tips">（沪深300 ：<span class="red">3.21%</span>）</p>
+                            </div>
+                            <div class="middle tcenter clear">
+                                <div class="middle_item fleft">
+                                    <p class="tips">目标收益(每月) </p>
+                                    <p class="f20">3%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">年化收益</p>
+                                    <p class="f20">53.97%</p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">历史达标率 </p>
+                                    <p class="f20">
+                                        16.67%
+                                    </p>
+                                </div>
+                                <div class="middle_item fleft">
+                                    <p class="tips">适合资金</p>
+                                    <p class="f20">500000</p>
+                                </div>
+                            </div>
+                            <div class="bottom tcenter relative">
+                                <p class="num"><span class="tips">剩余数量：</span><span class="surplus">
+                                                29/50
+                                                </span></p>
+                                <button class="order " _amount="1000" _backtestId="720155" _liveshopId="15" _post_id="2256" issubinfo="false">1000元/月，立即订购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body> 
+
+    <!-- footer -->
+    <footer class="tqfooter clear ">
+    <div class="inner auto_w">
+        <div class="wp19 fleft">
+            <div class="item title">关于</div>
+            <div class="item"><a href="/about?f=home&m=footer#aboutUs">关于我们</a></div>
+            <div class="item"><a href="/about?f=home&m=footer#joinUs">加入我们</a></div>
+            <div class="item"><a href="/about?f=home&m=footer#contactUs">联系我们</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">数据</div>
+            <div class="item"><a href="/help/data/index?f=home&m=footer">指数数据</a></div>
+            <div class="item"><a href="/help/data/fund?f=home&m=footer">基金数据</a></div>
+            <div class="item"><a href="/data/dict/gta?f=home&m=footer">国泰安数据</a></div>
+            <div class="item"><a href="/help/data/stock?f=home&m=footer">股票财务数据</a></div>
+            <div class="item"><a href="/help/data/futures?f=home&m=footer">金融期货数据</a></div>
+            <div class="item"><a href="/help/api/plateData?f=home&m=footer">行业概念数据</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">帮助</div>
+            <div class="item"><a href="/faq?f=home&m=footer">常见问题</a></div>
+            <div class="item"><a href="/api?f=home&m=footer">API文档</a></div>
+            <div class="item"><a href="/study#link=python?f=home&m=footer" target="_blank">Python教程</a></div>
+            <div class="item"><a href="/algorithm/apishare/list?f=home&m=footer" target="_blank">共享函数库</a></div>
+            <div class="item"><a href="/post/553?f=home&m=footer">系统更新日志</a></div>
+            <div class="item"><a href="/post/4089?f=home&m=footer">数据调整记录</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">友情链接</div>
+            <div class="item"><a href="https://quant.baidu.com?f=joinquant"> 百度因子量化平台</a></div>
+            <div class="item"><a href="http://tushare.org/index.html??f=joinquant">TuShare</a></div>
+            <div class="item"><a href="https://guorn.com/?f=joinquant">果仁网</a></div>
+        </div>
+        <div class="wp16 fleft">
+            <div class="item title" style="padding-left:5px">关注我们</div>
+            <div class="item"><a href="https://zhuanlan.zhihu.com/JoinQuant?f=home&m=footer"><img style="width:24px;" src="https://cdn.joinquant.net/common/img/zhi.png" alt="">知乎专栏</a></div>
+            <div class="item"><a href="https://xueqiu.com/JoinQuant/profile?f=home&m=footer"> <img style="width:24px;" src="https://cdn.joinquant.net/common/img/xq.png" alt="">雪球</a></div>
+        </div>
+        <div class="wp2 fleft last tright subscribe">
+            <div class="item inline-block pr_10 fleft">
+                <img class="mb_10" src="https://cdn.joinquant.net/themes/jq/static/common/img/wechat_no.png" alt="">
+                <p class="f14 tcenter">微信公众号</p>
+            </div>
+        </div>
+        <div class="copyright tcenter clear">Copyright 2018 &copy; tulipQuant 御宽 </div>
+    </div>
+    </footer>
+    <!-- javascript -->
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>    
+    <script src="js/login.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+        <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>

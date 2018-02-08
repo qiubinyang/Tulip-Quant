@@ -1,0 +1,35 @@
+// 点击个人中心所返回的json
+{
+	"success":true,
+	"user":[
+		{
+			"uPhone":"13486192688",
+			"uName":"Apiao",
+			"uPortrait":"/img/001.png",
+			"uSign":"股市有风险，投资需谨慎"
+			"uMoney":"10元",
+			"uStrategy":[
+				{"sId":"004","sName":"白马等权策略","sUrl":"/strategy/004","bData":"2018/1/12","bTime":"1个月"},
+				{"sId":"005","sName":"白马等权策略","sUrl":"/strategy/005","bData":"2018/1/12","bTime":"1个月"}
+			],
+			"uFavorite":[
+				{"sId":"001","sName":"白马等权策略","sUrl":"/strategy/001"},
+				{"sId":"002","sName":"白马等权策略","sUrl":"/strategy/002"},
+				{"sId":"003","sName":"白马等权策略","sUrl":"/strategy/003"}
+			],
+			"uSubscribe":[
+				{"sId":"004","sName":"白马等权策略","sUrl":"/strategy/004","sPrice":"500元","bData":"2018/1/12","bTime":"1个月"},
+				{"sId":"005","sName":"白马等权策略","sUrl":"/strategy/005","sPrice":"500元","bData":"2018/1/12","bTime":"1个月"}
+			],		
+			"uCourage":[
+				{"sId":"004","sName":"白马等权策略","sUrl":"/strategy/004","sPrice":"5元","courageData":"2018/1/12"},
+				{"sId":"005","sName":"白马等权策略","sUrl":"/strategy/005","sPrice":"5元","courageData":"2018/1/12"}
+			],
+			"uTransaction":[
+				{"sId":"004","sName":"白马等权策略","sUrl":"/strategy/004","sPrice":"500元","bData":"2018/1/12","bTime":"1个月"},
+				{"sId":"005","sName":"白马等权策略","sUrl":"/strategy/005","sPrice":"5元","bData":"2018/1/12","bTime":"1个月"}
+			]
+		},
+
+	]
+}

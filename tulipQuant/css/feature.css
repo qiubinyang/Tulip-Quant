@@ -1,0 +1,212 @@
+
+/*欢迎页*/
+.large-header {
+    position: relative;
+    width: 100%;
+    background-image: url(http://static.tumblr.com/1ccbc9v/ng3ncd339/cd-intro-bg.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background: #333;
+    z-index: 1;
+}
+.main-title {
+    position: absolute;
+    width: 90%;
+    max-width: 1170px;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(255,255,255);
+    letter-spacing: .05em;
+    line-height: 1.5em;
+}
+.sub-title{
+    position: absolute;
+    width: 90%;
+    max-width: 1170px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(255,255,255);
+    letter-spacing: .05em;
+    line-height: 1.5em;
+}
+/*箭头动画效果*/
+.chevron-down:hover .icon {
+    animation: bounce 2s infinite;
+}
+.chevron-down {
+    position: absolute;
+    left:49%;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+}
+.chevron-down .icon {
+    position: absolute;
+    bottom: 0;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { bottom: 0; }
+    40% { bottom: 20px; }
+    60% { bottom: 10px; }
+}
+
+/*巨幕*/
+.hp-slogan {
+    text-align: center;
+    color: #fff;
+}
+
+.hp-slogan .title {
+    font-size: 108px;
+    margin-top: 120px;
+}
+
+.hp-slogan p {
+    font-size: 26px;
+    opacity: .8;
+    margin: 15px 0 68px 0;
+}
+
+.hp-slogan>a {
+    width: 168px;
+    display: inline-block;
+    height: 52px;
+    line-height: 52px;
+    font-size: 22px;
+    margin: 0 20px;
+}
+
+.hp-slogan p.pro {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hp-slogan p.pro a {
+    font-size: 20px;
+    line-height: 21px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    overflow: auto;
+    height: 772px;
+    width: 100%;
+    left: 0%;
+}
+.banner ul li,  .banner  ul{
+    list-style: none;
+    height: 100%;
+}
+.banner ul li {
+    float: left;
+    position: relative;
+}
+.banner ul li.banner01 {
+  background: url(../img/banner01.jpg) no-repeat center/cover;
+  width: 100%;
+}
+.banner ul li.banner02 {
+  background: url(../img/banner02.jpg) no-repeat center/cover;
+  width: 100%;
+}
+.banner ul li.banner03 {
+  background: url(../img/banner03.jpg) no-repeat center/cover;
+  width: 100%;
+}
+
+
+/*功能页导航栏*/
+.navbar {
+    margin-bottom: 0;
+    background: #ffffff;
+    border: none;
+    border-bottom: 1px solid #253DAF;
+    border-radius: 0;
+}
+.container{
+    width:100%;
+}
+.navbar-brand {
+    height: 48px;
+}
+#main-navigation.affix {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar-brand > .logo {
+    width: 100%;
+    max-width: 186px;
+    max-height: 46px;
+}
+
+.navbar-default .navbar-nav {
+    padding: 16px 0;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: #253DAF;
+}
+
+.navbar-default .navbar-nav>li {
+    margin-left: 20px;
+}
+
+.navbar-default .navbar-nav>li:first-child {
+    margin-left: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    padding: 12px 23px;
+    background: #ffffff;
+    color: #8e8e8e;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    -ms-transition: border-color 0.3s ease-in-out;
+    -o-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #131316;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    background: #ffffff;
+    color: #131316;
+    border: 1px solid #253DAF;
+}
+
+/*BOOTSTRAP AFFIX*/
+
+.nav-container {
+    min-height: 78px;
+}
+
+#main-navigation.affix {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+

@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽-策略广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/specificStrategy.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon3.ico">
+
+
+
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix " >
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">AR增强显示</a>
+                        <a href="/help/faq/">热门股票词云</a>
+                        <a href="/help/researchV3/">随手拍 出股票</a>
+                        <a href="/help/faq/">智能策略推荐</a>
+                        <a href="/help/researchV3/">精选研报</a>
+                        <a href="/help/researchV3/">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+        <div id="content">
+            <div class="container content-container">
+                <div class="bigquant-strategy-title">
+                    <span class="bigquant-strategy-name">AI随缘选股</span>
+                    
+                        <span class="order fright">
+                                <div class="inline-block order-success hidden">
+                                    <span>
+                                        您已订阅，还有0天到期
+                                    </span>
+                                    <span class="ml_10 btn btn-small inline-block btn-cancel-sub">取消订阅</span>
+                                    
+                                        <span class="inline-block btn notice-class wechat wechat-open">开启微信通知</span>
+                                        <span class="inline-block btn notice-class email email-open">开启邮件通知</span>
+                                    
+                                </div>
+                                <button class="btn bigquant-subscribe-btn ">500元/月</button>
+                            
+                            <!-- <input type="hidden" id="isCanWechatSub" value="1"> -->
+                        </span>
+                    
+                </div>
+            </div>
+            <div class="container content-container">
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <div class="bigquant-board-head-title">策略表现</div>
+                    </div>
+                    <div class="bigquant-board-content">
+                        <div class="panel panel-default">
+                            <div class="panel-body bigquant-panel-main">
+                                <div class="row">
+                                    <!-- <div class="bigquant-board-value">
+                                        <div class="bigquant-board-value-text"><b>1</b></div>
+                                        <div class="bigquant-board-key">
+                                            策略排名
+                                        </div>
+                                    </div> -->
+                                    <div class="bigquant-board-value  bigquant-text-red ">
+                                        <div class="bigquant-board-value-text">33.18%</div>
+                                        <div class="bigquant-board-key">
+                                            累计收益
+                                        </div>
+                                    </div>
+                                    <div class="bigquant-board-value  bigquant-text-red ">
+                                        <div class="bigquant-board-value-text">2929.84%</div>
+                                        <div class="bigquant-board-key">
+                                            年化收益
+                                        </div>
+                                    </div>
+                                    <div class="bigquant-board-value  bigquant-text-red ">
+                                        <div class="bigquant-board-value-text">2.38%</div>
+                                        <div class="bigquant-board-key">
+                                            今日收益
+                                        </div>
+                                    </div>
+                                    <div class="bigquant-board-value">
+                                        <div class="bigquant-board-value-text">2.42%</div>
+                                        <div class="bigquant-board-key">
+                                            最大回撤
+                                        </div>
+                                    </div>
+                                    <div class="new-line-bigquant-board-value bigquant-board-value">
+                                        <div class="bigquant-board-value-text">100000.0</div>
+                                        <div class="bigquant-board-key">
+                                            初始资金
+                                        </div>
+                                    </div>
+                                    <div class="new-line-bigquant-board-value bigquant-board-value">
+                                        <div class="bigquant-board-value-text">2017.12.12</div>
+                                        <div class="bigquant-board-key">
+                                            开始时间
+                                        </div>
+                                    </div>
+                                    <div class="new-line-bigquant-board-value bigquant-board-value">
+                                        <div class="bigquant-board-value-text">qwe9527</div>
+                                        <div class="bigquant-board-key">
+                                            创建者
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <div class="bigquant-board-head-title">策略排名</div>
+                    </div>
+                    <div class="bigquant-board-content">
+                        <div class="panel panel-default">
+                            <div class="panel-body bigquant-panel-main">
+                                <div class="row">
+                                    <div class="bigquant-board-value">
+                                        <div class="bigquant-board-value-text"><b>1</b></div>
+                                        <div class="bigquant-board-key">
+                                            总排名
+                                        </div>
+                                    </div>
+                                    <div class="bigquant-board-value">
+                                        <div class="bigquant-board-value-text"><b>1</b></div>
+                                        <div class="bigquant-board-key">
+                                            板块排名
+                                        </div>
+                                    </div>
+                                    <div class="bigquant-board-value">
+                                        <div class="bigquant-board-value-text"><b>1</b></div>
+                                        <div class="bigquant-board-key">
+                                            总排名历史最高
+                                        </div>
+                                    </div>
+      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <div class="bigquant-board-head-title">收益率走势</div>
+                    </div>
+                    <div class="bigquant-board-content">
+                        <div class="panel panel-default">
+                            <div class="panel-body bigquant-panel-main">
+                                <div id="bigquant-strategy-portfolio-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <div class="bigquant-board-head-title">最新卖出</div>
+                    </div>
+                    <div class="bigquant-board-content bigquant-board-table">
+                        <table id="bigquant-strategy-sell" class="table table-striped" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>股票代码</th>
+                                    <th>股票名称</th>
+                                    <th>买入时间</th>
+                                    <th>卖出时间</th>
+                                    <th>买入价</th>
+                                    <th>卖出价</th>
+                                    <th>累计盈亏</th>
+                                    <th>盈亏比例</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>603711.SHA</td>
+                                    <td>香飘飘</td>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td>2018-01-11 15:00:00</td>
+                                    <td>29.01</td>
+                                    <td>29.89</td>
+                                    <td><span class=" bigquant-text-red ">663.52</span></td>
+                                    <td><span class=" bigquant-text-red ">3.03 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>600933.SHA</td>
+                                    <td>爱柯迪</td>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td>2018-01-11 15:00:00</td>
+                                    <td>16.43</td>
+                                    <td>17.0</td>
+                                    <td><span class=" bigquant-text-red ">1156.53</span></td>
+                                    <td><span class=" bigquant-text-red ">3.47 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603260.SHA</td>
+                                    <td>合盛硅业</td>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td>2018-01-10 15:00:00</td>
+                                    <td>60.99</td>
+                                    <td>61.79</td>
+                                    <td><span class=" bigquant-text-red ">583.2</span></td>
+                                    <td><span class=" bigquant-text-red ">1.31 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603501.SHA</td>
+                                    <td>韦尔股份</td>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td>2018-01-10 15:00:00</td>
+                                    <td>44.49</td>
+                                    <td>43.4</td>
+                                    <td><span class=" bigquant-text-green ">-689.97</span></td>
+                                    <td><span class=" bigquant-text-green ">-2.45 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>002457.SZA</td>
+                                    <td>青龙管业</td>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td>2018-01-09 15:00:00</td>
+                                    <td>12.97</td>
+                                    <td>12.8</td>
+                                    <td><span class=" bigquant-text-green ">-278.29</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.31 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>002194.SZA</td>
+                                    <td>武汉凡谷</td>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td>2018-01-09 15:00:00</td>
+                                    <td>11.1</td>
+                                    <td>11.26</td>
+                                    <td><span class=" bigquant-text-red ">486.08</span></td>
+                                    <td><span class=" bigquant-text-red ">1.44 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603616.SHA</td>
+                                    <td>韩建河山</td>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td>2018-01-08 15:00:00</td>
+                                    <td>16.68</td>
+                                    <td>16.41</td>
+                                    <td><span class=" bigquant-text-green ">-374.49</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.62 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603619.SHA</td>
+                                    <td>中曼石油</td>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td>2018-01-08 15:00:00</td>
+                                    <td>43.48</td>
+                                    <td>45.66</td>
+                                    <td><span class=" bigquant-text-red ">2402.36</span></td>
+                                    <td><span class=" bigquant-text-red ">5.01 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603937.SHA</td>
+                                    <td>丽岛新材</td>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td>2018-01-05 15:00:00</td>
+                                    <td>24.21</td>
+                                    <td>24.27</td>
+                                    <td><span class=" bigquant-text-red ">52.62</span></td>
+                                    <td><span class=" bigquant-text-red ">0.25 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>002346.SZA</td>
+                                    <td>柘中股份</td>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td>2018-01-05 15:00:00</td>
+                                    <td>20.08</td>
+                                    <td>19.85</td>
+                                    <td><span class=" bigquant-text-green ">-396.98</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.15 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>603929.SHA</td>
+                                    <td>亚翔集成</td>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td>2018-01-04 15:00:00</td>
+                                    <td>28.05</td>
+                                    <td>28.06</td>
+                                    <td><span class=" bigquant-text-red ">14.8</span></td>
+                                    <td><span class=" bigquant-text-red ">0.04 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>601313.SHA</td>
+                                    <td>江南嘉捷</td>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td>2018-01-04 15:00:00</td>
+                                    <td>53.02</td>
+                                    <td>61.19</td>
+                                    <td><span class=" bigquant-text-red ">3888.92</span></td>
+                                    <td><span class=" bigquant-text-red ">15.41 %</span></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <!-- <div class="bigquant-board-head-title">最新持仓</div> -->
+                        <div class="bigquant-board-head-title">历史持仓</div>
+                    </div>
+                    <div class="bigquant-board-content bigquant-board-table">
+                        <table id="bigquant-strategy-positions" class="table table-striped" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>持仓日期</th>
+                                    <th>股票代码</th>
+                                    <th>股票名称</th>
+                                    <th>买入时间</th>
+                                    <th>买入价</th>
+                                    <th>最新价</th>
+                                    <th>持股数量</th>
+                                    <th>市值</th>
+                                    <th>持有天数</th>
+                                    <th>累计盈亏</th>
+                                    <th>盈亏比例</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>2018-01-11</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>45989.85</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-red ">1853.41</span></td>
+                                    <td><span class=" bigquant-text-red ">4.23 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-11</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-11 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>29387.41</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1157.72</span></td>
+                                    <td><span class=" bigquant-text-red ">4.1 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>33675.01</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">314.77</span></td>
+                                    <td><span class=" bigquant-text-red ">0.97 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>23217.28</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1343.19</span></td>
+                                    <td><span class=" bigquant-text-red ">6.14 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>44599.21</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">125.21</span></td>
+                                    <td><span class=" bigquant-text-red ">0.28 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>27688.97</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-489.78</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.73 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>20949.19</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-301.2</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.4 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>34004.03</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">263.37</span></td>
+                                    <td><span class=" bigquant-text-red ">0.77 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>47930.99</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-3.35</span></td>
+                                    <td><span class="">0.0 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>23294.52</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">159.55</span></td>
+                                    <td><span class=" bigquant-text-red ">0.69 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>34087.94</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-580.26</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.68 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21774.93</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">529.0</span></td>
+                                    <td><span class=" bigquant-text-red ">2.48 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>41376.52</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-145.69</span></td>
+                                    <td><span class=" bigquant-text-green ">-0.35 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>26530.09</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1246.67</span></td>
+                                    <td><span class=" bigquant-text-red ">4.93 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-29 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>34681.55</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-green ">-946.54</span></td>
+                                    <td><span class=" bigquant-text-green ">-2.66 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2018-01-02 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21758.24</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">254.73</span></td>
+                                    <td><span class=" bigquant-text-red ">1.19 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-29 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>27105.78</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1192.72</span></td>
+                                    <td><span class=" bigquant-text-red ">4.61 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-29 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>40279.31</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">135.66</span></td>
+                                    <td><span class=" bigquant-text-red ">0.33 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-28 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>22122.92</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">475.28</span></td>
+                                    <td><span class=" bigquant-text-red ">2.2 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-28 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>35444.18</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1354.72</span></td>
+                                    <td><span class=" bigquant-text-red ">3.98 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-27 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>24784.42</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">760.98</span></td>
+                                    <td><span class=" bigquant-text-red ">3.16 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-27 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>38223.5</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">668.11</span></td>
+                                    <td><span class=" bigquant-text-red ">1.76 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-26</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>36578.95</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-red ">1400.28</span></td>
+                                    <td><span class=" bigquant-text-red ">3.99 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-26</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21858.97</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-green ">-499.67</span></td>
+                                    <td><span class=" bigquant-text-green ">-2.23 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>35641.02</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">458.41</span></td>
+                                    <td><span class=" bigquant-text-red ">1.33 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21730.26</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-628.8</span></td>
+                                    <td><span class=" bigquant-text-green ">-2.8 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-22 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>39558.0</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">295.03</span></td>
+                                    <td><span class=" bigquant-text-red ">0.75 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-22 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>24673.09</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-41.26</span></td>
+                                    <td><span class=" bigquant-text-green ">-0.18 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-21</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21547.04</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-green ">-400.84</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.82 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-21</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>35443.63</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-red ">566.47</span></td>
+                                    <td><span class=" bigquant-text-red ">1.63 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>37777.77</td>
+                                    <td>5</td>
+                                    <td><span class=" bigquant-text-red ">5102.68</span></td>
+                                    <td><span class=" bigquant-text-red ">15.62 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-15 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>22572.24</td>
+                                    <td>3</td>
+                                    <td><span class=" bigquant-text-red ">2174.78</span></td>
+                                    <td><span class=" bigquant-text-red ">10.66 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>21287.06</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-660.82</span></td>
+                                    <td><span class=" bigquant-text-green ">-3.01 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>35029.75</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">152.59</span></td>
+                                    <td><span class=" bigquant-text-red ">0.44 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-19</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>34349.99</td>
+                                    <td>4</td>
+                                    <td><span class=" bigquant-text-red ">1674.9</span></td>
+                                    <td><span class=" bigquant-text-red ">5.13 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-19</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-15 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>22720.94</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-red ">2323.47</span></td>
+                                    <td><span class=" bigquant-text-red ">11.39 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>35071.62</td>
+                                    <td>3</td>
+                                    <td><span class=" bigquant-text-red ">2396.54</span></td>
+                                    <td><span class=" bigquant-text-red ">7.33 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-15 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>20014.65</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-green ">-382.82</span></td>
+                                    <td><span class=" bigquant-text-green ">-1.88 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-14 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>20705.7</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">1543.66</span></td>
+                                    <td><span class=" bigquant-text-red ">8.06 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>33800.02</td>
+                                    <td>2</td>
+                                    <td><span class=" bigquant-text-red ">2879.39</span></td>
+                                    <td><span class=" bigquant-text-red ">9.31 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-13</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>19389.82</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">230.14</span></td>
+                                    <td><span class=" bigquant-text-red ">1.2 %</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-13</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td>31127.26</td>
+                                    <td>1</td>
+                                    <td><span class=" bigquant-text-red ">412.08</span></td>
+                                    <td><span class=" bigquant-text-red ">1.34 %</span></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bigquant-board">
+                    <div class="bigquant-board-head">
+                        <div class="bigquant-board-head-symbol">|</div>
+                        <div class="bigquant-board-head-title">交易详情</div>
+                    </div>
+                    <div class="bigquant-board-content bigquant-board-table">
+                        <table id="bigquant-strategy-transactions" class="table table-striped" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>交易时间</th>
+                                    <th>股票代码</th>
+                                    <th>股票名称</th>
+                                    <th>买/卖</th>
+                                    <th>成交量</th>
+                                    <th>成交价</th>
+                                    <th>成交额</th>
+                                    <th>费用</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>2018-01-11 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-22538.63</td>
+                                    <td>29.3</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-11 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-34507.25</td>
+                                    <td>44.86</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-11 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>44123.2</td>
+                                    <td>13.24</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-11 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>28221.22</td>
+                                    <td>8.47</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-45058.62</td>
+                                    <td>58.58</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-27486.31</td>
+                                    <td>35.73</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>33350.24</td>
+                                    <td>10.01</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-10 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21867.52</td>
+                                    <td>6.56</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-20965.57</td>
+                                    <td>27.26</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-34216.74</td>
+                                    <td>44.48</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>44460.66</td>
+                                    <td>13.34</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-09 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>28170.3</td>
+                                    <td>8.45</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-22767.31</td>
+                                    <td>29.6</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-50334.15</td>
+                                    <td>65.43</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21244.01</td>
+                                    <td>6.37</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-08 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>33730.54</td>
+                                    <td>10.12</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-21300.99</td>
+                                    <td>27.69</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-34277.89</td>
+                                    <td>44.56</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>47919.97</td>
+                                    <td>14.38</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-05 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>23128.04</td>
+                                    <td>6.94</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-41539.36</td>
+                                    <td>54.0</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-29181.67</td>
+                                    <td>37.94</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>34657.79</td>
+                                    <td>10.4</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-04 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21239.56</td>
+                                    <td>6.37</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-34167.75</td>
+                                    <td>44.42</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-22260.51</td>
+                                    <td>28.94</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>41509.76</td>
+                                    <td>12.45</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-03 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>25275.84</td>
+                                    <td>7.58</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-27014.51</td>
+                                    <td>35.12</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-39878.42</td>
+                                    <td>51.84</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>35617.41</td>
+                                    <td>10.69</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2018-01-02 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21497.06</td>
+                                    <td>6.45</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-35470.77</td>
+                                    <td>46.11</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-21735.29</td>
+                                    <td>28.26</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>25905.29</td>
+                                    <td>7.77</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-29 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>40131.62</td>
+                                    <td>12.04</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-25594.8</td>
+                                    <td>33.27</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-38938.63</td>
+                                    <td>50.62</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21641.15</td>
+                                    <td>6.49</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-28 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>34079.24</td>
+                                    <td>10.22</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-35945.85</td>
+                                    <td>46.73</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-21472.85</td>
+                                    <td>27.91</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>24016.23</td>
+                                    <td>7.2</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-27 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>37544.13</td>
+                                    <td>11.26</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-23776.19</td>
+                                    <td>30.91</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-37755.55</td>
+                                    <td>49.08</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>35172.06</td>
+                                    <td>10.55</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-25 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>22352.35</td>
+                                    <td>6.71</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-21604.18</td>
+                                    <td>28.09</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-35506.34</td>
+                                    <td>46.16</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>39251.2</td>
+                                    <td>11.78</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-22 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>24706.93</td>
+                                    <td>7.41</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-21 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-41566.37</td>
+                                    <td>54.04</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-21 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-23087.73</td>
+                                    <td>30.01</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>21941.3</td>
+                                    <td>6.58</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-20 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>34866.7</td>
+                                    <td>10.46</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-36342.5</td>
+                                    <td>47.25</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-20423.99</td>
+                                    <td>26.55</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>32618.05</td>
+                                    <td>9.79</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-15 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>20391.35</td>
+                                    <td>6.12</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-31872.64</td>
+                                    <td>41.43</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14 15:00:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-blue ">卖</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>-21324.08</td>
+                                    <td>27.72</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>19156.29</td>
+                                    <td>5.75</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-14 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>30883.65</td>
+                                    <td>9.27</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>19153.93</td>
+                                    <td>5.75</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2017-12-13 09:30:00</td>
+                                    <td title="订阅可见">******</td>
+                                    <td title="订阅可见">******</td>
+                                    <td><span class=" bigquant-text-red ">买</span></td>
+                                    <td title="订阅可见">******</td>
+                                    <td>******</td>
+                                    <td>30705.97</td>
+                                    <td>9.21</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bottom-thank">
+                    <input class="alias" type="hidden" value="ScintiGimcki">
+                    <div class="thank-author">
+                        <button class="btn btn-warning thank-author-btn" id="thank-author-btn" _strategyid="1679">感谢作者</button>
+                        
+                        <div class="message-container hidden"><div class="message"><p class="tleft f14 title" style="margin-bottom: 2px">选择金额</p><div class="message-btns active message-cash"><button class="btn selected default" val="1">1元</button><button class="btn default" val="5">5元</button><button class="btn custom" href=".message-input">其他金额</button></div><div class="message-input message-cash"><input class="user-defined" type="text" placeholder="0.00" value=""></div><div class="payment-container clear"><div class="pay fleft"><span class="pay-radio selected"><input type="checkbox" value="1"></span><img src="https:///cdn.bigquant.com/static/img/ali-pay.png" alt=""></div><div class="pay fleft"><span class="pay-radio mr_5"><input value="2" type="checkbox"></span><img src="https:///cdn.bigquant.com/static/img/wechat-pay.png" alt=""></div></div></div></div>
+                    </div>
+                </div>
+
+<!--                 <div class="bigquant-board">
+                    <div id='discourse-comments'></div>
+                    <script type="text/javascript">
+                    DiscourseEmbed = { discourseUrl: 'https://community.bigquant.com/',
+                                        discourseEmbedUrl: 'https://bigquant.com/armory/strategy?id=1679' };
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                    </script>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="sub-strategy-message-container hidden"><div class="message"><p class="tleft f14 title" style="margin-bottom: 2px">选择订阅时长</p><div class="message-btns active message-cash"><button class="btn selected default" val="1"><p>1月<del>299元</del></p><p>优惠价:<span style="color: red;">199</span>元</p></button><button class="btn default" val="6">半年699元</button><button class="btn default" val="12">1年999元</button></div><div class="payment-container clear"><div class="pay fleft"><span class="pay-radio selected"><input type="checkbox" value="1"></span><img src="https:///cdn.bigquant.com/static/img/ali-pay.png" alt=""></div><div class="pay fleft"><span class="pay-radio mr_5"><input value="2" type="checkbox"></span><img src="https:///cdn.bigquant.com/static/img/wechat-pay.png" alt=""></div></div></div></div>
+    <div class="sub-agreement hidden"><p>甲方：BigQuant网站</p><p>乙方：策略订阅者</p><p>甲乙双方经公平、自由协商，就乙方成为甲方策略订阅者，在甲方BigQuant网站（<a href="http://www.bigquant.com">www.bigquant.com</a>）平台订阅策略达成如下合作事宜：</p><h3>1. 甲方责任</h3><p>1.1 甲方向乙方提供策略订阅服务，提供策略符合证券、期货市场的基本交易或交割原则。</p><p>1.2 在乙方订阅期间，甲方需为乙方提供订阅服务，本协议5.2中列出的特殊情况除外。</p><h3>2.乙方责任</h3><p>1.1 乙方在策略订阅期间，策略只限乙方使用，不得通过其他途径租用或者转卖牟利。</p><h3>3.用户责任和义务</h3><p>3.1 除国家相关法律、法规规定和监管部门的要求外，本合同任何条款、本合同及补充协议涉及用户的任何资料，均属于应当保密的信息，甲乙双方均负有保密义务。</p><h3>4.款项的支付</h3><p>4.1 乙方需在订阅前通过BigQuant官方网站进行付费。</p><h3>5.违约责任及合同解除</h3><p>5.1 在协议有效期内，双方无任何违约行为，乙方不得更换订阅策略。</p><p>5.2 在协议有效期内，双方无任何违约行为，乙方可自行解除本协议，且告知甲方。乙方行为视为“主动放弃”，乙方所付款项不退回。</p><p>5.3 甲方向乙方提供的策略，如果数据指标出现大幅下滑，策略发生抄袭等意外情况，甲方有权进行下架处理，并向乙方退回部分款项，款项计算公式如下：</p><p style="text-align: center;">应退回款项= (付费总额 / 订阅自然日) * 剩余自然日</p><p>5.4 甲乙双方均应履行本协议条款以及甲方制定的规章制度，任何一方违约，守约方有权随时单方解除本协议，并告知对方。</p><p>5.5 提前解除本协议时，甲乙双方应当结清因履行本协议而产生的债权债务关系。</p><h3>6.不可抗力</h3><p>6.1 甲乙双方约定由于战争、地震、水灾、政策法规等不可抗力而不能履行协议的一方不负有违约责任。</p><h3>7.争议解决与管辖</h3><p>7.1 因本协议或履行本协议产生的纠纷，双方应友好协商解决，协商不成的，任何一方有权依法向甲方所在地法院提起诉讼。</p><h3>8.其它</h3><p>8.1 双方须互相提供准确的联系地址、电话号码、传真号码、电子邮箱地址；任一方的以上联系方式有改动，应及时通知另一方；任一方因未及时通知对方而造成的损失，由未通知的一方承担。</p><h3>9.协议生效、修改、变更、补充</h3><p>9.1 本协议自乙方成为甲方策略订阅者起生效，有效期视乙方购买服务期限定。</p><p>9.2 在本协议生效前双方已签订并有效的其它协议及法律文件若与本协议的约定有冲突的，以本协议约定的内容为准。</p><p>9.3 本协议条款的修改、变更和补充均须经甲乙双方友好协商一致后方可执行。</p><p>9.4 有关本协议的修改、变更和补充的文件是本协议的当然附件，与本协议不同之处以本协议约定为准则。</p><code>本协议最后修订时间：2017 年11月14日
+        本人已认真阅读并完全理解协议的各项约定及规范，本人愿意与贵司签订《策略订阅者与BigQuant网站合作协议》并自愿受其约束，以上系本人独立、自主、真实的意思表示。
+        特别提示：请您仔细阅读关于限制用户权利、免除或限制公司责任的条款。本协议最终解释权归甲方所有。</code></div>
+    <!-- #wrapper -->
+    <script src="https:///cdn.bigquant.com/static/js/s.min.js?v=20180108007"></script>
+    <script src="https:///cdn.bigquant.com/static/js/highstock.js?v=20180108007"></script>
+    <script src="https:///cdn.bigquant.com/static/js/jquery.dataTables.min.js?v=20180108007"></script>
+    <link href="https://cdn.bootcss.com/ReStable/0.1.2/jquery.restable.min.css" rel="stylesheet">
+    <script src="https:///cdn.bigquant.com/static/js/bigResTable.js?v=20180108007" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap3-dialog/1.35.3/css/bootstrap-dialog.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap3-dialog/1.35.3/js/bootstrap-dialog.min.js"></script>
+    <style type="text/css">
+        ul.tabletolist ul>li .row_headers{
+            font-weight: 800
+        }
+        ul.tabletolist ul>li .row_data{
+           font-weight: 100
+        }
+        .btn {
+            margin-bottom: 0px; 
+        }
+        .sub-agreement-dialog p {
+            text-align: left;
+            font-size: 14px;
+        }
+        .sub-agreement-dialog h3 {
+            text-align: left;
+            font-weight: bold;
+        }
+        .sub-agreement-dialog .bootstrap-dialog-message {
+            overflow: auto;
+            height: 400px;
+        }
+        .sub-agreement-dialog .bootstrap-dialog-footer-buttons {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#thank-author-btn").bind('click', function () {
+                
+                    window.location.href = "/account/login/?next=/armory/strategy?id=" + 1679;
+                
+            });
+            $(document).on("click", ".thank-author-dialog .message-btns .btn", function () {
+                if ($(this).hasClass('custom')) {
+                    $(".thank-author-dialog .message-btns.message-cash").removeClass('active');
+                    $(".thank-author-dialog .message-input.message-cash").addClass('active');
+                    $(".thank-author-dialog .message-btns .btn").removeClass('selected');
+                    $(".thank-author-dialog .user-defined").addClass('selected');
+                } else {
+                    $(".thank-author-dialog .message-btns .btn").removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+            $(document).on("click", ".thank-author-dialog .pay .pay-radio input[type='checkbox']", function () {
+                $(".thank-author-dialog .pay .pay-radio input[type='checkbox']").parent().removeClass('selected');
+                $(this).parent().addClass('selected');
+            });
+            $(document).on("click", ".bigquant-subscribe-dialog .message-btns .btn", function () {
+                $(".bigquant-subscribe-dialog .message-btns .btn").removeClass('selected');
+                $(this).addClass('selected');
+            });
+            $(document).on("click", ".bigquant-subscribe-dialog .pay .pay-radio input[type='checkbox']", function () {
+                $(".bigquant-subscribe-dialog .pay .pay-radio input[type='checkbox']").parent().removeClass('selected');
+                $(this).parent().addClass('selected');
+            });
+            $('.bigquant-subscribe-btn').bind('click', function () {
+                
+                    window.location.href = "/account/login/?next=/armory/strategy?id=" + 1679;
+                
+            });
+
+            $('.btn-cancel-sub').bind('click', function () {
+                $.getJSON("/armory/update_strategy_subscribe_info", {'algo_id': 1679, 'field': 'cancel_sub_info', 'value': '1'}).done(function(json) {
+                    if(json['code'] == 200) {
+                        $('.order-success').addClass('hidden');
+                        $('.bigquant-subscribe-btn').removeClass('hidden');
+                    }
+                });
+            });
+
+            $('.wechat').bind('click', function () {
+                if($(this).hasClass('wechat-open')){
+                    $.getJSON("/armory/update_strategy_subscribe_info", {'algo_id': 1679, 'field': 'notify_wechat', 'value': '1'}).done(function(json) {
+                        if(json['code'] == 200) {
+                            $('.wechat').addClass('wechat-close');
+                            $('.wechat').removeClass('wechat-open');
+                            for(var i = 0; i < $('.wechat').length; i++){
+                                $('.wechat')[i].innerText = '关闭微信通知';
+                            }
+                        } else if (json['code'] == 407) {
+                            window.open("/wechat/info/", '_blank', 'toolbar=0,location=0,menubar=0');
+                        }
+                    });
+                }else{
+                    BootstrapDialog.confirm({
+                        title : '关闭微信通知',
+                        message : '您确定要关闭微信通知么？',
+                        type : BootstrapDialog.TYPE_WARNING, // <-- Default value
+                        closable : true, // <-- Default value is false，点击对话框以外的页面内容可关闭
+                        draggable : true, // <-- Default value is false，可拖拽
+                        btnCancelLabel : '取消', // <-- Default value is 'Cancel',
+                        btnOKLabel : '确定', // <-- Default value is 'OK',
+                        btnOKClass : 'btn-warning',
+                        size : BootstrapDialog.SIZE_SMALL,
+                        callback : function(result) {
+                         // 点击确定按钮时，result为true
+                            if (result) {
+                                // 执行方法
+                                $.getJSON("/armory/update_strategy_subscribe_info", {'algo_id': 1679, 'field': 'notify_wechat', 'value': '0'}).done(function(json) {
+                                    if(json['code'] == 200) {
+                                        $('.wechat').addClass('wechat-open');
+                                        $('.wechat').removeClass('wechat-close');
+                                        for(var i = 0; i < $('.wechat').length; i++){
+                                            $('.wechat')[0].innerText = '开启微信通知';
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+
+            $('.email').bind('click', function () {
+                if($(this).hasClass('email-open')){
+                    $.getJSON("/armory/update_strategy_subscribe_info", {'algo_id': 1679, 'field': 'notify_email', 'value': '1'}).done(function(json) {
+                        if(json['code'] == 200) {
+                            $('.email').addClass('email-close');
+                            $('.email').removeClass('email-open');
+                            for(var i = 0; i < $('.email').length; i++){
+                                $('.email')[i].innerText = '关闭邮件通知';
+                            }
+                        }
+                    });
+                }else{
+                    BootstrapDialog.confirm({
+                        title : '关闭邮件通知',
+                        message : '您确定要关闭邮件通知么？',
+                        type : BootstrapDialog.TYPE_WARNING, // <-- Default value
+                        closable : true, // <-- Default value is false，点击对话框以外的页面内容可关闭
+                        draggable : true, // <-- Default value is false，可拖拽
+                        btnCancelLabel : '取消', // <-- Default value is 'Cancel',
+                        btnOKLabel : '确定', // <-- Default value is 'OK',
+                        btnOKClass : 'btn-warning',
+                        size : BootstrapDialog.SIZE_SMALL,
+                        callback : function(result) {
+                         // 点击确定按钮时，result为true
+                            if (result) {
+                                // 执行方法
+                                $.getJSON("/armory/update_strategy_subscribe_info", {'algo_id': 1679, 'field': 'notify_email', 'value': '0'}).done(function(json) {
+                                    if(json['code'] == 200) {
+                                        $('.email').addClass('email-open');
+                                        $('.email').removeClass('email-close');
+                                        for(var i = 0; i < $('.email').length; i++){
+                                            $('.email')[i].innerText = '开启邮件通知';
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+
+            var seriesOptions = [
+                {
+                    data: [[1471305600000.0, -0.0044729709625244141], [1471392000000.0, -0.006004604320139606], [1471478400000.0, -0.0085278638351038438], [1471564800000.0, -0.0083703129807179977], [1471824000000.0, -0.016687849361391338], [1471910400000.0, -0.015204079324362185], [1471996800000.0, -0.018730562462109912], [1472083200000.0, -0.024886856640293331], [1472169600000.0, -0.025441507944006791], [1472428800000.0, -0.025237850670168926], [1472515200000.0, -0.023998337768040057], [1472601600000.0, -0.019340443330036261], [1472688000000.0, -0.02706626007122237], [1472774400000.0, -0.023371629891169698], [1473033600000.0, -0.021731343790488467], [1473120000000.0, -0.014969557660496458], [1473206400000.0, -0.015502607445752825], [1473292800000.0, -0.015871884570833883], [1473379200000.0, -0.022213583862020103], [1473638400000.0, -0.038550979859725998], [1473724800000.0, -0.03922026629593911], [1473811200000.0, -0.045586402362670642], [1474243200000.0, -0.038397758628272882], [1474329600000.0, -0.040083650276071192], [1474416000000.0, -0.037362825671156341], [1474502400000.0, -0.030147471827813077], [1474588800000.0, -0.034701737072236782], [1474848000000.0, -0.051022357529502349], [1474934400000.0, -0.044989862890971177], [1475020800000.0, -0.047896751773593094], [1475107200000.0, -0.043919386979863528], [1475193600000.0, -0.041297422226888036], [1476057600000.0, -0.029337822975898487], [1476144000000.0, -0.025598707071524784], [1476230400000.0, -0.027528144312624625], [1476316800000.0, -0.026751544790838633], [1476403200000.0, -0.025807720000941892], [1476662400000.0, -0.034049952990280907], [1476748800000.0, -0.021244672903559025], [1476835200000.0, -0.02274513561518654], [1476921600000.0, -0.022048594921646347], [1477008000000.0, -0.019356508958627283], [1477267200000.0, -0.0076167612025825893], [1477353600000.0, -0.007653079701946397], [1477440000000.0, -0.01138215513002161], [1477526400000.0, -0.014065360351087741], [1477612800000.0, -0.015706408830894913], [1477872000000.0, -0.016840470353217785], [1477958400000.0, -0.010129381001193649], [1478044800000.0, -0.017702616805837845], [1478131200000.0, -0.0083514441047488619], [1478217600000.0, -0.01156650264302872], [1478476800000.0, -0.010854335373080559], [1478563200000.0, -0.0065736543515152457], [1478649600000.0, -0.011896591204809015], [1478736000000.0, -0.00082893894469671103], [1478822400000.0, 0.0070124607800792216], [1479081600000.0, 0.010851387510626864], [1479168000000.0, 0.010739801847685637], [1479254400000.0, 0.010657989427144132], [1479340800000.0, 0.012703977745641248], [1479427200000.0, 0.0070814514924730787], [1479686400000.0, 0.014052355900082913], [1479772800000.0, 0.022083556829835871], [1479859200000.0, 0.023959312182499248], [1479945600000.0, 0.02808829850465], [1480032000000.0, 0.037682726143709599], [1480291200000.0, 0.041744214885045094], [1480377600000.0, 0.05027824847523088], [1480464000000.0, 0.042604811679453736], [1480550400000.0, 0.05057168394582412], [1480636800000.0, 0.039938985890676015], [1480896000000.0, 0.02239110148436696], [1480982400000.0, 0.019369428355338725], [1481068800000.0, 0.024259446480687563], [1481155200000.0, 0.022607782994618741], [1481241600000.0, 0.029549991764652672], [1481500800000.0, 0.0046427139297944287], [1481587200000.0, 0.0034214932273914922], [1481673600000.0, -0.0042669597540729853], [1481760000000.0, -0.015615808126159592], [1481846400000.0, -0.01396648563823466], [1482105600000.0, -0.01899027258680408], [1482192000000.0, -0.024859999749919037], [1482278400000.0, -0.01617504752677501], [1482364800000.0, -0.017018943492055683], [1482451200000.0, -0.025291709142551744], [1482710400000.0, -0.020929891957805702], [1482796800000.0, -0.022702548017183521], [1482883200000.0, -0.026974535886688411], [1482969600000.0, -0.02818974361540616], [1483056000000.0, -0.024560432088151951], [1483401600000.0, -0.015087214276729322], [1483488000000.0, -0.0074004496587477542], [1483574400000.0, -0.0075543931992009261], [1483660800000.0, -0.013484322804550586], [1483920000000.0, -0.0087001626359042294], [1484006400000.0, -0.010359240526619073], [1484092800000.0, -0.017365738470631276], [1484179200000.0, -0.022337533228381501], [1484265600000.0, -0.021663312026213744], [1484524800000.0, -0.021800815048779731], [1484611200000.0, -0.01976433050140447], [1484697600000.0, -0.015930727642713194], [1484784000000.0, -0.018900024740309274], [1484870400000.0, -0.011355996970245918], [1485129600000.0, -0.0086473228825268977], [1485216000000.0, -0.0085382441747151594], [1485302400000.0, -0.0051630508934099595], [1485388800000.0, -0.0016102176556027636], [1486080000000.0, -0.0085260770535467989], [1486339200000.0, -0.0059584544513118232], [1486425600000.0, -0.0081745632460104023], [1486512000000.0, -0.0029871293818765077], [1486598400000.0, 0.00084517306928244551], [1486684800000.0, 0.0059121512443358615], [1486944000000.0, 0.012627459240827532], [1487030400000.0, 0.01248875816543249], [1487116800000.0, 0.0083363222676595683], [1487203200000.0, 0.014000170091867048], [1487289600000.0, 0.0082563383283205116], [1487548800000.0, 0.022976198553329663], [1487635200000.0, 0.026344653552828889], [1487721600000.0, 0.028387895496466253], [1487808000000.0, 0.02354527268539286], [1487894400000.0, 0.023700965235091909], [1488153600000.0, 0.015559056470425103], [1488240000000.0, 0.017500318890900868], [1488326400000.0, 0.019158549536504754], [1488412800000.0, 0.01228015316117248], [1488499200000.0, 0.010148581793737232], [1488758400000.0, 0.015635959523601306], [1488844800000.0, 0.01783803963412911], [1488931200000.0, 0.016298167636177086], [1489017600000.0, 0.0098777077226992471], [1489104000000.0, 0.010157005108143435], [1489363200000.0, 0.019058458819843249], [1489449600000.0, 0.018644572252584535], [1489536000000.0, 0.020692764038418909], [1489622400000.0, 0.025956835389779442], [1489708800000.0, 0.015436097513426006], [1489968000000.0, 0.016558104548186847], [1490054400000.0, 0.021489411261813141], [1490140800000.0, 0.01668706638449402], [1490227200000.0, 0.020202066525075502], [1490313600000.0, 0.028341686818262435], [1490572800000.0, 0.024934785698409234], [1490659200000.0, 0.022509722371270469], [1490745600000.0, 0.021149461259200031], [1490832000000.0, 0.012769959571915512], [1490918400000.0, 0.018453761241599809], [1491350400000.0, 0.032553977025085779], [1491436800000.0, 0.035546049377677136], [1491523200000.0, 0.036552880735004178], [1491782400000.0, 0.032921069116899959], [1491868800000.0, 0.036512881678190112], [1491955200000.0, 0.03418806332110691], [1492041600000.0, 0.035699042127610214], [1492128000000.0, 0.027429606907413584], [1492387200000.0, 0.025495661073603237], [1492473600000.0, 0.020427417109334156], [1492560000000.0, 0.015457025804473057], [1492646400000.0, 0.020075277246365042], [1492732800000.0, 0.021619020337548145], [1492992000000.0, 0.011149402217192739], [1493078400000.0, 0.014012430338361748], [1493164800000.0, 0.015252656074892901], [1493251200000.0, 0.015705662186477509], [1493337600000.0, 0.013652482336650618], [1493683200000.0, 0.0097695732722189454], [1493769600000.0, 0.0058064427330843937], [1493856000000.0, 0.003230359618684453], [1493942400000.0, -0.0032044757097112742], [1494201600000.0, -0.010199719225613468], [1494288000000.0, -0.01205038652390733], [1494374400000.0, -0.0164211107347082], [1494460800000.0, -0.010838169105731543], [1494547200000.0, -0.002371000961839953], [1494806400000.0, 0.0017000959227770895], [1494892800000.0, 0.010380270472919673], [1494979200000.0, 0.0048744704958885166], [1495065600000.0, 0.0013816228374070594], [1495152000000.0, 0.003072077935678541], [1495411200000.0, 0.0052496675442628149], [1495497600000.0, 0.0090674939533992305], [1495584000000.0, 0.0090594946538316012], [1495670400000.0, 0.027180230472353184], [1495756800000.0, 0.025640918744201491], [1496188800000.0, 0.029309752363409602], [1496275200000.0, 0.030740104548575564], [1496361600000.0, 0.027430498864770003], [1496620800000.0, 0.022198797281025806], [1496707200000.0, 0.029308949242179638], [1496793600000.0, 0.041388219234322232], [1496880000000.0, 0.049376210205724469], [1496966400000.0, 0.0538531241121607], [1497225600000.0, 0.053328308621202192], [1497312000000.0, 0.055649782430657657], [1497398400000.0, 0.041808659729465569], [1497484800000.0, 0.039891364024516207], [1497571200000.0, 0.036935177568087063], [1497830400000.0, 0.047221081148349553], [1497916800000.0, 0.04510775292128022], [1498003200000.0, 0.05732583156093507], [1498089600000.0, 0.058029403928576251], [1498176000000.0, 0.067618708560678087], [1498435200000.0, 0.080941211983584838], [1498521600000.0, 0.082893027652872986], [1498608000000.0, 0.074480108601386652], [1498694400000.0, 0.081158105110705314], [1498780800000.0, 0.080559825166771404], [1499040000000.0, 0.075859125191293009], [1499126400000.0, 0.06676442673654015], [1499212800000.0, 0.078462123488824531], [1499299200000.0, 0.078585029433416942], [1499385600000.0, 0.077356922826381069], [1499644800000.0, 0.076696081355853041], [1499731200000.0, 0.081741733704154385], [1499817600000.0, 0.078209886289952069], [1499904000000.0, 0.086489701541186292], [1499990400000.0, 0.091255895709159596], [1500249600000.0, 0.079605033622916377], [1500336000000.0, 0.080672720104265405], [1500422400000.0, 0.099110072088752332], [1500508800000.0, 0.10445507048190517], [1500595200000.0, 0.09877151529818895], [1500854400000.0, 0.10315370836476401], [1500940800000.0, 0.096107870797104811], [1501027200000.0, 0.091931973748527795], [1501113600000.0, 0.09393760899236292], [1501200000000.0, 0.096795098684125946], [1501459200000.0, 0.10150477831746918], [1501545600000.0, 0.11108499557416596], [1501632000000.0, 0.10827655695077842], [1501718400000.0, 0.098544168386694997], [1501804800000.0, 0.092577651551498219], [1502064000000.0, 0.098240200806255729], [1502150400000.0, 0.099836775500034669], [1502236800000.0, 0.099492281976481411], [1502323200000.0, 0.095035715782707308], [1502409600000.0, 0.074828823747919326], [1502668800000.0, 0.088777138007212653], [1502755200000.0, 0.092128765838046967], [1502841600000.0, 0.090762597195487738], [1502928000000.0, 0.096614033767132845], [1503014400000.0, 0.097615268642409214], [1503273600000.0, 0.10242438018793409], [1503360000000.0, 0.10575546333839525], [1503446400000.0, 0.10687247486120444], [1503532800000.0, 0.10055361212350222], [1503619200000.0, 0.11856160448648678], [1503878400000.0, 0.13239940082494828], [1503964800000.0, 0.12999052665798039], [1504051200000.0, 0.12992068192473361], [1504137600000.0, 0.12632319333391551], [1504224000000.0, 0.12881198846078723], [1504483200000.0, 0.13325518607438247], [1504569600000.0, 0.13662349838011822], [1504656000000.0, 0.13438489989888192], [1504742400000.0, 0.12861534531316443], [1504828800000.0, 0.12747140677490809], [1505088000000.0, 0.12736993095053828], [1505174400000.0, 0.13099128388053494], [1505260800000.0, 0.13236811338442744], [1505347200000.0, 0.12864006024719732], [1505433600000.0, 0.12903521709049559], [1505692800000.0, 0.13252625105714344], [1505779200000.0, 0.12927681943826586], [1505865600000.0, 0.13231775710924665], [1505952000000.0, 0.13095699554911433], [1506038400000.0, 0.13093131222863352], [1506297600000.0, 0.12505556033024212], [1506384000000.0, 0.1259367095067645], [1506470400000.0, 0.12606005963065114], [1506556800000.0, 0.12645458164374968], [1506643200000.0, 0.13056917310351812], [1507507200000.0, 0.14403825188531583], [1507593600000.0, 0.14629438601399825], [1507680000000.0, 0.15007313913447362], [1507766400000.0, 0.15309864873444767], [1507852800000.0, 0.155470384794264], [1508112000000.0, 0.15324391011576965], [1508198400000.0, 0.15313269090952186], [1508284800000.0, 0.16229563734568342], [1508371200000.0, 0.15849032335508317], [1508457600000.0, 0.15719443565247482], [1508716800000.0, 0.15835734004525959], [1508803200000.0, 0.16678451076873158], [1508889600000.0, 0.1719573256094642], [1508976000000.0, 0.17685689218941691], [1509062400000.0, 0.18522378311974586], [1509321600000.0, 0.18161510327147279], [1509408000000.0, 0.18072994219242866], [1509494400000.0, 0.17775482536874088], [1509580800000.0, 0.17790575463343794], [1509667200000.0, 0.17659846949439739], [1509926400000.0, 0.18490615622241635], [1510012800000.0, 0.19473601170233312], [1510099200000.0, 0.19289689535321863], [1510185600000.0, 0.20111702019823374], [1510272000000.0, 0.21172912508524155], [1510531200000.0, 0.21649190965120413], [1510617600000.0, 0.2080278394742805], [1510704000000.0, 0.20045985167058622], [1510790400000.0, 0.20969605382554102], [1510876800000.0, 0.21436345781892308], [1511136000000.0, 0.22113621372479675], [1511222400000.0, 0.24290428595508229], [1511308800000.0, 0.24581129771322363], [1511395200000.0, 0.20892530280047605], [1511481600000.0, 0.20945780819277093], [1511740800000.0, 0.20945780819277093], [1511827200000.0, 0.19520077882219611], [1511913600000.0, 0.19459061235175112], [1512000000000.0, 0.18054771367655675], [1512086400000.0, 0.17820114406955612], [1512345600000.0, 0.18430731743448425], [1512432000000.0, 0.1905880113983347], [1512518400000.0, 0.18341257027648705], [1512604800000.0, 0.17022111456474942], [1512691200000.0, 0.17974611888982528], [1512950400000.0, 0.19923105194188206], [1513036800000.0, 0.18347012648214389], [1513123200000.0, 0.19351196377657298], [1513209600000.0, 0.18645676766968955], [1513296000000.0, 0.17310861137519939], [1513555200000.0, 0.17441574674146332], [1513641600000.0, 0.1891612401665701], [1513728000000.0, 0.18773507307702486], [1513814400000.0, 0.19874418840009533], [1513900800000.0, 0.19483954937013426], [1514160000000.0, 0.19099142788376144], [1514246400000.0, 0.19455193315811314], [1514332800000.0, 0.17615904642522873], [1514419200000.0, 0.18431893471466299], [1514505600000.0, 0.18784269173031354], [1514851200000.0, 0.20450611816261799], [1514937600000.0, 0.21157611979412727], [1515024000000.0, 0.21670934653134077], [1515110400000.0, 0.21963805593404029], [1515369600000.0, 0.22594705906795065], [1515456000000.0, 0.23453376611821897], [1515542400000.0, 0.23999001575806789], [1515628800000.0, 0.23933385019639775]],
+                    name: '沪深300基准收益率',
+                    color: '#FF0000',
+                    lineWidth: 2,
+                    yAxis: 0,
+                },
+                {
+                    data: [[1471305600000.0, 0.0014840443315423909], [1471392000000.0, 0.010509845682015439], [1471478400000.0, 0.016105854414502248], [1471564800000.0, 0.0059111738567233264], [1471824000000.0, -0.0035997206788184123], [1471910400000.0, -0.00090040209555096223], [1471996800000.0, 0.0057716329298089838], [1472083200000.0, 0.015050245988264505], [1472169600000.0, 0.017689097505245589], [1472428800000.0, 0.022929434291704964], [1472515200000.0, 0.036805973258827], [1472601600000.0, 0.032879283848755589], [1472688000000.0, 0.026352268262417929], [1472774400000.0, 0.027707284088387678], [1473033600000.0, 0.030739478442852852], [1473120000000.0, 0.044881351915940469], [1473206400000.0, 0.064072176522296506], [1473292800000.0, 0.067993861454401922], [1473379200000.0, 0.048334398720230674], [1473638400000.0, 0.037484124510265247], [1473724800000.0, 0.043754413332229597], [1473811200000.0, 0.050376136105553887], [1474243200000.0, 0.070849641096909624], [1474329600000.0, 0.07028641342932504], [1474416000000.0, 0.08084160280062104], [1474502400000.0, 0.089945985094378123], [1474588800000.0, 0.089295368417490681], [1474848000000.0, 0.067692297313022717], [1474934400000.0, 0.087681703702472441], [1475020800000.0, 0.083100906307318367], [1475107200000.0, 0.088560068756951368], [1475193600000.0, 0.11001096453076374], [1476057600000.0, 0.14024513437750488], [1476144000000.0, 0.1665144344148069], [1476230400000.0, 0.17526079086408136], [1476316800000.0, 0.18397582080284294], [1476403200000.0, 0.18248753539508353], [1476662400000.0, 0.18673873632990784], [1476748800000.0, 0.20375492478275323], [1476835200000.0, 0.19643113952819841], [1476921600000.0, 0.20986875642571307], [1477008000000.0, 0.21238091209592647], [1477267200000.0, 0.21716463256961827], [1477353600000.0, 0.22633602596273922], [1477440000000.0, 0.22145710623197024], [1477526400000.0, 0.22014399926027212], [1477612800000.0, 0.22092707988772833], [1477872000000.0, 0.22971665497207214], [1477958400000.0, 0.24373723185216556], [1478044800000.0, 0.23748382120799127], [1478131200000.0, 0.23717689745600481], [1478217600000.0, 0.22859912487755005], [1478476800000.0, 0.23455691994781838], [1478563200000.0, 0.25147623220728199], [1478649600000.0, 0.25317453366269199], [1478736000000.0, 0.26254524412576602], [1478822400000.0, 0.2685302983268209], [1479081600000.0, 0.27104214141182703], [1479168000000.0, 0.28488291419298156], [1479254400000.0, 0.28892192877278894], [1479340800000.0, 0.28025161117487268], [1479427200000.0, 0.32202137123961116], [1479686400000.0, 0.3292302786672977], [1479772800000.0, 0.3438110778384641], [1479859200000.0, 0.32838459570799838], [1479945600000.0, 0.32016632408276435], [1480032000000.0, 0.32831794302425465], [1480291200000.0, 0.31666232715809134], [1480377600000.0, 0.28109308147353645], [1480464000000.0, 0.28554359457477346], [1480550400000.0, 0.29255908436374289], [1480636800000.0, 0.27819149652341829], [1480896000000.0, 0.27540189368828855], [1480982400000.0, 0.27324020887068384], [1481068800000.0, 0.30311002512292645], [1481155200000.0, 0.28205724758009371], [1481241600000.0, 0.28193421525755546], [1481500800000.0, 0.20712927212829674], [1481587200000.0, 0.23109937564343971], [1481673600000.0, 0.26090001002330215], [1481760000000.0, 0.28322336094558542], [1481846400000.0, 0.29472001254800517], [1482105600000.0, 0.29263108348107808], [1482192000000.0, 0.28657023441740909], [1482278400000.0, 0.2874496158213366], [1482364800000.0, 0.29586652452525247], [1482451200000.0, 0.26838582667165001], [1482710400000.0, 0.26570112708884785], [1482796800000.0, 0.26637624949980093], [1482883200000.0, 0.25943974039645473], [1482969600000.0, 0.26296083948699378], [1483056000000.0, 0.26623674019766358], [1483401600000.0, 0.27692885021480251], [1483488000000.0, 0.30427865282935296], [1483574400000.0, 0.3140939904991395], [1483660800000.0, 0.30500850760611575], [1483920000000.0, 0.29228135782979225], [1484006400000.0, 0.28040475632419298], [1484092800000.0, 0.26017115956929338], [1484179200000.0, 0.25560628810053271], [1484265600000.0, 0.24960584313571119], [1484524800000.0, 0.21712590770464071], [1484611200000.0, 0.24528410742825565], [1484697600000.0, 0.23579847066467599], [1484784000000.0, 0.22675469922559977], [1484870400000.0, 0.25858351066577612], [1485129600000.0, 0.27574825514285606], [1485216000000.0, 0.26805826028238749], [1485302400000.0, 0.28773330108747874], [1485388800000.0, 0.30749309829873089], [1486080000000.0, 0.31158566651815256], [1486339200000.0, 0.32750844857860417], [1486425600000.0, 0.33010091361987171], [1486512000000.0, 0.34073025399072593], [1486598400000.0, 0.35393007754059103], [1486684800000.0, 0.32863285435872969], [1486944000000.0, 0.36083825527966196], [1487030400000.0, 0.35955694825400947], [1487116800000.0, 0.35705434741094066], [1487203200000.0, 0.36274256290247314], [1487289600000.0, 0.35395358206439936], [1487548800000.0, 0.35379921965957384], [1487635200000.0, 0.37116445950844967], [1487721600000.0, 0.37415423350762722], [1487808000000.0, 0.38480360231356636], [1487894400000.0, 0.40851773126739921], [1488153600000.0, 0.399735105874156], [1488240000000.0, 0.40460970317595374], [1488326400000.0, 0.41488838058406313], [1488412800000.0, 0.40340848066217205], [1488499200000.0, 0.4229967856326155], [1488758400000.0, 0.43339474308447246], [1488844800000.0, 0.43052083644089639], [1488931200000.0, 0.44396919720480249], [1489017600000.0, 0.43969298226352138], [1489104000000.0, 0.43787055252196561], [1489363200000.0, 0.46037795813335602], [1489449600000.0, 0.4700796717708709], [1489536000000.0, 0.48159164251682346], [1489622400000.0, 0.49916645391808767], [1489708800000.0, 0.50534230142498449], [1489968000000.0, 0.51624544735255795], [1490054400000.0, 0.53381860164167161], [1490140800000.0, 0.53476591434985432], [1490227200000.0, 0.53361663780892965], [1490313600000.0, 0.5271031767205917], [1490572800000.0, 0.53879076570099194], [1490659200000.0, 0.53631553803985854], [1490745600000.0, 0.52926184727014913], [1490832000000.0, 0.46825730001779392], [1490918400000.0, 0.45386981558149797], [1491350400000.0, 0.47312243515620883], [1491436800000.0, 0.46596532672149332], [1491523200000.0, 0.45410930153293388], [1491782400000.0, 0.42142741154064395], [1491868800000.0, 0.45814465974254531], [1491955200000.0, 0.45030641074962624], [1492041600000.0, 0.47267990734154536], [1492128000000.0, 0.44253665162691525], [1492387200000.0, 0.40271904210672071], [1492473600000.0, 0.42005851208534933], [1492560000000.0, 0.41927594028264603], [1492646400000.0, 0.41191780422904295], [1492732800000.0, 0.39406452138009246], [1492992000000.0, 0.39704979507545707], [1493078400000.0, 0.44071748267966965], [1493164800000.0, 0.43546243372579163], [1493251200000.0, 0.47411386110868742], [1493337600000.0, 0.49328965870037383], [1493683200000.0, 0.49849783466205233], [1493769600000.0, 0.50588013569548962], [1493856000000.0, 0.49607005319292019], [1493942400000.0, 0.4802374188424286], [1494201600000.0, 0.44449820977964383], [1494288000000.0, 0.47896323191591711], [1494374400000.0, 0.44166314010900998], [1494460800000.0, 0.45993340061335941], [1494547200000.0, 0.46720290080206001], [1494806400000.0, 0.47769372789295916], [1494892800000.0, 0.53408650356066156], [1494979200000.0, 0.54203511817057504], [1495065600000.0, 0.50981305468726434], [1495152000000.0, 0.52267065348387343], [1495411200000.0, 0.49562216352618765], [1495497600000.0, 0.48032597031676821], [1495584000000.0, 0.50474188929369557], [1495670400000.0, 0.51148120099030991], [1495756800000.0, 0.51044214497594109], [1496188800000.0, 0.47941400135134465], [1496275200000.0, 0.4593532104169496], [1496361600000.0, 0.47424468917092716], [1496620800000.0, 0.49043845288151877], [1496707200000.0, 0.5126507363406767], [1496793600000.0, 0.5388958533262671], [1496880000000.0, 0.53530946152304071], [1496966400000.0, 0.54487298042630772], [1497225600000.0, 0.56939614666709737], [1497312000000.0, 0.59404809420500126], [1497398400000.0, 0.59590530212037784], [1497484800000.0, 0.63791393759913129], [1497571200000.0, 0.64648533101574024], [1497830400000.0, 0.66183593761583559], [1497916800000.0, 0.67308696269554347], [1498003200000.0, 0.68856190866054501], [1498089600000.0, 0.67619152917927361], [1498176000000.0, 0.68731939254299212], [1498435200000.0, 0.72921212373970656], [1498521600000.0, 0.76294943040220042], [1498608000000.0, 0.76701662857744346], [1498694400000.0, 0.7589119052944775], [1498780800000.0, 0.74759046648437855], [1499040000000.0, 0.77010132296732048], [1499126400000.0, 0.78926467525710231], [1499212800000.0, 0.8211888548529247], [1499299200000.0, 0.81900205218853606], [1499385600000.0, 0.83216458625934497], [1499644800000.0, 0.83207331068240742], [1499731200000.0, 0.86123849768661986], [1499817600000.0, 0.86329176634126314], [1499904000000.0, 0.86224778858505069], [1499990400000.0, 0.87226119324799689], [1500249600000.0, 0.80772548768806152], [1500336000000.0, 0.83203007852028354], [1500422400000.0, 0.88524777933977949], [1500508800000.0, 0.89975748711741677], [1500595200000.0, 0.89513594693834986], [1500854400000.0, 0.88928603558410713], [1500940800000.0, 0.89726950706630593], [1501027200000.0, 0.87219015299840541], [1501113600000.0, 0.87642583949108488], [1501200000000.0, 0.91321343969292301]],
+                    name: '分享前策略收益率',
+                    color: '#2776B6',
+                    lineWidth: 2,
+                    yAxis: 0,
+                },
+                {
+                    data: [[1501200000000.0, 0.91321343969292301], [1501459200000.0, 0.95704751494501772], [1501545600000.0, 0.93204529027792804], [1501632000000.0, 0.90230557611857831], [1501718400000.0, 0.91867754354765208], [1501804800000.0, 0.91278997493705771], [1502064000000.0, 0.94345784508847519], [1502150400000.0, 0.94004563948773134], [1502236800000.0, 0.97007644306387109], [1502323200000.0, 0.9256968054805067], [1502409600000.0, 0.88959681155166415], [1502668800000.0, 0.93719460784074904], [1502755200000.0, 0.94168697413346147], [1502841600000.0, 0.94919357628531142], [1502928000000.0, 0.99020436220670061], [1503014400000.0, 1.0012639093902178], [1503273600000.0, 1.0109222860550968], [1503360000000.0, 0.9833935171056577], [1503446400000.0, 0.9951284468807915], [1503532800000.0, 0.97940375031109494], [1503619200000.0, 1.0300826475783569], [1503878400000.0, 1.0421145230729965], [1503964800000.0, 1.0475307948629913], [1504051200000.0, 1.0338188545977633], [1504137600000.0, 1.0216051966458082], [1504224000000.0, 1.0268846962568923], [1504483200000.0, 1.0458050182212792], [1504569600000.0, 1.0379579043983258], [1504656000000.0, 1.0441802714926831], [1504742400000.0, 1.0431791309958451], [1504828800000.0, 1.0546520165609858], [1505088000000.0, 1.0655221892359061], [1505174400000.0, 1.085215223599074], [1505260800000.0, 1.0828725548380032], [1505347200000.0, 1.0774659291790869], [1505433600000.0, 1.0823324004165651], [1505692800000.0, 1.086793913892476], [1505779200000.0, 1.0661176585944354], [1505865600000.0, 1.1020450616217634], [1505952000000.0, 1.0550565294349088], [1506038400000.0, 1.0628230261699698], [1506297600000.0, 1.0334756660249667], [1506384000000.0, 1.061515762465425], [1506470400000.0, 1.0913608491004312], [1506556800000.0, 1.0898793254919705], [1506643200000.0, 1.1128139297078219], [1507507200000.0, 1.1336119897565837], [1507593600000.0, 1.1282131422339956], [1507680000000.0, 1.1240536038312938], [1507766400000.0, 1.1292209260393213], [1507852800000.0, 1.1559360175816973], [1508112000000.0, 1.1075948070080486], [1508198400000.0, 1.1061295750824072], [1508284800000.0, 1.0603750015101983], [1508371200000.0, 1.0793041754576662], [1508457600000.0, 1.1484031254513398], [1508716800000.0, 1.1531756799812021], [1508803200000.0, 1.1450790593647107], [1508889600000.0, 1.1627706122911645], [1508976000000.0, 1.190405115529843], [1509062400000.0, 1.1748676354368595], [1509321600000.0, 1.1314041391826921], [1509408000000.0, 1.1596154694723948], [1509494400000.0, 1.1663503624846681], [1509580800000.0, 1.1718632415263728], [1509667200000.0, 1.1584459730106862], [1509926400000.0, 1.1929395115240733], [1510012800000.0, 1.2414155759113805], [1510099200000.0, 1.2509250580075832], [1510185600000.0, 1.272625762119304], [1510272000000.0, 1.2661945870438858], [1510531200000.0, 1.2949666977543035], [1510617600000.0, 1.290124689036372], [1510704000000.0, 1.2484984446411072], [1510790400000.0, 1.2613545987344996], [1510876800000.0, 1.1623234672804699], [1511136000000.0, 1.2027240155545258], [1511222400000.0, 1.1933017117927096], [1511308800000.0, 1.1800344239543541], [1511395200000.0, 1.1230958453367743], [1511481600000.0, 1.0759028504862107], [1511740800000.0, 1.0743818152249314], [1511827200000.0, 1.066674792578979], [1511913600000.0, 1.0199973262425395], [1512000000000.0, 0.97926202374919169], [1512086400000.0, 0.97620121307050145], [1512345600000.0, 1.0217019084967713], [1512432000000.0, 1.0192716633042078], [1512518400000.0, 1.004876380989157], [1512604800000.0, 1.0016084814885275], [1512691200000.0, 1.0306092048987863], [1512950400000.0, 1.0782519811418403], [1513036800000.0, 1.0730247638803057], [1513123200000.0, 1.0743044584812198], [1513209600000.0, 1.0994104622319978], [1513296000000.0, 1.0907946514673459], [1513555200000.0, 1.0708322201982385], [1513641600000.0, 1.1016544426078669], [1513728000000.0, 1.0831480363791055], [1513814400000.0, 1.0821137018736615], [1513900800000.0, 1.0803089588980697], [1514160000000.0, 1.1047682049843095], [1514246400000.0, 1.1236014275108168], [1514332800000.0, 1.0795135858636107], [1514419200000.0, 1.0763511787649891], [1514505600000.0, 1.0808053403627174], [1514851200000.0, 1.0863594665010978], [1514937600000.0, 1.1766996655227837], [1515024000000.0, 1.1727148637220239], [1515110400000.0, 1.1417183655398568], [1515369600000.0, 1.1137359767106461], [1515456000000.0, 1.1140043099659065], [1515542400000.0, 1.0898610470665933], [1515628800000.0, 1.0968230859852313]],
+                    name: '分享后策略收益率',
+                    color: '#2175EE',
+                    lineWidth: 4,
+                    yAxis: 0,
+                },
+                {
+                    data: [[1471305600000.0, 0.33489999999999998], [1471392000000.0, 0.66559999999999997], [1471478400000.0, 0.997], [1471564800000.0, 0.66439999999999999], [1471824000000.0, 0.54930000000000001], [1471910400000.0, 0.4405], [1471996800000.0, 0.6028], [1472083200000.0, 0.66120000000000001], [1472169600000.0, 0.64449999999999996], [1472428800000.0, 0.58850000000000002], [1472515200000.0, 0.62429999999999997], [1472601600000.0, 0.49869999999999998], [1472688000000.0, 0.52259999999999995], [1472774400000.0, 0.56759999999999999], [1473033600000.0, 0.54730000000000001], [1473120000000.0, 0.55569999999999997], [1473206400000.0, 0.54690000000000005], [1473292800000.0, 0.54210000000000003], [1473379200000.0, 0.64780000000000004], [1473638400000.0, 0.55489999999999995], [1473724800000.0, 0.63529999999999998], [1473811200000.0, 0.56059999999999999], [1474243200000.0, 0.63060000000000005], [1474329600000.0, 0.56530000000000002], [1474416000000.0, 0.59219999999999995], [1474502400000.0, 0.50409999999999999], [1474588800000.0, 0.51770000000000005], [1474848000000.0, 0.4592], [1474934400000.0, 0.46810000000000002], [1475020800000.0, 0.57979999999999998], [1475107200000.0, 0.53820000000000001], [1475193600000.0, 0.44540000000000002], [1476057600000.0, 0.57740000000000002], [1476144000000.0, 0.53159999999999996], [1476230400000.0, 0.54169999999999996], [1476316800000.0, 0.51039999999999996], [1476403200000.0, 0.45650000000000002], [1476662400000.0, 0.46870000000000001], [1476748800000.0, 0.58489999999999998], [1476835200000.0, 0.53200000000000003], [1476921600000.0, 0.54630000000000001], [1477008000000.0, 0.54249999999999998], [1477267200000.0, 0.57299999999999995], [1477353600000.0, 0.56020000000000003], [1477440000000.0, 0.44269999999999998], [1477526400000.0, 0.51880000000000004], [1477612800000.0, 0.45829999999999999], [1477872000000.0, 0.58320000000000005], [1477958400000.0, 0.56840000000000002], [1478044800000.0, 0.5454], [1478131200000.0, 0.54859999999999998], [1478217600000.0, 0.58250000000000002], [1478476800000.0, 0.52310000000000001], [1478563200000.0, 0.56320000000000003], [1478649600000.0, 0.57589999999999997], [1478736000000.0, 0.52600000000000002], [1478822400000.0, 0.54969999999999997], [1479081600000.0, 0.59999999999999998], [1479168000000.0, 0.59409999999999996], [1479254400000.0, 0.50180000000000002], [1479340800000.0, 0.4632], [1479427200000.0, 0.60589999999999999], [1479686400000.0, 0.65510000000000002], [1479772800000.0, 0.64629999999999999], [1479859200000.0, 0.52880000000000005], [1479945600000.0, 0.54530000000000001], [1480032000000.0, 0.64219999999999999], [1480291200000.0, 0.66290000000000004], [1480377600000.0, 0.61780000000000002], [1480464000000.0, 0.622], [1480550400000.0, 0.622], [1480636800000.0, 0.62360000000000004], [1480896000000.0, 0.65880000000000005], [1480982400000.0, 0.53820000000000001], [1481068800000.0, 0.52769999999999995], [1481155200000.0, 0.63949999999999996], [1481241600000.0, 0.60040000000000004], [1481500800000.0, 0.5837], [1481587200000.0, 0.54369999999999996], [1481673600000.0, 0.51300000000000001], [1481760000000.0, 0.5595], [1481846400000.0, 0.63280000000000003], [1482105600000.0, 0.47020000000000001], [1482192000000.0, 0.29420000000000002], [1482278400000.0, 0.60919999999999996], [1482364800000.0, 0.64980000000000004], [1482451200000.0, 0.66559999999999997], [1482710400000.0, 0.60870000000000002], [1482796800000.0, 0.66120000000000001], [1482883200000.0, 0.59599999999999997], [1482969600000.0, 0.61519999999999997], [1483056000000.0, 0.57140000000000002], [1483401600000.0, 0.42570000000000002], [1483488000000.0, 0.45610000000000001], [1483574400000.0, 0.46189999999999998], [1483660800000.0, 0.46689999999999998], [1483920000000.0, 0.72670000000000001], [1484006400000.0, 0.7208], [1484092800000.0, 0.58250000000000002], [1484179200000.0, 0.5585], [1484265600000.0, 0.53300000000000003], [1484524800000.0, 0.4496], [1484611200000.0, 0.60070000000000001], [1484697600000.0, 0.64729999999999999], [1484784000000.0, 0.56530000000000002], [1484870400000.0, 0.59599999999999997], [1485129600000.0, 0.63519999999999999], [1485216000000.0, 0.39269999999999999], [1485302400000.0, 0.55310000000000004], [1485388800000.0, 0.64180000000000004], [1486080000000.0, 0.39229999999999998], [1486339200000.0, 0.46450000000000002], [1486425600000.0, 0.46239999999999998], [1486512000000.0, 0.58340000000000003], [1486598400000.0, 0.5675], [1486684800000.0, 0.501], [1486944000000.0, 0.56230000000000002], [1487030400000.0, 0.53310000000000002], [1487116800000.0, 0.57279999999999998], [1487203200000.0, 0.62719999999999998], [1487289600000.0, 0.46289999999999998], [1487548800000.0, 0.54910000000000003], [1487635200000.0, 0.56079999999999997], [1487721600000.0, 0.63749999999999996], [1487808000000.0, 0.56540000000000001], [1487894400000.0, 0.61480000000000001], [1488153600000.0, 0.59360000000000002], [1488240000000.0, 0.58979999999999999], [1488326400000.0, 0.53420000000000001], [1488412800000.0, 0.57379999999999998], [1488499200000.0, 0.56530000000000002], [1488758400000.0, 0.55669999999999997], [1488844800000.0, 0.56020000000000003], [1488931200000.0, 0.65239999999999998], [1489017600000.0, 0.66639999999999999], [1489104000000.0, 0.58189999999999997], [1489363200000.0, 0.59650000000000003], [1489449600000.0, 0.5968], [1489536000000.0, 0.41699999999999998], [1489622400000.0, 0.5675], [1489708800000.0, 0.63290000000000002], [1489968000000.0, 0.59370000000000001], [1490054400000.0, 0.59179999999999999], [1490140800000.0, 0.58940000000000003], [1490227200000.0, 0.52729999999999999], [1490313600000.0, 0.45179999999999998], [1490572800000.0, 0.46999999999999997], [1490659200000.0, 0.62109999999999999], [1490745600000.0, 0.64580000000000004], [1490832000000.0, 0.61960000000000004], [1490918400000.0, 0.72919999999999996], [1491350400000.0, 0.54169999999999996], [1491436800000.0, 0.62180000000000002], [1491523200000.0, 0.48970000000000002], [1491782400000.0, 0.47099999999999997], [1491868800000.0, 0.61250000000000004], [1491955200000.0, 0.50039999999999996], [1492041600000.0, 0.47420000000000001], [1492128000000.0, 0.61539999999999995], [1492387200000.0, 0.4042], [1492473600000.0, 0.58450000000000002], [1492560000000.0, 0.5575], [1492646400000.0, 0.4385], [1492732800000.0, 0.26939999999999997], [1492992000000.0, 0.61419999999999997], [1493078400000.0, 0.53359999999999996], [1493164800000.0, 0.66659999999999997], [1493251200000.0, 0.52800000000000002], [1493337600000.0, 0.63370000000000004], [1493683200000.0, 0.50380000000000003], [1493769600000.0, 0.46000000000000002], [1493856000000.0, 0.3211], [1493942400000.0, 0.57430000000000003], [1494201600000.0, 0.73299999999999998], [1494288000000.0, 0.46729999999999999], [1494374400000.0, 0.59189999999999998], [1494460800000.0, 0.51119999999999999], [1494547200000.0, 0.56779999999999997], [1494806400000.0, 0.4345], [1494892800000.0, 0.59440000000000004], [1494979200000.0, 0.66790000000000005], [1495065600000.0, 0.55800000000000005], [1495152000000.0, 0.50690000000000002], [1495411200000.0, 0.45569999999999999], [1495497600000.0, 0.61339999999999995], [1495584000000.0, 0.59279999999999999], [1495670400000.0, 0.49690000000000001], [1495756800000.0, 0.55969999999999998], [1496188800000.0, 0.58679999999999999], [1496275200000.0, 0.57110000000000005], [1496361600000.0, 0.57620000000000005], [1496620800000.0, 0.57220000000000004], [1496707200000.0, 0.52470000000000006], [1496793600000.0, 0.55449999999999999], [1496880000000.0, 0.43869999999999998], [1496966400000.0, 0.57540000000000002], [1497225600000.0, 0.61299999999999999], [1497312000000.0, 0.48709999999999998], [1497398400000.0, 0.46710000000000002], [1497484800000.0, 0.58650000000000002], [1497571200000.0, 0.52659999999999996], [1497830400000.0, 0.5746], [1497916800000.0, 0.6673], [1498003200000.0, 0.66769999999999996], [1498089600000.0, 0.56659999999999999], [1498176000000.0, 0.58660000000000001], [1498435200000.0, 0.51319999999999999], [1498521600000.0, 0.5544], [1498608000000.0, 0.63690000000000002], [1498694400000.0, 0.65969999999999995], [1498780800000.0, 0.64459999999999995], [1499040000000.0, 0.62849999999999995], [1499126400000.0, 0.63919999999999999], [1499212800000.0, 0.56559999999999999], [1499299200000.0, 0.60109999999999997], [1499385600000.0, 0.59819999999999995], [1499644800000.0, 0.59799999999999998], [1499731200000.0, 0.60170000000000001], [1499817600000.0, 0.58930000000000005], [1499904000000.0, 0.51639999999999997], [1499990400000.0, 0.46029999999999999], [1500249600000.0, 0.45350000000000001], [1500336000000.0, 0.59140000000000004], [1500422400000.0, 0.52280000000000004], [1500508800000.0, 0.5454], [1500595200000.0, 0.53569999999999995], [1500854400000.0, 0.5494], [1500940800000.0, 0.54549999999999998], [1501027200000.0, 0.55269999999999997], [1501113600000.0, 0.57310000000000005], [1501200000000.0, 0.66500000000000004], [1501459200000.0, 0.59770000000000001], [1501545600000.0, 0.63270000000000004], [1501632000000.0, 0.56159999999999999], [1501718400000.0, 0.59560000000000002], [1501804800000.0, 0.57089999999999996], [1502064000000.0, 0.62139999999999995], [1502150400000.0, 0.50890000000000002], [1502236800000.0, 0.64529999999999998], [1502323200000.0, 0.56030000000000002], [1502409600000.0, 0.59689999999999999], [1502668800000.0, 0.60589999999999999], [1502755200000.0, 0.51590000000000003], [1502841600000.0, 0.44990000000000002], [1502928000000.0, 0.54810000000000003], [1503014400000.0, 0.63660000000000005], [1503273600000.0, 0.50049999999999994], [1503360000000.0, 0.46700000000000003], [1503446400000.0, 0.46550000000000002], [1503532800000.0, 0.58799999999999997], [1503619200000.0, 0.64329999999999998], [1503878400000.0, 0.58730000000000004], [1503964800000.0, 0.58679999999999999], [1504051200000.0, 0.51149999999999995], [1504137600000.0, 0.46579999999999999], [1504224000000.0, 0.58689999999999998], [1504483200000.0, 0.56220000000000003], [1504569600000.0, 0.65090000000000003], [1504656000000.0, 0.48180000000000001], [1504742400000.0, 0.26379999999999998], [1504828800000.0, 0.46660000000000001], [1505088000000.0, 0.27010000000000001], [1505174400000.0, 0.59330000000000005], [1505260800000.0, 0.56030000000000002], [1505347200000.0, 0.55489999999999995], [1505433600000.0, 0.43869999999999998], [1505692800000.0, 0.5615], [1505779200000.0, 0.58320000000000005], [1505865600000.0, 0.67000000000000004], [1505952000000.0, 0.53320000000000001], [1506038400000.0, 0.4451], [1506297600000.0, 0.46660000000000001], [1506384000000.0, 0.61470000000000002], [1506470400000.0, 0.53149999999999997], [1506556800000.0, 0.56230000000000002], [1506643200000.0, 0.64829999999999999], [1507507200000.0, 0.57269999999999999], [1507593600000.0, 0.53710000000000002], [1507680000000.0, 0.44429999999999997], [1507766400000.0, 0.46860000000000002], [1507852800000.0, 0.62090000000000001], [1508112000000.0, 0.64149999999999996], [1508198400000.0, 0.5605], [1508284800000.0, 0.52149999999999996], [1508371200000.0, 0.58919999999999995], [1508457600000.0, 0.54920000000000002], [1508716800000.0, 0.58320000000000005], [1508803200000.0, 0.61499999999999999], [1508889600000.0, 0.60780000000000001], [1508976000000.0, 0.61439999999999995], [1509062400000.0, 0.61060000000000003], [1509321600000.0, 0.52729999999999999], [1509408000000.0, 0.56379999999999997], [1509494400000.0, 0.54769999999999996], [1509580800000.0, 0.64049999999999996], [1509667200000.0, 0.4521], [1509926400000.0, 0.3054], [1510012800000.0, 0.62480000000000002], [1510099200000.0, 0.57979999999999998], [1510185600000.0, 0.59889999999999999], [1510272000000.0, 0.51939999999999997], [1510531200000.0, 0.46000000000000002], [1510617600000.0, 0.58140000000000003], [1510704000000.0, 0.57189999999999996], [1510790400000.0, 0.42480000000000001], [1510876800000.0, 0.78039999999999998], [1511136000000.0, 0.53769999999999996], [1511222400000.0, 0.61560000000000004], [1511308800000.0, 0.5806], [1511395200000.0, 0.5131], [1511481600000.0, 0.54649999999999999], [1511740800000.0, 0.5393], [1511827200000.0, 0.41749999999999998], [1511913600000.0, 0.59160000000000001], [1512000000000.0, 0.72489999999999999], [1512086400000.0, 0.66220000000000001], [1512345600000.0, 0.49840000000000001], [1512432000000.0, 0.55940000000000001], [1512518400000.0, 0.50239999999999996], [1512604800000.0, 0.46750000000000003], [1512691200000.0, 0.58089999999999997], [1512950400000.0, 0.61919999999999997], [1513036800000.0, 0.501], [1513123200000.0, 0.5716], [1513209600000.0, 0.53810000000000002], [1513296000000.0, 0.54849999999999999], [1513555200000.0, 0.63290000000000002], [1513641600000.0, 0.96709999999999996], [1513728000000.0, 1.0], [1513814400000.0, 0.50829999999999997], [1513900800000.0, 0.58579999999999999], [1514160000000.0, 0.4617], [1514246400000.0, 0.5181], [1514332800000.0, 0.45729999999999998], [1514419200000.0, 0.46560000000000001], [1514505600000.0, 0.52329999999999999], [1514851200000.0, 0.44979999999999998], [1514937600000.0, 0.59030000000000005], [1515024000000.0, 0.55710000000000004], [1515110400000.0, 0.65100000000000002], [1515369600000.0, 0.5877], [1515456000000.0, 0.623], [1515542400000.0, 0.57279999999999998], [1515628800000.0, 0.6069]],
+                    name: '持仓占比',
+                    color: '#66ff99',
+                    lineWidth: 2,
+                    yAxis: 1,
+                }];
+            /**
+             * Create the chart when all data is loaded
+             * @returns {undefined}
+             */
+            function createChart() {
+                Highcharts.setOptions({
+                    global:{
+                        timezoneOffset:(new Date).getTimezoneOffset()
+                    },
+                    lang: {
+                        months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                        shortMonths: ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+                        numericSymbols: ["千", "百万", "十亿", "万亿", "千万亿", "百万万亿"],
+                        weekdays: ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"],
+                        rangeSelectorZoom: "缩放",
+                        rangeSelectorFrom: "从",
+                        rangeSelectorTo: "到",
+                    },
+                    plotOptions:{
+                        series: {
+                            dataGrouping:{
+                                dateTimeLabelFormats:{
+                                    millisecond: ['%A, %b月%e, %H:%M:%S.%L', '%A, %b月%e, %H:%M:%S.%L', '-%H:%M:%S.%L'],
+                                    second: ['%A, %b月%e日, %H:%M:%S', '%A, %b月%e日, %H:%M:%S', '-%H:%M:%S'],
+                                    minute: ['%A, %b月%e日, %H:%M', '%A, %b月%e日, %H:%M', '-%H:%M'],
+                                    hour: ['%A, %b月%e日, %H:%M', '%A, %b月%e日, %H:%M', '-%H:%M'],
+                                    day: ['%A, %Y年%b月%e日', '%A, %Y年%b月%e日', '-%A, %Y年%b月%e日'],
+                                    week: ['Week from %A, %Y-%b-%e, %Y', '%A, %Y-%b-%e', '-%A, %Y-%b-%e, %Y'],
+                                    month: ['%B %Y', '%B', '-%B %Y'],
+                                    year: ['%Y', '%Y', '-%Y']
+                                }
+                            },
+                            connectNulls: true
+                        }
+                    },
+                });
+
+                Highcharts.stockChart('bigquant-strategy-portfolio-chart', {
+                    rangeSelector:{
+                        selected:4,
+                        inputBoxWidth:90,
+                        inputDateFormat:"%Y-%m-%d",
+                        buttons:[
+                            {type:"month",count:1,text:"1月"},
+                            {type:"month",count:3,text:"3月"},
+                            {type:"month",count:6,text:"6月"},
+                            {type:"year",count:1,text:"1年"},
+                            {type:"all",text:"全部"}]
+                    },
+
+                    legend: {
+                        enabled: true,
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                    },
+
+                    xAxis:{
+                        plotLines: [{ // mark the split
+                            color: 'grey',
+                            width: 2,
+                            value:  1.5131232e+12 ,
+                            dashStyle: 'dash'
+                        }],
+                        gridLineWidth:1,
+                        dateTimeLabelFormats:{
+                            second:"%Y-%m-%d<br/>%H:%M:%S",
+                            minute:"%Y-%m-%d<br/>%H:%M",
+                            hour:"%Y-%m-%d<br/>%H:%M",
+                            day:"%Y<br/>%m-%d",
+                            week:"%Y<br/>%m-%d",
+                            month:"%Y-%m",
+                            year:"%Y"},
+                        events:{}
+                    },
+
+                    yAxis: [
+                        {
+                            labels: {
+                                formatter: function () {
+                                    return (this.value > 0 ? ' + ' : '') + this.value * 100 + '%';
+                                },
+                                x: -3,
+                                align: 'right',
+                            },
+                            // plotLines: [{
+                            //     value: 0,
+                            //     width: 2,
+                            //     color: 'silver'
+                            // }],
+                            title: {
+                                text: '净值曲线'
+                            },
+                            top: '0%',
+                            height: '76%',
+                            gridLineColor:"#cfcfcf",
+                            gridLineWidth:1,
+                            offset: 0,
+                            lineWidth: 2
+                        },
+                        {
+                            labels: {
+                                formatter: function () {
+                                    return (this.value > 0 ? ' + ' : '') + this.value * 100 + '%';
+                                },
+                                x: -3,
+                                align: 'right',
+                            },
+                            // plotLines: [{
+                            //     value: 0,
+                            //     width: 2,
+                            //     color: 'silver'
+                            // }],
+                            title: {
+                                text: '持仓占比'
+                            },
+                            top: '80%',
+                            height: '19%',
+                            gridLineColor:"#cfcfcf",
+                            gridLineWidth:1,
+                            offset: 0,
+                            lineWidth: 2
+                        }
+                    ],
+
+                    plotOptions: {
+                        series: {
+                            showInNavigator: true
+                        }
+                    },
+
+                    tooltip: {
+                        formatter: function() {
+                                var s = '<b>'+ Highcharts.dateFormat('%Y-%m-%d', new Date(this.x)) +'</b>';
+
+                                $.each(this.points, function(i, point) {
+                                    s += '<br/><span style="color:' + point.color + '">\u25CF</span>: ' +
+                                         point.series.name + ': <b>' + Highcharts.numberFormat(this.y * 100, 2) + "%</b>";
+                                });
+
+                                return s;
+                            },
+                        shared: true,
+                        valueDecimals: 2,
+                    },
+
+                    series: seriesOptions
+                });
+            }
+
+            createChart();
+
+            var tableOptions = {
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "processing": true,
+                "pageLength": 100,
+                "language": {
+                    "sProcessing": "处理中...",
+                    "sLengthMenu": "显示 _MENU_ 项结果",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                    "sInfoPostFix": "",
+                    "sSearch": "搜索:",
+                    "sUrl": "",
+                    "sEmptyTable": "表中数据为空",
+                    "sLoadingRecords": "载入中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                      "sFirst": "首页",
+                      "sPrevious": "上页",
+                      "sNext": "下页",
+                      "sLast": "末页"
+                    }
+                }
+            }
+            window.resCount = 0;
+            var sellTransactionTableOptions = {
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "processing": true,
+                "pageLength": 10,
+                "language": {
+                    "sProcessing": "处理中...",
+                    "sLengthMenu": "显示 _MENU_ 项结果",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                    "sInfoPostFix": "",
+                    "sSearch": "搜索:",
+                    "sUrl": "",
+                    "sEmptyTable": "表中数据为空",
+                    "sLoadingRecords": "载入中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                      "sFirst": "首页",
+                      "sPrevious": "上页",
+                      "sNext": "下页",
+                      "sLast": "末页"
+                    }
+                },
+                "fnDrawCallback": function(table) {
+                    if (window.resCount == 0) {
+                        window.resCount = 1;
+                        $('table').not('#bigquant-strategy-transactions').not('#bigquant-strategy-positions').ReStable({
+                            rowHeaders: false,
+                            keepHtml: true,
+                            maxWidth: 600
+                        });
+                    }
+                    $("#" + table.sTableId + "_paginate .paginate_button").click(function(e) {
+                        $("#" + table.sTableId + "_wrapper .tabletolist").remove();
+                        if ($(window).width() <= parseInt(600, 10)) {
+                            $("#" + table.sTableId).ReStable({
+                                rowHeaders: false,
+                                keepHtml: true,
+                                maxWidth: 600
+                            });
+                        }
+                    });
+                }
+            }
+            window.resCountForAllTrans = 0;
+            var transactionTableOptions = {
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "processing": true,
+                "pageLength": 10,
+                "language": {
+                    "sProcessing": "处理中...",
+                    "sLengthMenu": "显示 _MENU_ 项结果",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                    "sInfoPostFix": "",
+                    "sSearch": "搜索:",
+                    "sUrl": "",
+                    "sEmptyTable": "表中数据为空",
+                    "sLoadingRecords": "载入中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                      "sFirst": "首页",
+                      "sPrevious": "上页",
+                      "sNext": "下页",
+                      "sLast": "末页"
+                    }
+                },
+                "fnDrawCallback": function(table) {
+                    $("#" + table.sTableId + "_paginate").append("到第 <input type='text' id='" + table.sTableId + "-changePage" + "' class='input-text' style='width:50px;height:27px'>页<a class='btn btn-default shiny' href='javascript:void(0);' id='" + table.sTableId + "_dataTable-btn' style='text-align:center;border: unset;'>确认</a>");
+                    if (window.resCountForAllTrans == 0) {
+                        window.resCountForAllTrans = 1;
+                        $('#bigquant-strategy-transactions').ReStable({
+                            rowHeaders: false,
+                            keepHtml: true,
+                            maxWidth: 600
+                        });
+                    }
+                    $('#' + table.sTableId + '_dataTable-btn').click(function(e) {
+                        var pageTotal = Math.ceil(table.fnRecordsDisplay() / table._iDisplayLength);
+                        var changePage = $("#" + table.sTableId + "-changePage").val();
+                        var redirectpage = 0;
+                        if(changePage && changePage > 0 && changePage <= pageTotal) {
+                            redirectpage = changePage - 1;
+                        } else if (changePage > pageTotal) {
+                            redirectpage = pageTotal - 1;
+                        }
+                        $("#" + table.sTableId).dataTable().fnPageChange(redirectpage);
+                        $("#" + table.sTableId + "_wrapper .tabletolist").remove();
+                        if ($(window).width() <= parseInt(600, 10)) {
+                            $("#" + table.sTableId).ReStable({
+                                rowHeaders: false,
+                                keepHtml: true,
+                                maxWidth: 600
+                            });
+                        }
+                    });
+                    $("#" + table.sTableId + "_paginate .paginate_button").click(function(e) {
+                        $("#" + table.sTableId + "_wrapper .tabletolist").remove();
+                        if ($(window).width() <= parseInt(600, 10)) {
+                            $("#" + table.sTableId).ReStable({
+                                rowHeaders: false,
+                                keepHtml: true,
+                                maxWidth: 600
+                            });
+                        }
+                    });
+                },
+            }
+            window.resCountForAllPositions = 0;
+            var positionTableOptions = {
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "processing": true,
+                "pageLength": 10,
+                "language": {
+                    "sProcessing": "处理中...",
+                    "sLengthMenu": "显示 _MENU_ 项结果",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                    "sInfoPostFix": "",
+                    "sSearch": "搜索:",
+                    "sUrl": "",
+                    "sEmptyTable": "表中数据为空",
+                    "sLoadingRecords": "载入中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                      "sFirst": "首页",
+                      "sPrevious": "上页",
+                      "sNext": "下页",
+                      "sLast": "末页"
+                    }
+                },
+                "fnDrawCallback": function(table) {
+                    $("#" + table.sTableId + "_paginate").append("到第 <input type='text' id='" + table.sTableId + "-changePage" + "' class='input-text' style='width:50px;height:27px'>页<a class='btn btn-default shiny' href='javascript:void(0);' id='" + table.sTableId + "_dataTable-btn' style='text-align:center;border: unset;'>确认</a>");
+                    if (window.resCountForAllPositions == 0) {
+                        window.resCountForAllPositions = 1;
+                        $('#bigquant-strategy-positions').ReStable({
+                            rowHeaders: false,
+                            keepHtml: true,
+                            maxWidth: 600
+                        });
+                    }
+                    $('#' + table.sTableId + '_dataTable-btn').click(function(e) {
+                        var pageTotal = Math.ceil(table.fnRecordsDisplay() / table._iDisplayLength);
+                        var changePage = $("#" + table.sTableId + "-changePage").val();
+                        var redirectpage = 0;
+                        if(changePage && changePage > 0 && changePage <= pageTotal) {
+                            redirectpage = changePage - 1;
+                        } else if (changePage > pageTotal) {
+                            redirectpage = pageTotal - 1;
+                        }
+                        $("#" + table.sTableId).dataTable().fnPageChange(redirectpage);
+                        $("#" + table.sTableId + "_wrapper .tabletolist").remove();
+                        if ($(window).width() <= parseInt(600, 10)) {
+                            $("#" + table.sTableId).ReStable({
+                                rowHeaders: false,
+                                keepHtml: true,
+                                maxWidth: 600
+                            });
+                        }
+                    });
+                    $("#" + table.sTableId + "_paginate .paginate_button").click(function(e) {
+                        $("#" + table.sTableId + "_wrapper .tabletolist").remove();
+                        if ($(window).width() <= parseInt(600, 10)) {
+                            $("#" + table.sTableId).ReStable({
+                                rowHeaders: false,
+                                keepHtml: true,
+                                maxWidth: 600
+                            });
+                        }
+                    });
+                },
+            }
+            $('#bigquant-strategy-planorders').DataTable(tableOptions);
+            $('#bigquant-strategy-positions').DataTable(positionTableOptions);
+            $('#bigquant-strategy-sell').DataTable(sellTransactionTableOptions);
+            $('#bigquant-strategy-transactions').DataTable(transactionTableOptions);
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        $('table').ReStable({
+            rowHeaders: false,
+            keepHtml: true,
+            maxWidth: 600
+        });
+    </script> -->
+    <script type='text/javascript'> var _vds = _vds || []; window._vds = _vds; (function(){ _vds.push(['setAccountId', 'aab706c8f4b762a5']); if('' != '') {_vds.push(['setCS1', 'user_id', '']);} (function() { var vds = document.createElement('script'); vds.type='text/javascript'; vds.async = true; vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vds, s); })(); })(); </script>
+    <script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?c58f67ca105d070ca7563b4b14210980"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
+</body>
+
+</html>

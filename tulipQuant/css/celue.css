@@ -1,0 +1,232 @@
+
+
+/*巨幕*/
+.hp-slogan {
+    text-align: center;
+    color: #fff;
+}
+
+.hp-slogan .title {
+    font-size: 108px;
+    margin-top: 120px;
+}
+
+.hp-slogan p {
+    font-size: 26px;
+    opacity: .8;
+    margin: 15px 0 68px 0;
+}
+
+.hp-slogan>a {
+    width: 168px;
+    display: inline-block;
+    height: 52px;
+    line-height: 52px;
+    font-size: 22px;
+    margin: 0 20px;
+}
+
+.hp-slogan p.pro {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hp-slogan p.pro a {
+    font-size: 20px;
+    line-height: 21px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    overflow: auto;
+    height: 540px;
+    width: 100%;
+    left: 0%;
+}
+.banner ul li,  .banner  ul{
+    list-style: none;
+    height: 100%;
+}
+.banner ul li {
+    float: left;
+    position: relative;
+}
+.banner ul li.banner01 {
+  background: url(../img/banner01.jpg) no-repeat center/cover;
+  width: 100%;
+}
+/*巨幕下方横条*/
+.tiao_box {
+    height: 100px;
+    margin-left:50px;
+    padding: 20px;
+    background: #fff;
+}
+.strategy_item_head, .tiao_box{
+	border-bottom: 1px solid #e8ecf0;
+}.tiao_item {
+    width: 588px;
+    text-align: center;
+}.tiao_item div.inline-block {
+    padding-top: 10px;
+}.tiao_box img {
+    vertical-align: top;
+}
+.tiao_box .col-lg-3 {
+    width: auto;
+}
+/*策略*/
+
+.strategy_box {
+    background: #f7f7f7;
+    /*padding-bottom: 115px;*/
+}.strategy .title {
+    padding: 34px 0 20px;
+}.strategy_item_head {
+    padding: 11px 20px 10px;
+}.strategy_item_head .item_title.fleft {
+    width: 70%;
+}.strategy_item_head .item_title.fleft a {
+    display: inline-block;
+    width: 100%;
+}.item_title>div {
+    padding-top: 6px;
+}.tui {
+    height: 24px;
+    color: #fb8341;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    background: url(../img/tips.png) center no-repeat;
+}.item_title .author, .tui {
+    width: 70px;
+    display: inline-block;
+}.cursor {
+    cursor: pointer;
+}.item_title.fright {
+    line-height: 59px;
+}.strategy_img_left {
+    width: calc(100% - 330px);
+    height: 390px;
+}.strategy_item_container .strategy_img_left .toolbar {
+    padding: 15px 0 5px 20px;
+    position: relative;
+    background: #fff;
+    z-index: 2;
+}.toolbar .blue_square {
+    background: c;
+}.item_title .stra_title {
+    color: #255da8;
+}.toolbar .blue_square, .toolbar .red_square {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}.toolbar .blue_tip {
+    font-size: 12px;
+    color: #3674c9;
+    margin-right: 10px;
+}.toolbar .red_square {
+    background: #ab423e;
+}.toolbar .red_tip {
+    font-size: 12px;
+    color: #ab423e;
+}.strategy_img {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}.strategy_img img {
+    width: 100%;
+    height: 135%;
+    position: absolute;
+    top: -85px;
+    margin: 0px;
+}.strategy_item_container .strategy_img_right {
+    padding: 20px;
+}.strategy_img_right {
+    width: 330px;
+    border-left: 1px solid #e8ecf0;
+    font-size: 14px;
+    line-height: 20px
+}.bottom .tips, .middle_item .tips, .top .tips {
+    color: #9a9ea1;
+}.red, span.red {
+    color: #fb4044;
+}.strategy_box .top {
+    padding: 10px 0;
+    top:0;
+    line-height: 20px
+}
+.middle {
+    padding: 14px 0;
+}.middle_item:first-child, .middle_item:nth-child(2) {
+    border-bottom: 1px dashed #d3dae2;
+}.middle_item:nth-child(2n+1) {
+    border-right: 1px dashed #d3dae2;
+}.middle_item {
+    width: 50%;
+    padding: 11px 0;
+}.bottom {
+    padding: 11px;
+}.strategy_item {
+    background: #fff;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(193,193,193,.55);
+    box-shadow: 1px 1px 3px 0 rgba(193,193,193,.55);
+}.avatar {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    border-radius: 50%;
+}.bottom .order {
+    background: #fb4044;
+    width: 212px;
+    height: 44px;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+/*售卖我的策略*/
+.js-input{
+    margin-top: 5px;
+    width:400px;
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #d9e1f1;
+}input[placeholder], [placeholder], *[placeholder] {
+   font-size: 12px;
+}.number{
+    width: 173px;
+}.li_textarea{
+    height: 120px;
+}.tips{
+    line-height: 30px;
+    color: #9a9ea1;
+    font-size: 12px;
+}.tagBox{
+    width:400px;
+}
+.tagItem{
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+}input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+   margin-right: 3px;
+}.btn-submit {
+    color: #fff;
+    background-color: #5389d2;
+    border-color: #868e96;
+}.shuxian {
+border: 2px solid #067dd9;
+height: 15px;
+vertical-align: middle;
+position: relative;
+top: -1px;
+margin-right: 5px;
+}.form_ul li{
+    margin:15px 5px;
+}

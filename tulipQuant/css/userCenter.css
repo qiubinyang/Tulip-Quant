@@ -1,0 +1,377 @@
+/*上传照片*/
+
+#photo {
+    max-width:100%;
+    max-height:350px;
+}
+.img-preview-box {
+    text-align: center;
+}
+.img-preview-box > div {
+    display: inline-block;;
+    margin-right: 10px;
+}
+.img-preview {
+    overflow: hidden;
+}
+.img-preview-box .img-preview-lg {
+    width: 150px;
+    height: 150px;
+}
+.img-preview-box .img-preview-md {
+    width: 100px;
+    height: 100px;
+}
+.img-preview-box .img-preview-sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*主窗体*/
+.kk_body {
+padding-bottom: 0px;
+padding-top: 20px;
+position: relative;
+top: 50px;
+}
+
+.user_body {
+width: 960px;
+margin-bottom: 40px;
+border: 1px solid #d3d3d3;
+}
+
+.bgwhite {
+background-color: #fff;
+}
+
+.box_center {
+margin-left: auto;
+margin-right: auto;
+}
+
+.user_body_left {
+width: 200px;
+float: left;
+}
+
+.user_menu {
+padding: 6px 0;
+border-bottom: 1px solid #d3d3d3;
+}
+
+.user_menu_title,
+.user_menu_item {
+height: 40px;
+padding-left: 22px;
+line-height: 40px;
+cursor: default;
+}
+
+.user_menu_item.active {
+background: #067dd9;
+color: #fff;
+}
+
+.user_menu_item {
+font-size: 14px;
+padding-left: 50px;
+cursor: pointer;
+}
+
+.user_body_left .user_menu_icon {
+display: inline-block;
+height: 16px;
+position: relative;
+top: 1px;
+margin-right: 7px;
+color:gray;
+}
+
+.user_body_left .user_menu_title h4 {
+margin: 0;
+line-height: 40px;
+color: #8d8d8d;
+}
+
+/*右侧内容页*/
+.user_body_right {
+padding-top: 18px;
+padding-bottom: 40px;
+min-height: 704px;
+float: left;
+width: 758px;
+padding: 20px 20px 0;
+border-left: 1px solid #d3d3d3;
+}
+
+.jq-c-account .mainPage {
+clear: both;
+height: 64px;
+}
+
+.user_body .profile .avatar {
+position: absolute;
+left: 0;
+top: 0;
+width: 64px;
+}
+
+.user_body .profile .avatar .avatar-view {
+margin: auto;
+}
+
+.user-photo-box {
+display: block;
+padding: 4px;
+margin-bottom: 20px;
+line-height: 1.42857143;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 4px;
+-webkit-transition: border .2s ease-in-out;
+-o-transition: border .2s ease-in-out;
+transition: border .2s ease-in-out;
+}
+
+.avatar {
+cursor: pointer;
+}
+
+.avatar-view img {
+width: 100%;
+}
+
+.thumbnail a>img,
+.thumbnail>img {
+margin-right: auto;
+margin-left: auto;
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+.user_body .set-head {
+position: absolute;
+bottom: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.6);
+width: 100%;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+opacity: 0;
+}
+
+.user_body .set-head>a {
+color: #fff;
+font-size: 12px;
+}
+
+.user_body .profile .infobox {
+position: relative;
+margin-left: 80px;
+top: 10px;
+}
+
+.user_body .profile .name {
+margin-top: 0;
+margin-bottom: 5px;
+font-size: 18px;
+display: inline-block;
+}
+
+.user_body .profile .btn_edit {
+width: 8px;
+background-size: cover;
+position: relative;
+top: 2px;
+cursor: pointer;
+color: gray;
+margin-left: 8px;
+}
+
+.user_body .profile .stats {
+margin-top: 50px;
+padding-bottom: 31px;
+}
+
+.user_body .user_body_right .stats-title {
+padding: 5px 0 17px;
+}
+
+.user_body .user_body_right .shuxian {
+border: 2px solid #067dd9;
+height: 15px;
+vertical-align: middle;
+position: relative;
+top: -1px;
+margin-right: 12px;
+}
+
+.user_body .profile .stats .item {
+border: 1px solid #d3d3d3;
+display: inline-block;
+height: 120px;
+width: 25%;
+border-right: 0;
+padding: 40px 0;
+text-align: center;
+font-size: 16px;
+color: #8d8d8d;
+}
+.user_body .profile .stats a{
+    cursor: pointer;
+}
+.user_body .profile .stats .item b {
+font-size: 20px;
+}
+
+b,
+strong {
+font-weight: 700;
+}
+
+.js-jq-content {
+margin-top: 80px;
+}
+
+.message-badge {
+background-color: #F00;
+border-radius: 10px;
+color: #fff;
+display: inline-block;
+font-size: 8pt;
+height: 16px;
+line-height: .9pc;
+min-width: 17px;
+opacity: .9;
+padding: 0;
+position: relative;
+text-align: center;
+bottom: 40px;
+}
+
+.monthCount {
+margin: 0;
+padding: 0;
+height: 100%;
+float: left;
+line-height: 40px;
+}
+
+.user_body .profile .stats .item:last-child {
+border-right: 1px solid #d3d3d3;
+position: relative;
+}
+
+.user_faq .more {
+font-size: 12px;
+float: right;
+}
+
+.user_faq_item_p {
+font-size: 14px;
+line-height: 18px;
+}
+
+.about {
+height: 30px;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+word-wrap: break-word;
+word-break: break-all;
+width: 440px;
+}
+
+#introduction {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+float: left;
+word-wrap: break-word;
+word-break: break-all;
+}
+/*提现*/
+.wallet{
+    padding: 0 10px;
+}.wallet-head-balance {
+    width: 440px;
+    height: 120px;
+    padding-top: 26px;
+    border-right: 1px solid #e8ecf0;
+}.mr_3, .reward_user {
+    margin-right: 3px;
+}.balance-tips {
+    margin-bottom: 2px;
+}.wallet-head-kiting {
+    text-align: center;
+    width: calc(100% - 440px);
+    padding-top: 37px;
+}.wallet-head-kiting .btn {
+    width: 146px;
+    height: 40px;
+    margin-bottom: 12px;
+}.btn-warning {
+    background-color: #fb8341;
+}.wallet-table {
+    padding-top: 35px;
+    max-height: 484px;
+    overflow-y: auto;
+}.table>thead>tr>td {
+    border-top: none;
+    border-bottom: 1px solid #e8ecf0;
+    line-height: 43px;
+    height: 44px;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+/*账户设置*/
+.pl_40 {
+    padding-left: 40px;
+}.user_body .input-group {
+    width: 380px;
+    margin-top: 15px;
+}.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}.user_body .input-group label {
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+}
+
+}.mt_20 {
+    margin-top: 20px;
+}.user_body .btn_update {
+    margin-left: 300px;
+    width: 80px;
+    margin-top: 20px;
+}.btn-primary {
+    background-color: #4a90e2;
+}
+
+/*交易记录*/
+.profile.strategy_mall {
+    padding: 10px 0;
+}
+
+/*错误信息*/
+.error {
+    color: #e00000;
+    float: right;    
+    display:inline;
+    margin-top: 5px;
+}
