@@ -6,6 +6,7 @@
     <title>tulipQuant 御宽</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- main css file -->
     <link rel="stylesheet" href="css/basic.css">
@@ -15,6 +16,11 @@
     <link rel="shortcut icon" href="img/favicon3.ico">
     <meta name="keywords" content="量化投资,量化交易,量化策略,量化平台,量化研究,量化分析,quantopian,量化,quant,quantify,tushare,程序化交易,量化投资平台,量化交易系统,优矿,聚宽,米筐,程序化交易软件,金融投资,股票交易,郁金香,投资平台,">
     <meta name="description" content="御宽(tulipQuant)是一个集成了各大量化交易平台交易策略的平台,是策略提供者理想的分享策略并同时获取收益的平台，同时也是广大有志于量化投资的投资者构建自己交易体系、提升自身选股买卖能力的历练场！">
+    <!-- echarts -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src="js/echarts-wordcloud.js"></script>
+    <!-- <script src="js/echarts.js"></script> -->
 </head>
 
 <body>
@@ -40,12 +46,12 @@
                 <li class="help">
                     <a href="javascript:;" class="act">特色功能</a>
                     <div class="sub">
-                        <a href="/help/introduction/">AR增强显示</a>
-                        <a href="/help/faq/">热门股票词云</a>
-                        <a href="/help/researchV3/">随手拍 出股票</a>
-                        <a href="/help/faq/">智能策略推荐</a>
-                        <a href="/help/researchV3/">精选研报</a>
-                        <a href="/help/researchV3/">舆情分析</a>
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+<!--                         <a href="feature.html#report">精选研报</a>
+ -->                        <a href="feature.html#news">舆情分析</a>
                         <span class="arrow"></span>
                     </div>
                 </li>
@@ -70,7 +76,7 @@
         <canvas id="demo-canvas"></canvas>
         <h1 class="main-title">TulipQuant 御宽</h1>
         <h3 class="sub-title">特色功能</h3>
-            <a href="#AR" class="chevron-down smoothScroll">
+        <a href="#AR" class="chevron-down smoothScroll">
             <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
             </a>
     </div>
@@ -88,110 +94,234 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a class="smoothScroll" href="index.html">首页</a></li>
                         <li><a class="smoothScroll" href="#AR">AR增强显示</a></li>
-                        <li><a class="smoothScroll" href="#ciyun">热门股票词云</a></li>
-                        <li><a class="smoothScroll" href="#photo">随手拍 出股票</a></li>
+                        <li><a class="smoothScroll" href="#wordCloud">热门股票词云</a></li>
+                        <li><a class="smoothScroll" href="#imageIdentity">随手拍 出股票</a></li>
                         <li><a class="smoothScroll" href="#recommend">智能策略推荐</a></li>
-                        <li><a class="smoothScroll" href="#report">精选研报</a></li>
+                        <!-- <li><a class="smoothScroll" href="#report">精选研报</a></li> -->
                         <li><a class="smoothScroll" href="#news">舆情分析</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <!-- 巨幕 -->
+    <!-- AR -->
     <div class="banner" id="AR">
         <ul>
             <li class="banner01">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                <div class="background">
+                    <div class="content clearfix">
+                        <p><span>“基于</span><b>U3D</b>开发的<b>AR虚拟现实技术</b>的K线查看功能，将<b>k线走势</b>移出屏幕，呈现在任何你想要的<b>实景平面</b>之上，让您在枯燥的盯盘过程中，以一种全新的形式关注<b>标的走势</b>，享受科技带来的乐趣。”</p>
+                    </div>
+                    <div class="content clearfix wechatImg">
+                        <img src="img/wechat_no.jpeg">
+                    </div>
                 </div>
             </li>
         </ul>
-        <a href="#ciyun" class="chevron-down smoothScroll">
-            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        <a href="#wordCloud" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_black.svg" title="Scroll down" alt="Chevron pointing downwards">
         </a>
     </div>
-    <div class="banner" id="ciyun">
+    <!-- 词云 -->
+    <div class="banner" id="wordCloud">
         <ul>
             <li class="banner02">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                <div class="background">
+                    <div class="content clearfix">
+                        <p><span>“基于</span><b>增量式爬虫</b>及<b>自然语言处理</b>在最近时效内的<b>研报</b>中找寻被<b>机构</b>关注最多的每日热门股票，指引您后世关注标的的<b>方向</b>，大大提高您的<b>选股成功率</b>及<b>准确性</b>。”</p>
+                        <button class="wordCloudBtn btn btn-primary" onclick="javascrtpt:window.location.href='specificWordCloud.html'">查看更多</button>
+                    </div>
+                    <div class="content clearfix" id='main'>
+                        <script type="text/javascript" src="js/wordCloud.js"></script>
+                    </div>
+
                 </div>
             </li>
         </ul>
-        <a href="#photo" class="chevron-down smoothScroll">
-            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+        <a href="#imageIdentity" class="chevron-down smoothScroll">
+            <img class="icon" src="img/chevron_down_black.svg" title="Scroll down" alt="Chevron pointing downwards">
         </a>
     </div>
-    <div class="banner" id="photo">
+    <!-- 拍照出股票 -->
+    <div class="banner" id="imageIdentity">
         <ul>
             <li class="banner03">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+                <div class="background">
+                    <div class="content clearfix">
+                        <p><span>“基于</span><b>卷积神经网络</b>和<b>迁移学习</b>，对上传的照片进行<b>高准确率</b>地识别，并将结果通过<b>自然语言处理</b>及<b>推荐算法处理</b>进而得出相应<b>上市公司</b>，便于您直接通过照片来查询对应标的，从而<b>及时</b>做出投资决定。”</p>
+                    </div>
+                    <div class="content clearfix">
+                        <!-- 图片浏览筐 -->
+                        <div class="user-photo-box browse">
+                            <img id="user-photo" src="img/img02.png">
+                        </div>
+                        <button class="uploadBtn btn btn-primary" onclick="javascrtpt:window.location.href='specificPhotoRecognize.html'">上传图片
+                        <!-- 上传按钮 -->
+                        <!-- <button class="uploadBtn btn btn-primary" data-target="#changeModal" data-toggle="modal">上传图片</button> -->
+                        <!-- 上传图片 -->
+                        <!-- <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title text-primary">
+                                    <i class="fa fa-pencil"></i>
+                                                更换头像
+                                    </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="tip-info text-center">
+                                            未选择图片
+                                        </p>
+                                        <div class="img-container hidden">
+                                            <img src="" alt="" id="photo">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <label class="btn btn-danger pull-left" for="photoInput">
+                                            <input type="file" class="sr-only" id="photoInput" accept="image/*">
+                                            <span>打开图片</span>
+                                        </label>
+                                        <button class="btn btn-primary disabled" disabled="true" onclick="sendPhoto();">提交</button>
+                                        <button class="btn btn-close" aria-hidden="true" data-dismiss="modal">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </li>
         </ul>
         <a href="#recommend" class="chevron-down smoothScroll">
-            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+            <img class="icon" src="img/chevron_down_black.svg" title="Scroll down" alt="Chevron pointing downwards">
         </a>
     </div>
+    <!-- 推荐算法 -->
     <div class="banner" id="recommend">
         <ul>
-            <li class="banner01">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
-                </div>
-            </li>
-        </ul>
-        <a href="#report" class="chevron-down smoothScroll">
-            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
-        </a>
-    </div>
-    <div class="banner" id="report">
-        <ul>
-            <li class="banner01">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+            <li class="banner04">
+                <div class="background">
+                    <div class="content clearfix">
+                        <p><span>“通过</span>构建完备的<b>用户评估机制</b>，建立用户画像的<b>标签体系</b>，利用<b>逻辑回归、集成学习</b>等智能学习算法搭建<b>协同过滤推荐系统</b>，为用户推荐真正符合自己投资风格的<b>量化策略</b>。”</p>
+                        <button class="recommendBtn btn btn-primary" onclick="javascrtpt:window.location.href='wenjuan.html'">我的智能投顾</button>
+                    </div>
+                    <div class="content clearfix">
+                        <img src="img/img01.png" style="height: 340px;margin-left: -60px;margin-top: 20px">
+                    </div>
                 </div>
             </li>
         </ul>
         <a href="#news" class="chevron-down smoothScroll">
-            <img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
+            <img class="icon" src="img/chevron_down_black.svg" title="Scroll down" alt="Chevron pointing downwards">
         </a>
     </div>
+    <!-- 舆情分析 -->
     <div class="banner" id="news">
         <ul>
-            <li class="banner01">
-                <div class="hp-slogan">
-                    <div class="title">策 略 商 城</div>
-                    <p>优质策略|退款保障</p>
-                    <a href="/community/share/569cb902228e5b8ffc7450cf" class="guide-btn">查看策略</a>
-                    <a href="/labs/" class="blue-btn">上架我的策略</a>
+            <li class="banner05">
+                <div class="background">
+                    <div class="content clearfix">
+                        <p><span>“基于</span><b>增量式爬虫</b>爬取各大论坛的回帖与评论，进一步利用<b>人工智能</b>分词提取关键信息，通过<b>大数据</b>计算分析市场的<b>情绪指标</b>，最终得到如右图所示的市场情绪指标</p>
+                    </div>
+                    <div class="content clearfix browse">
+                        <div class="browse">
+                            <div id="newsAnalyse" style="width: 450px;height:360px;"></div>
+                            <script type="text/javascript">
+                                $.ajax({
+                                    method: 'POST',
+                                    url: '/Tulip-Quant/echarts/opinionanalysis',
+                                    dataType: 'json',
+                                    success: function(data) {
+                                        initChart(data);
+                                    }
+                                });
+
+                                function initChart(data) {
+                                    var myChart = echarts.init(document.getElementById('newsAnalyse'));
+
+                                    var date = [];
+                                    var opinionGood = [];
+                                    var opinionBad = []
+
+                                    for (var i = 0; i < 5; i++) {
+                                        date.push(data[i].date);
+                                        opinionGood.push(data[i].opinion);
+                                        opinionBad.push(1 - data[i].opinion);
+                                    }
+
+                                    var option = {
+                                        title: {
+                                            text: '市场情绪指标'
+                                        },
+                                        tooltip: {
+                                            trigger: 'axis',
+                                            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                                                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                                            }
+                                        },
+                                        legend: {
+                                            data: ['正面情绪', '负面情绪']
+                                        },
+                                        grid: {
+                                            left: '5%',
+                                            right: '4%',
+                                            bottom: '3%',
+                                            containLabel: true
+                                        },
+                                        xAxis: [{
+                                            type: 'value'
+                                        }],
+                                        yAxis: [{
+                                            type: 'category',
+                                            axisTick: { show: false },
+                                            data: date
+                                        }],
+                                        series: [{
+                                                name: '正面情绪',
+                                                type: 'bar',
+                                                stack: '总量',
+                                                label: {
+                                                    normal: {
+                                                        show: true
+                                                    }
+                                                },
+                                                data: opinionGood
+                                            },
+                                            {
+                                                name: '负面情绪',
+                                                type: 'bar',
+                                                stack: '总量',
+                                                label: {
+                                                    normal: {
+                                                        show: true,
+                                                        position: 'left'
+                                                    }
+                                                },
+                                                data: opinionBad
+                                            }
+                                        ]
+                                    };
+
+
+                                    // 使用刚指定的配置项和数据显示图表。
+                                    myChart.setOption(option);
+
+                                }
+                            </script>
+                        </div>
+                        <button class="historyBtn btn btn-primary" onclick="javascrtpt:window.location.href='opinionAnalysis.html'">查看往期</button>
+                    </div>
                 </div>
             </li>
         </ul>
     </div>
 </body>
 <!-- js -->
-<script src="js/jquery-1.9.1.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/feature.js"></script>
 <script src="js/modernizr-2.6.2.min.js"></script>
+<script src="js/cropperfunc.js"></script>
 <!-- 欢迎页background -->
 <script src="js/smooth-scroll.min.js"></script>
 <script src="js/feature/TweenLite.min.js"></script>

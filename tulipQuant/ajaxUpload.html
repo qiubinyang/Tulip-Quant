@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8" />
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/ajaxfileupload.js"></script>
+</head>
+<body>
+
+	<input type="file" name="file" id="file">
+	<button id="submit">提交</button>
+
+<script type="text/javascript">
+	$(function(){
+		$("#submit").click(function(){
+			$.ajaxFileUpload({
+				url:'/Tulip-Quant/file/upload',
+				type:'POST',
+			    secureuri : false,//是否启用安全提交，默认为false  
+			    fileElementId:'file',//文件选择框的id属性  
+			    dataType: 'json',//服务器返回的格式  
+			    async : false,  
+				success:function(data){
+					console.log(data);
+					alert("成功");
+				}
+			
+			})
+		})
+	})
+</script>
+</body>
+</html>

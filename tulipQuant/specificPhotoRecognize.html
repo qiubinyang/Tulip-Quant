@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽-策略广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/specificPhotoRecognize.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/specificPhotoRecognize.js"></script>
+</head>
+
+<body>
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+<!--                         <a href="feature.html#report">精选研报</a>
+ -->                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="content left fleft clearfix">
+            <!-- 图片浏览筐 -->
+            <div class="user-photo-box browse">
+                <img id="user-photo" src="img/wechat_no.jpeg">
+            </div>
+            <!-- 上传按钮 -->
+            <button class="uploadBtn btn btn-primary" data-target="#changeModal" data-toggle="modal">上传图片</button>
+            <!-- 上传图片 -->
+            <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title text-primary">更换头像</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tip-info text-center">
+                                未选择图片
+                            </p>
+                            <div class="img-container hidden">
+                                <img src="" alt="" id="photo">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <label class="btn btn-danger pull-left" for="photoInput">
+                                <input type="file" class="sr-only" id="photoInput" accept="image/*">
+                                <span>打开图片</span>
+                            </label>
+                            <button class="btn btn-primary disabled" disabled="true" onclick="sendPhoto();" id="uploadImg">提交</button>
+                            <button class="btn btn-close" aria-hidden="true" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="middle fleft clearfix">
+            <!--             <p>图片识别结果:</p>
+            <p>披萨，概率为：0.84126</p>
+            <p>玉米，概率为：0.01614</p>
+            <p>煎锅,煎锅,锅，概率为：0.00581</p> -->
+            <table class="table">
+                <caption><b>图片识别结果:</b></caption>
+                <thead class="hidden">
+                    <tr>
+                        <th>名称</th>
+                        <th>识别概率</th>
+                    </tr>
+                </thead>
+                <tbody class="hidden" id="photoResult">
+<!--                     <tr>
+                        <td>披萨</td>
+                        <td>0.8412</td>
+                    </tr>
+                    <tr>
+                        <td>玉米</td>
+                        <td>0.01614</td>
+                    </tr>
+                    <tr>
+                        <td>煎锅,煎锅,锅</td>
+                        <td>0.00581</td>
+                    </tr>
+                    <tr>
+                        <td>bagel, beigel</td>
+                        <td>0.01117</td>
+                    </tr>
+                    <tr>
+                        <td>木耳</td>
+                        <td>0.00261</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <img src="img/loading.gif" id="loading1" style="margin-top: -30px" class="hidden">
+
+        </div>
+        <div class="line"></div>
+        <div class="right fright clearfix ">
+            <p><b>股票识别结果:</b></p>
+            <br></br>
+            <img src="img/loading.gif" id="loading2" style="margin-top: -30px" class="hidden">
+            <div id="StockResult" class="hidden">
+<!--                 <p>上市公司：苏泊尔</p>
+                <p>股票代码：002032.SZ</p>
+                <p>主营业务：食品</p> -->
+            </div>
+        </div>
+        <div class="bottom clear">
+            <h3>请上传图片</h3>
+            <span class="barContainer">
+                <span id="progressBar" class="h-100P bar"></span>
+            </span>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/cropperfunc.js"></script>
+    <script src="specificPhotoRecognize.js">
+
+</body>

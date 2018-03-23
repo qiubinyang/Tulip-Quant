@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽-策略广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/wenjuan.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+                <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+                <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">AR增强显示</a>
+                        <a href="/help/faq/">热门股票词云</a>
+                        <a href="/help/researchV3/">随手拍 出股票</a>
+                        <a href="/help/faq/">智能策略推荐</a>
+                        <a href="/help/researchV3/">精选研报</a>
+                        <a href="/help/researchV3/">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <body>
+        <div class="kk_body">
+            <div class="box_center user_body">
+                <div class="description">
+                    <span>欢迎参加"投资者投资习惯"的量化调研工作！此次调查是为了系统地了解广大证券投资者的投资习惯而专门设计的，旨在通过问卷可量化投资者的投资风格，为投资者提供更专业的量化投资顾问服务！</span>
+                </div>
+                </span>
+                <form class="field-label"  id="question">
+                    <div class="question">
+                        <b>1. 请问您的投资年限处于：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q1"  required>1年以下
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q1">1年-3年
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q1">3年-5年
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q1">5年以上
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <b>2.请问您用于证券投资的资金体量处于：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q2" required>10万以下
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q2">10万-100万
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q2">100万-1000万
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q2">1000万以上
+                            </label>
+                        </div>
+                    </div>                    
+                    <div class="question">
+                        <b>3. 请选择您的投资标的：</b><span class="red">*</span><span class="hint"> [<b>最少</b>选择<b>1</b>项]</span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q3" required>A股
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q3">H股
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q3">美股
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q3">期货
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <b>4.请选择您在进行投资时的股票市值偏好：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q4" required>大盘蓝筹股
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q4">中小盘成长股
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q4">小盘壳资源
+                            </label>
+                        </div>
+                    </div> 
+                    <div class="question">
+                        <b>5.请问您的调仓（持仓）频率处于：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q5" required>1周以下
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q5">1-4周
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q5">1-6个月
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q5">6-18个月
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q5">18个月以上
+                            </label>
+                        </div>
+                    </div> 
+                    <div class="question">
+                        <b>6.请选择您的投资风格：</b><span class="red">*</span><span class="hint"> [<b>最少</b>选择<b>1</b>项]</span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q6" required>价值投资
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q6">短线复利
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q6">板块轮动
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q6">题材追击
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <b>7.请问您的风险承受能力（最大容忍回撤幅度）处于：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q7" required>0-5%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q7">5-15%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q7">15-30%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q7">30%以上
+                            </label>
+                        </div>
+                    </div> 
+                    <div class="question">
+                        <b>8.请问您的投资预期年化收益率处于：</b><span class="red">*</span>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q8" required>0-8%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q8">8-15%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q8">15-30%
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="q8">30%以上
+                            </label>
+                        </div>
+                    </div> 
+                    <div class="question">
+                        <b>9.请选择您感兴趣的量化投资策略板块：</b><span class="red">*</span><span class="hint"> [请选择<b>1</b>-<b>3</b>项]</span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9" required minlength="1" maxlength="3">人工智能（AI）策略板块
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">大市值策略板块
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">小市值策略板块
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">基本面选股策略板块
+                            </label>
+                        </div>
+                       <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">量化对冲策略板块
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">板块轮动策略板块
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="q9">动量反转策略板块
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" style="display:block;" value="提交" id="wenjuan">
+
+            </form>
+    </body>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<!--     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+ -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#question").validate({
+            messages: {
+            q9: {
+                maxlength: "最多只能选择三个板块"
+            },
+        },
+        });
+
+
+
+        // success: function(label) {
+        //     $(".btn-confirm").removeAttr("disabled");
+
+        // }
+    });
+    </script>
+</html>

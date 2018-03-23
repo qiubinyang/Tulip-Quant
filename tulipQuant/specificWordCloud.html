@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/specificWordCloud.css">
+    <!-- 网站小图标 -->
+    <link rel="shortcut icon" href="img/favicon3.ico">
+    <meta name="keywords" content="量化投资,量化交易,量化策略,量化平台,量化研究,量化分析,quantopian,量化,quant,quantify,tushare,程序化交易,量化投资平台,量化交易系统,优矿,聚宽,米筐,程序化交易软件,金融投资,股票交易,郁金香,投资平台,">
+    <meta name="description" content="御宽(tulipQuant)是一个集成了各大量化交易平台交易策略的平台,是策略提供者理想的分享策略并同时获取收益的平台，同时也是广大有志于量化投资的投资者构建自己交易体系、提升自身选股买卖能力的历练场！">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src="js/echarts-wordcloud.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+                <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="/help/faq/">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="/help/introduction/">关于御宽</a>
+                        <a href="/help/introduction/">团队概况</a>
+                        <a href="/help/faq/">加入我们</a>
+                        <a href="/help/researchV3/">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <body>
+    <div class="content" id='main'>
+        <img src="img/loading.gif" id="loading" style="width: 40%;margin:200px 400px;">
+        <script type="text/javascript" src="js/specificWordCloud.js"></script>
+    </div>
+    <div class="stock">
+        <p>a</p>
+    </div>
+    </body>
+</body>

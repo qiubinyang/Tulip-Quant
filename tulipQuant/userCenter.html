@@ -89,6 +89,7 @@
                             <div class="user_menu_item" id="courage">我的打赏</div>
                             <div class="user_menu_item" id="subscribe">我的订阅</div>
                             <div class="user_menu_item" id="mStrategy">我的策略</div>
+                            <div class="user_menu_item" id="IntroStrategy">策略推荐</div>
                         </div>
                         <div class="user_menu">
                             <div class="user_menu_title">
@@ -344,6 +345,83 @@
                                     </table>
                                 </div>
                             </div>
+                            <!-- 策略推荐 -->
+                            <div class="profile celue IntroStrategy hidden">
+                                <div class="celuebox auto_w clearfix m_0a">
+                                    <div class="item-header">
+                                        <span class="title inline-block">智能投顾推荐</span><a class="subtitle inline-block" href="#">更多>></a>
+                                    </div>
+                                    <div class="celue_box">
+                                        <div class="item celue_item" postId_backtestId="4755_2587783">
+                                            <div class="title clearfix">
+                                                <p class="fleft title_p">
+                                                    <a href="/post/4755?f=home&m=alg_example" target="_blank">次新择时进取</a>
+                                                </p>
+                                                <span class="fright inline-block title_span trade f12">小市值</span>
+                                                <span class="fright inline-block title_span backtest f12">人工智能</span>
+                                                <div class="user_box clear">
+                                                    <img src="https://image.joinquant.net/bd67eadbaff9803ae4c6f02323bcc7c0" class="IntroAvatar">
+                                                    <span class="f14">阿尔法熊</span>
+                                                </div>
+                                            </div>
+                                            <div class="celue_item_tile">
+                                                <span class="f12 celue_blue"><span></span>策略收益</span>
+                                                <span class="f12 celue_red"><span></span>基准收益</span>
+                                                <a href="/post/4755?f=home&m=alg_example" target="_blank"> <img class="imgUrl" _href="/post/4755?f=home&m=alg_example" src="https://image.joinquant.net/backtest_27f55244e86bdbce3e51f5d4c76de0bc.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">年化收益</p>
+                                                <p class="perc red f16">113.49%</p>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">最大回撤</p>
+                                                <p class="perc  f16">22.46%</p>
+                                            </div>
+                                            <div class="items last">
+                                                <p class="f12">初始资金</p>
+                                                <p class="perc f16">￥50000</p>
+                                            </div>
+                                            <div class="items_last clear">
+                                                <span class="f14">策略限额<span class="red f20">4/20</span>人</span>
+                                                <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">288元/月</button>
+                                            </div>
+                                        </div>
+                                        <div class="item celue_item" postId_backtestId="3594_1810351">
+                                            <div class="title clear">
+                                                <p class="fleft title_p">
+                                                    <a href="/post/3594?f=home&m=alg_example" target="_blank">银行日内</a>
+                                                </p>
+                                                <span class="fright inline-block title_span trade f12">大市值</span>
+                                                <div class="user_box clear">
+                                                    <img src="https://image.joinquant.net/634e7bca35fa442aefbba7d053168779" class="IntroAvatar">
+                                                    <span class="f14">囚徒之爱</span>
+                                                </div>
+                                            </div>
+                                            <div class="celue_item_tile">
+                                                <span class="f12 celue_blue"><span></span>策略收益</span>
+                                                <span class="f12 celue_red"><span></span>基准收益</span>
+                                                <a href="/post/3594?f=home&m=alg_example" target="_blank"> <img class="imgUrl" _href="/post/3594?f=home&m=alg_example" src="https://image.joinquant.net/backtest_36f8cddda954da207237dc2d72d880e7.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">年化收益</p>
+                                                <p class="perc red f16">64.46%</p>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">最大回撤</p>
+                                                <p class="perc  f16">8.62%</p>
+                                            </div>
+                                            <div class="items last">
+                                                <p class="f12">初始资金</p>
+                                                <p class="perc f16">￥30000</p>
+                                            </div>
+                                            <div class="items_last clear">
+                                                <span class="f14">策略限额<span class="red f20">7/20</span>人</span>
+                                                <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">500元/月</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- 账户设置 -->
                             <div class="profile hidden setting">
                                 <div class="tab-pane pl_40" role="tabpanel" id="myAccount">
@@ -377,15 +455,15 @@
                                     <form name="UserModel" id="PwdForm">
                                         <div class="input-group">
                                             <label for="">当前密码：</label>
-                                            <input type="password" class="form-control" name="oldPsd" >
+                                            <input type="password" class="form-control" name="oldPsd">
                                         </div>
                                         <div class="input-group">
                                             <label for="">新密码：</label>
-                                            <input type="password" class="form-control" name="newPsd" >
+                                            <input type="password" class="form-control" name="newPsd">
                                         </div>
                                         <div class="input-group">
                                             <label for="">确认新密码：</label>
-                                            <input type="password" class="form-control" name="confirmPsd" >
+                                            <input type="password" class="form-control" name="confirmPsd">
                                         </div>
                                         <div class="mt_20">
                                             <button id="btnPwdSubmit" class="btn btn-primary btn_update">更新密码</button>
@@ -416,6 +494,6 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/userCenter.js"></script>
     <script src="js/cropperfunc.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
 
 </html>
