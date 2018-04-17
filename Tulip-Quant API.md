@@ -54,3 +54,4 @@
 类别标签：sTag <br>
 交易频率: sFrequency <br>
 订阅人数上限: sSubscribLimit <br>
+初始金额: sMoneyBegin <br>
