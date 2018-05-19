@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refresh from url after use data option</title>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap-table.js"></script>
+        <script src="js/bootstrap-table-zh-CN.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Refresh from url after use data option(<a href="https://github.com/wenzhixin/bootstrap-table/issues/137" target="_blank">#137</a>).</h1>
+    <p><button id="button" class="btn btn-default">Refresh from url</button></p>
+    <table id="table">
+<!--         <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="name">Item Name</th>
+            <th data-field="price">Item Price</th>
+        </tr>
+        </thead> -->
+    </table>
+</div>
+<script>
+    
+    var $table = $('#table');
+    $(function () {
+        $table.bootstrapTable({
+            search: true,
+            cardView: false,
+            showToggle: true,
+            showColumns: true,
+            columns: [{
+                field: 'id',
+                title: '股票名称',
+                align: "center"
+            }, {
+                field: 'name',
+                title: '频率',
+                align: "center"
+            }],
+            data: [{
+                "id": 0,
+                "name": "Item 0",
+                // "price": "$0"
+            }]
+        });
+        $('#button').click(function () {
+            $table.bootstrapTable('refresh', {url: './data/data1.json'});
+        });
+    });
+</script>
+</body>
+</html>

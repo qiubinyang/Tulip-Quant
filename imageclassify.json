@@ -1,0 +1,11 @@
+{
+  "photoResult" : [
+    {"result":"披萨,披萨饼","ratio":"0.84126"},
+    {"result":"玉米","ratio":"0.01614"},
+    {"result":"bagel, beigel","ratio":"0.01117"},
+    {"result":"煎锅,煎锅,锅","ratio":"0.00581"},
+    {"result":"木耳 ","ratio":"0.00261"}
+  ],
+  "company" : "苏泊尔002032.SZ",
+  "major" : "食品"
+}

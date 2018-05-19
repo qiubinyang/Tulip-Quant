@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mainResponse.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/animate.scss">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- echarts -->
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/echarts.js"></script>
+    <!-- 网站小图标 -->
+    <link rel="shortcut icon" href="img/favicon3.ico">
+    <meta name="keywords" content="量化投资,量化交易,量化策略,量化平台,量化研究,量化分析,quantopian,量化,quant,quantify,tushare,程序化交易,量化投资平台,量化交易系统,优矿,聚宽,米筐,程序化交易软件,金融投资,股票交易,郁金香,投资平台,">
+    <meta name="description" content="御宽(tulipQuant)是一个集成了各大量化交易平台交易策略的平台,是策略提供者理想的分享策略并同时获取收益的平台，同时也是广大有志于量化投资的投资者构建自己交易体系、提升自身选股买卖能力的历练场！">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="top inner-wrap clearfix">
+            <a href="#" class="logo"><img src="img/logo9.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+                 <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="">
+                <li>
+                    <a href="#" class="act">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="javascript:;" onclick="popSell()">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="feature.html">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="#">关于御宽</a>
+                        <a href="#">团队概况</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="userCenter" class="help hidden">
+                    <a href="userCenter.html">个人中心</a>
+                    <div class="sub">
+                        <a href="userCenter.html">我的策略</a>
+                        <a href="userCenter.html">我的订阅</a>
+                        <a href="userCenter.html">我的收藏</a>
+                        <a href="userCenter.html">账户设置</a>
+                        <a href="userCenter.html" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="admin" class="help hidden">
+                    <a href="admin.html">管理中心</a>
+                    <div class="sub">
+                        <a href="javascript:;" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 巨幕 -->
+    <div class="banner">
+        <ul>
+            <li class="banner02">
+                <div class="hp-slogan">
+                    <div class="title">御宽，大数据和机器智能时代的量化投资</div>
+                    <p>为量化研究者提供华尔街专业机构的装备</p>
+                    <a href="#funcIntro" class="guide-btn">新手指引</a>
+                    <a href="#celue" class="blue-btn">开始研究</a>
+                    <p class="pro"><a href="#funcIntro" target="_blank">了解更多>>></a></p>
+                </div>
+            </li>
+            <li class="banner04">
+                <div class="hp-slogan">
+                    <div class="title">御宽，大数据和机器智能时代的量化投资</div>
+                    <p>为量化研究者提供华尔街专业机构的装备</p>
+                    <a href="#funcIntro" class="guide-btn">新手指引</a>
+                    <a href="#celue" class="blue-btn">开始研究</a>
+                    <p class="pro"><a href="#funcIntro" target="_blank">了解更多>>></a></p>
+                </div>
+            </li>
+            <li class="banner03">
+                <div class="hp-slogan">
+                    <div class="title">御宽，大数据和机器智能时代的量化投资</div>
+                    <p>为量化研究者提供华尔街专业机构的装备</p>
+                    <a href="#funcIntro" class="guide-btn">新手指引</a>
+                    <a href="#celue" class="blue-btn">开始研究</a>
+                    <p class="pro"><a href="#funcIntro" target="_blank">了解更多>>></a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 策略示例 -->
+    <div class="celue" id="celue">
+        <div class="celuebox auto_w clearfix m_0a">
+            <div class="item-header">
+                <span class="title inline-block">精选策略</span><a class="subtitle inline-block" href="#">更多>></a>
+            </div>
+            <div class="celue_box">
+                <div class="item celue_item" postId_backtestId="4755_2587783">
+                    <div class="title clearfix">
+                        <p class="fleft title_p">
+                            <a href="specificStrategy.html" target="_blank">次新择时进取</a>
+                        </p>
+                        <span class="fright inline-block title_span trade f12">小市值</span>
+                        <span class="fright inline-block title_span backtest f12">人工智能</span>
+                        <div class="user_box clear">
+                            <img src="https://image.joinquant.net/bd67eadbaff9803ae4c6f02323bcc7c0" class="avatar">
+                            <span class="f14">阿尔法熊</span>
+                        </div>
+                    </div>
+                    <div class="celue_item_tile">
+                        <span class="f12 celue_blue"><span></span>策略收益</span>
+                        <span class="f12 celue_red"><span></span>基准收益</span>
+                        <a href="/post/4755?f=home&m=alg_example" target="_blank"> <img class="imgUrl" _href="/post/4755?f=home&m=alg_example" src="https://image.joinquant.net/backtest_27f55244e86bdbce3e51f5d4c76de0bc.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                    </div>
+                    <div class="items">
+                        <p class="f12">年化收益</p>
+                        <p class="perc red f16">113.49%</p>
+                    </div>
+                    <div class="items">
+                        <p class="f12">最大回撤</p>
+                        <p class="perc  f16">22.46%</p>
+                    </div>
+                    <div class="items last">
+                        <p class="f12">初始资金</p>
+                        <p class="perc f16">￥50000</p>
+                    </div>
+                    <div class="items_last clear">
+                        <span class="f14">策略限额<span class="red f20">4/20</span>人</span>
+                        <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">288元/月</button>
+                    </div>
+                </div>
+                <div class="item celue_item" postId_backtestId="3594_1810351">
+                    <div class="title clear">
+                        <p class="fleft title_p">
+                            <a href="specificStrategy1.html" target="_blank">银行日内</a>
+                        </p>
+                        <span class="fright inline-block title_span trade f12">大市值</span>
+                        <div class="user_box clear">
+                            <img src="https://image.joinquant.net/634e7bca35fa442aefbba7d053168779" class="avatar">
+                            <span class="f14">囚徒之爱</span>
+                        </div>
+                    </div>
+                    <div class="celue_item_tile">
+                        <span class="f12 celue_blue"><span></span>策略收益</span>
+                        <span class="f12 celue_red"><span></span>基准收益</span>
+                        <a href="/post/3594?f=home&m=alg_example" target="_blank"> <img class="imgUrl" _href="/post/3594?f=home&m=alg_example" src="https://image.joinquant.net/backtest_36f8cddda954da207237dc2d72d880e7.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                    </div>
+                    <div class="items">
+                        <p class="f12">年化收益</p>
+                        <p class="perc red f16">64.46%</p>
+                    </div>
+                    <div class="items">
+                        <p class="f12">最大回撤</p>
+                        <p class="perc  f16">8.62%</p>
+                    </div>
+                    <div class="items last">
+                        <p class="f12">初始资金</p>
+                        <p class="perc f16">￥30000</p>
+                    </div>
+                    <div class="items_last clear">
+                        <span class="f14">策略限额<span class="red f20">7/20</span>人</span>
+                        <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">500元/月</button>
+                    </div>
+                </div>
+                <div class="item celue_item" postId_backtestId="1587_773598">
+                    <div class="title clear">
+                        <p class="fleft title_p">
+                            <a href="specificStrategy2.html" target="_blank">原来B基还可以这么玩，终于可以躺着数钱。</a>
+                        </p>
+                        <span class="fright inline-block title_span backtest f12">量化对冲</span>
+                        <div class="user_box clear">
+                            <img src="https://image.joinquant.net/56bf0b6e36a205ae84ddb34afb4819bf" class="avatar">
+                            <span class="f14">日记本</span>
+                        </div>
+                    </div>
+                    <div class="celue_item_tile">
+                        <span class="f12 celue_blue"><span></span>策略收益</span>
+                        <span class="f12 celue_red"><span></span>基准收益</span>
+                        <a href="/post/1587?f=home&m=alg_example" target="_blank"> <img class="imgUrl" _href="/post/1587?f=home&m=alg_example" src="https://image.joinquant.net/backtest_e0d4135f6b34ed86187a37dabdbbfb7b.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                    </div>
+                    <div class="items">
+                        <p class="f12">年化收益</p>
+                        <p class="perc red f16">39.61%</p>
+                    </div>
+                    <div class="items">
+                        <p class="f12">最大回撤</p>
+                        <p class="perc  f16">2.9%</p>
+                    </div>
+                    <div class="items last">
+                        <p class="f12">初始资金</p>
+                        <p class="perc f16">￥100000</p>
+                    </div>
+                    <div class="items_last clear">
+                        <span class="f14">策略限额<span class="red f20">17/20</span>人</span>
+                        <button class="fright f14 free " _backtestId="773598" _postId="1587">限时免费</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- k线图 -->
+    <div class="kmapTitle">
+        <div class="title">郁金香指数</div>
+        <div class="kmap">
+            <div id="kmap" style="width: auto;height:400px;">
+                <script src="js/kmap.js" type='text/javascript'></script>
+            </div>
+        </div>
+    </div>
+    <!-- 功能介绍 -->
+    <div id="funcIntro">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-6 col-md-offset-3 text-center funcIntroHead">
+                    <h2>功能介绍</h2>
+                    <p>御宽汇聚以下七大特色功能，专为有一定投资基础的您量身定制。相信有了这些功能更能使您如虎添翼！</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 text-center animate-box">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="icon-personal_video"></i>
+                        </span>
+                        <div class="desc">
+                            <h3><a href="javascript:void">御宽特色指标</a></h3>
+                            <p>基于自适应Boosting等先进机器学习算法的股市交投强弱衡量机制，为用户准确把握投资风向，精确锁定潜在标的，提升投资的成功率。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center animate-box">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="icon-idea"></i>
+                        </span>
+                        <div class="desc">
+                            <h3><a href="javascript:void">优质策略商场</a></h3>
+                            <p>各大主流平台的大牛策略汇聚于此，如：多因子轮动策略，动量反转策略，风格切换策略，旨在满足每一个用户多样化的量化投资需求。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center animate-box">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="icon-study"></i>
+                        </span>
+                        <div class="desc">
+                            <h3><a href="javascript:void">AR指数增强</a></h3>
+                            <p>基于U3D开发的AR虚拟现实技术，将k线走势移出屏幕，让您在枯燥的盯盘过程中以一种全新的形式关注标的走势，享受科技带来的乐趣。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center animate-box">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="icon-verified_user"></i>
+                        </span>
+                        <div class="desc">
+                            <h3><a href="javascript:void">热门股票词云</a></h3>
+                            <p>基于增量式爬虫及自然语言处理找寻被机构关注最多的每日热门股票，指引您后世关注标的的方向，大大提高您的选股成功率及准确性。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 数值统计动画 -->
+    <div id="counter" class="counters" style="background-image: url(img/banner03.jpg);min-height: 376px" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <span class="icon"><i class="icon-world"></i></span>
+                            <span class="counter js-counter" data-from="0" data-to="284" data-speed="4000" data-refresh-interval="50"></span>
+                            <span class="counter-label">优质策略数</span>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <span class="icon"><i class="icon-users"></i></span>
+                            <span class="counter js-counter" data-from="0" data-to="2132" data-speed="4000" data-refresh-interval="50"></span>
+                            <span class="counter-label">活跃用户数</span>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <span class="icon"><i class="icon-coin-yen"></i></span>
+                            <span class="counter js-counter" data-from="0" data-to="15034" data-speed="4000" data-refresh-interval="50"></span>
+                            <span class="counter-label">累计成交额</span>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <span class="icon"><i class="icon-flag"></i></span>
+                            <span class="counter js-counter" data-from="0" data-to="18" data-speed="4000" data-refresh-interval="50"></span>
+                            <span class="counter-label">平均年化收益率</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部三大块功能介绍 -->
+    <div class="funcIntroSpec gray">
+        <div class="inner-wrap introSpec1">
+            <img src="img/img01.png" alt="" class="show-img">
+            <div class="desc">
+                <img src="img/1.png" alt="">
+                <p>高质量的海量市场情绪数据支撑，实现大数据时代的量化指标</p>
+                <div class="detail">
+                    <ul>
+                        <li> 基于增量式爬虫爬取各大论坛的回帖与评论</li>
+                        <li> 进一步利用人工智能分词提取关键信息</li>
+                        <li> 通过大数据计算分析市场的情绪指标</li>
+                    </ul>
+                    <a href="feature.html" class="blue-btn">查看指标</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="funcIntroSpec introSpec2">
+        <div class="inner-wrap">
+            <img src="img/img02.png" alt="" class="show-img">
+            <div class="desc">
+                <img src="img/2.png" alt="">
+                <p>精确构建用户画像，为您量身定制的智能策略投顾</p>
+                <div class="detail">
+                    <ul>
+                        <li>通过构建完备的用户评估机制，建立用户画像的标签体系。</li>
+                        <li>利用逻辑回归、集成学习等智能学习算法搭建协同过滤推荐系统，为用户推荐真正符合自己投资风格的量化策略</li>
+                    </ul>
+                    <a href="feature.html" class="blue-btn">立即体验</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="funcIntroSpec gray">
+        <div class="inner-wrap introSpec3">
+            <img src="img/img03.png" alt="" class="show-img">
+            <div class="desc">
+                <img src="img/3.png" alt="">
+                <p>神经网络迁移学习，精确识别用户图片，映射股票公司</p>
+                <div class="detail">
+                    <ul>
+                        <li>基于卷积神经网络和迁移学习，对上传的照片进行高准确率地识别</li>
+                        <li>图像识别结果进一步通过自然语言处理及推荐算法处理进而得出相应上市公司</li>
+                        <li>便于您直接通过照片来查询对应标的，从而及时做出投资决定</li>
+                    </ul>
+                    <a href="specificPhotoRecognize.html" class="blue-btn">上传图片</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 返回顶部 -->
+    <div id="toTopBtn" class="" style="margin-bottom:20px">
+        <ul>
+            <li id="btn" class="toTop">
+                <a id="top_btn">
+                        <img id="toTop" src="img/toTop.png">
+                    </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 登录注册页面 -->
+    <div class="dialog-base-container">
+        <div loginPart="" class="tulipDialog-model default hidden">
+            <div loginPart="" class="tulipDialog">
+                <div loginPart="" class="tulipDialog-title">
+                    <div class="dialog-title">
+                        <span class="form-field-icon iconCancel">
+                            <i loginMain="" class="rqicon icon-cross"></i></span>
+                        <div>
+                            <img src="img/logo9.png" alt="brand-img" style="height: 48px"></div>
+                        <div>
+                            <span>御宽量化 </span> <span> | </span> <span> 量化未来</span>
+                        </div>
+                    </div>
+                </div>
+                <div loginPart="" class="tulipDialog-body">
+                    <div class="dialog-body">
+                        <div loginMain="">
+                            <div class="register-title hidden">
+                                <span class="f16">注册</span>
+                                <a href="javascript:void(0)" class="fr btn-goto-login">已有账户？立即登录</a>
+                            </div>
+                            <ul loginMain="" class="login-tabs align-left">
+                                <li loginMain="" class="login-tab verifyCodeTab">
+                                    <a loginMain="" href="javascript:void(0)">验证码登录</a>
+                                </li>
+                                <li loginMain="" class="login-tab accountTab selected">
+                                    <a loginMain="" href="javascript:void(0)">账号登录</a></li>
+                                <li loginMain="" class="login-tab flex-one"></li>
+                                <li loginMain="" class="login-tab ">
+                                    <a loginMain="" href="javascript:void(0)" id="register" class="text-gray">注册</a></li>
+                            </ul>
+                            <!-- 验证码登陆 -->
+                            <form loginMain="" target="nm_iframe" class="tab-pane" action="demo-form.php">
+                                <div loginMain="" class="form-field">
+                                    <span loginMain="" class="form-field-icon">
+                                        <i loginMain="" class="rqicon icon-mobile"></i>
+                                    </span>
+                                    <!-- 选择菜单 -->
+                                    <span loginMain="" class="select-container hidden">
+                                        <select loginMain="" class="country-code-select"><option loginMain="" value="+86">
+                                            中国
+                                            </option><option loginMain="" value="+33">
+                                                法国
+                                            </option><option loginMain="" value="+1">
+                                                美国
+                                            </option><option loginMain="" value="+44">
+                                                英国
+                                            </option>
+                                        </select>
+                                    </span>
+                                    <input loginMain="" type="text" placeholder="手机号码或邮箱地址" name="username" autofocus="autofocus" class="phone-number" id="phone-number">
+                                    <!---->
+                                </div>
+                                <div loginMain="" class="form-field verifyCode getVerifyCode hidden">
+                                    <span loginMain="" class="form-field-icon">
+                                        <i loginMain="" class="rqicon icon-key"></i>
+                                    </span>
+                                    <input loginMain="" type="text" placeholder="验证码" autocomplete="off" class="captcha">
+                                    <a loginMain="" href="javascript:void(0)" class="btn-inside" id="getCode">获取验证码</a>
+                                </div>
+                                <div loginMain="" class="form-field name hidden">
+                                    <span loginMain="" class="form-field-icon">
+                                        <i loginMain="" class="rqicon icon-verified_user"></i>
+                                    </span>
+                                    <input loginMain="" type="text" name="name" placeholder="昵称" class="name" id="name">
+                                </div>
+                                <div loginMain="" class="form-field account">
+                                    <span loginMain="" class="form-field-icon">
+                                        <i loginMain="" class="rqicon icon-verified_user"></i>
+                                    </span>
+                                    <input loginMain="" type="password" name="password" placeholder="密码" class="password" id="password">
+                                    <!---->
+                                    <a loginMain="" href="javascript:void(0)" class="btn-inside forgetPassword">忘记密码</a>
+                                </div>
+                                <!-- 手机号或邮箱登录 -->
+                                <div loginMain="" class="subhead">
+                                    <a loginMain="" href="javascript:void(0)" class="account haiwaimobile">海外手机登录</a>
+                                    <a loginMain="" href="javascript:void(0)" class="verifyCode changeToAccount hidden">手机号码或邮箱登录</a>
+                                    <!-- 记住我按钮 -->
+                                    <span loginMain="" class="fr remeber-me">
+                                        <input loginMain="" type="checkbox" name="remeberme" id="remeberme"> 
+                                        <label loginMain="" for="remeberme">记住我</label>
+                                    </span>
+                                </div>
+                                <div loginMain="">
+                                    <input loginMain="" type="submit" value="确认登录" disabled="disabled" class="btn-confirm" id="loginButton">
+                                </div>
+                                <div loginMain="" class="licence-container">
+                                    点击注册御宽账户按钮，则代表您同意
+                                    <a loginMain="" href="javascript:void(0)">最终用户使用条款</a> 和
+                                    <a loginMain="" href="javascript:void(0)">隐私政策</a></div>
+                            </form>
+                            <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+                            <div loginMain="" class="cross-lines">
+                                <span loginMain="" class="cross-line"></span>
+                                <span loginMain="">社交账号登录</span> <span loginMain="" class="cross-line"></span>
+                            </div>
+                            <div loginMain="" class="wechat">
+                                <a loginMain="" href="javascript:void(0)">
+                                    <img src="img/brand.svg" style="width: 30px;"></img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+<!-- footer -->
+<footer class="tqfooter clear ">
+    <div class="inner auto_w">
+        <div class="wp19 fleft">
+            <div class="item title">关于</div>
+            <div class="item"><a href="">关于我们</a></div>
+            <div class="item"><a href="">加入我们</a></div>
+            <div class="item"><a href="">联系我们</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">数据</div>
+            <div class="item"><a href="">指数数据</a></div>
+            <div class="item"><a href="">基金数据</a></div>
+            <div class="item"><a href="">国泰安数据</a></div>
+            <div class="item"><a href="">股票财务数据</a></div>
+            <div class="item"><a href="">金融期货数据</a></div>
+            <div class="item"><a href="">行业概念数据</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">帮助</div>
+            <div class="item"><a href="">常见问题</a></div>
+            <div class="item"><a href="">API文档</a></div>
+            <div class="item"><a href="" target="_blank">Python教程</a></div>
+            <div class="item"><a href="" target="_blank">共享函数库</a></div>
+            <div class="item"><a href="">系统更新日志</a></div>
+            <div class="item"><a href="">数据调整记录</a></div>
+        </div>
+        <div class="wp19 fleft">
+            <div class="item title">友情链接</div>
+            <div class="item"><a href=""> 百度因子量化平台</a></div>
+            <div class="item"><a href="">TuShare</a></div>
+            <div class="item"><a href="">果仁网</a></div>
+        </div>
+        <div class="wp16 fleft">
+            <div class="item title" style="padding-left:5px">关注我们</div>
+            <div class="item"><a href=""><img style="width:24px;" src="https://cdn.joinquant.net/common/img/zhi.png" alt="">知乎专栏</a></div>
+            <div class="item"><a href=""> <img style="width:24px;" src="https://cdn.joinquant.net/common/img/xq.png" alt="">雪球</a></div>
+        </div>
+        <div class="wp2 fleft last tright subscribe">
+            <div class="item inline-block pr_10 fleft">
+                <img class="mb_10" src="img/Wechat_no.jpeg" >
+                <p class="f14 tcenter">微信公众号</p>
+            </div>
+        </div>
+        <div class="copyright tcenter clear">Copyright 2018 &copy; tulipQuant 御宽 </div>
+    </div>
+</footer>
+<!-- 包括所有已编译的插件 -->
+<!-- 返回顶部 -->
+<script>
+function toTop() {
+    var scrollT = $(window).scrollTop();
+    if (scrollT >= 1700) {
+        $('#toTopBtn').removeClass('hidden');
+    } else {
+        $('#toTopBtn').addClass('hidden');
+    }
+}
+toTop();
+
+$(window).scroll(function() {
+    toTop();
+})
+$("#toTop").click(function() {
+    if (scroll == "off") return;
+    $("html,body").animate({ scrollTop: 0 }, 300);
+});
+</script>
+<!-- banner滚动js -->
+<script src="js/unslider.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.banner').unslider({
+        speed: 1500, //  The speed to animate each slide (in milliseconds)
+        delay: 3000, //  The delay between slide animations (in milliseconds)
+        complete: function() {}, //  A function that gets called after every slide animation
+        keys: true, //  Enable keyboard (left, right) arrow shortcuts
+        dots: true, //  Display dot navigation
+        fluid: false //  Support responsive design. May break non-responsive designs
+    });
+});
+</script>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- countTo -->
+<script src="js/jquery.countTo.js"></script>
+<!-- Main -->
+<script src="js/countNum.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="js/login.js"></script>

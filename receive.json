@@ -1,0 +1,10 @@
+{
+  "data":[
+    {"uid" : "1", "username" : "塑料瓶", "tele" : "中百集团"},
+    {"uid" : "2", "username" : "芯片", "tele" : "紫光国芯"},
+    {"uid" : "3", "username" : "轮船", "tele" : "中国船舶"},
+    {"uid" : "4", "username" : "白纸", "tele" : "仙鹤股份"},
+    {"uid" : "5", "username" : "电笔", "tele" : "中航电测"},
+    {"uid" : "7", "username" : "耳机", "tele" : "海信电器"}
+  ]
+}

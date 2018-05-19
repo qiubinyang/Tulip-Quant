@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/specificWordCloud.css">
+    <!-- 网站小图标 -->
+    <link rel="shortcut icon" href="img/favicon3.ico">
+    <meta name="keywords" content="量化投资,量化交易,量化策略,量化平台,量化研究,量化分析,quantopian,量化,quant,quantify,tushare,程序化交易,量化投资平台,量化交易系统,优矿,聚宽,米筐,程序化交易软件,金融投资,股票交易,郁金香,投资平台,">
+    <meta name="description" content="御宽(tulipQuant)是一个集成了各大量化交易平台交易策略的平台,是策略提供者理想的分享策略并同时获取收益的平台，同时也是广大有志于量化投资的投资者构建自己交易体系、提升自身选股买卖能力的历练场！">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script> -->
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.js"></script>
+    <script src="js/echarts3D.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+                <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="celue.html">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="feature.html">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="#">关于御宽</a>
+                        <a href="#">团队概况</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="userCenter" class="help hidden">
+                    <a href="userCenter.html">个人中心</a>
+                    <div class="sub">
+                        <a href="userCenter.html">我的策略</a>
+                        <a href="userCenter.html">我的订阅</a>
+                        <a href="userCenter.html">我的收藏</a>
+                        <a href="userCenter.html">账户设置</a>
+                        <a href="userCenter.html" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="admin" class="help hidden">
+                    <a href="admin.html">管理中心</a>
+                    <div class="sub">
+                        <a href="javascript:;" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <body>
+        <div class="tab-pannel" style="margin-top: 70px;">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#wordCloud" class="wordCloud" data-toggle="tab" style=""> <img class="gray hidden"
+                    src="img/股票2.svg"
+                    style="width: 25px; margin-right: 3px; margin-top: -2px"> <img
+                    class="colorful" src="img/股票.svg"
+                    style="width: 25px; margin-right: 3px; margin-top: -2px">股票词云
+            </a></li>
+                <li><a href="#line" class="line" data-toggle="tab" style="">
+                    <img class="gray" src="img/趋势2.svg"
+                    style="width: 25px; margin-right: 3px; margin-top: -2px"> <img
+                    class="colorful hidden" src="img/趋势.svg"
+                    style="width: 25px; margin-right: 3px; margin-top: -2px">热门趋势
+            </a></li>
+            </ul>
+        </div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="wordCloud">
+                <button class="btn btn-default" style="margin-right: 24px;margin-top: 10px" id="week">周热门</button><button class="btn btn-default btn-primary"  style="margin-right: 24px;margin-top: 10px" id="month">月热门</button><button class="btn btn-default" style="margin-top: 10px" id="year">年度热门</button>
+                <div class="content" id='main1'>
+                    <img src="img/loading.gif" id="loading" style="width: 40%;margin:200px 400px;">
+                    <script type="text/javascript" src="js/specificWordCloud.js"></script>
+                </div>
+                <div class="stock table-responsive" style="height:812px;float:right">
+                    <table id="table"></table>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="line">
+                <h3 style="margin-left: 600px;margin-bottom: 30px;margin-top: 30px;">十大热门股票趋势</h3>
+                <div class="" id='main2' style="height:600px;width: 1440px;">
+                    <!-- <img src="img/loading.gif" id="loading" style="width: 40%;margin:200px 400px;"> -->
+                    <script type="text/javascript" src="js/specificWordCloudTrends.js"></script>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="css/bootstrap-table.css">
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap-table.js"></script>
+        <script src="js/bootstrap-table-zh-CN.js"></script>
+        <script type="text/javascript">
+            $("#myTab").click(function(e) {
+                    var menuStr = $(e.target).attr("class");
+                    var menuClass = "." + menuStr;
+                    $("#myTab li").find(".colorful").addClass("hidden");
+                    $("#myTab li").find(".gray").removeClass("hidden");
+                    $(menuClass).find(".colorful").removeClass("hidden");
+                    $(menuClass).find(".gray").addClass("hidden");
+                });
+        </script>
+    </body>
+</body>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <title>欢迎进入管理员系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="assets/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="./bootstrap-table.css">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body>
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <ul class="clearfix" id="menu">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="celue.html">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="feature.html">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="#">关于御宽</a>
+                        <a href="#">团队概况</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="admin" class="help">
+                    <a href="admin.html">管理中心</a>
+                    <div class="sub">
+                        <a href="index.html" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3" id="sidebar">
+                <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                    <li>
+                        <a href="admin.html"><i class="icon-chevron-right"></i> 用户管理</a>
+                    </li>
+                    <li>
+                        <a href="calendar.html"><i class="icon-chevron-right"></i> 日志记录</a>
+                    </li>
+                    <li>
+                        <a href="receiveSgy.html"><span class="badge badge-success pull-right">3</span> 上架管理</a>
+                    </li>
+                    <li>
+                        <a href="stats.html"><i class="icon-chevron-right"></i> 数据分析</a>
+                    </li>
+                    <li>
+                        <a href="receive.html"><span class="badge badge-success pull-right">7</span> 用户反馈</a>
+                    </li>
+                    <li class="active">
+                        <a href="suConfig.html"><i class="icon-chevron-right"></i> 参数配置（超级管理员）</a>
+                    </li>
+                </ul>
+            </div>
+            <table class="table table-striped" style="width: 75%;margin-top: 40px;">
+                <caption class="f20" style="margin-bottom: 20px;">系统参数配置</caption>
+                <thead>
+                    <tr>
+                        <th>功能名称</th>
+                        <th>参数名称</th>
+                        <th>配给值</th>
+                        <th>修改</th>
+                    </tr>
+                </thead>
+                <hr>
+                <tbody>
+                    <tr>
+                        <td>AR指数增强</td>
+                        <td>显示指数天数</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="30">天</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AR指数增强</td>
+                        <td>虚拟按键开关</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>热门股票词云</td>
+                        <td>词云显示数目</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="100">支</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>热门股票词云</td>
+                        <td>词云显示大小</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="（10,100）">px</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>热门股票词云</td>
+                        <td>词云搜索栏</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>热门股票词云</td>
+                        <td>热门趋势天数</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="60">天</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>随手拍 出股票</td>
+                        <td>time out上限</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="120">秒</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>随手拍 出股票</td>
+                        <td>图片大小上限</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="5">MB</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>随手拍 出股票</td>
+                        <td>摄像头功能</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>智能策略推荐</td>
+                        <td>用户使用上限</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1">次</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>智能策略推荐</td>
+                        <td>重复提交开关</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>舆情分析</td>
+                        <td>舆情显示天数</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="60">天</td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>舆情分析</td>
+                        <td>舆情下载功能</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>舆情分析</td>
+                        <td>舆情因子上限</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="100">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>策略商场</td>
+                        <td>策略显示数量</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="4">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>策略商场</td>
+                        <td>策略商场隐私设置</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>策略商场</td>
+                        <td>策略查找</td>
+                        <td>
+                            <input type="" name="" style="width: 100px;" placeholder="1开启,2关闭">
+                        </td>
+                        <td>
+                            <button>确认</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </div>
+    </div>
+    <!--/.fluid-container-->
+    <script src="vendors/jquery-1.9.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

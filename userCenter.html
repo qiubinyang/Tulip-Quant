@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tulipQuant 御宽-策略广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/userCenter.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <span class="blue-btn" id="login-wrap" style="display: block;">
+            <a href="#" id="login">登录</a>/<a href="#" id="register">注册</a>
+            </span>
+            <ul class="clearfix" id="menu" style="margin-right: 110px;">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="celue.html">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="feature.html">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="#">关于御宽</a>
+                        <a href="#">团队概况</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="userCenter" class="help hidden">
+                    <a href="userCenter.html">个人中心</a>
+                    <div class="sub">
+                        <a href="userCenter.html">我的策略</a>
+                        <a href="userCenter.html">我的订阅</a>
+                        <a href="userCenter.html">我的收藏</a>
+                        <a href="userCenter.html">账户设置</a>
+                        <a href="userCenter.html" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="admin" class="help hidden">
+                    <a href="admin.html">管理中心</a>
+                    <div class="sub">
+                        <a href="javascript:;" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <body>
+        <div class="kk_main in_wrap">
+            <div class="kk_body ">
+                <div class="user_body box_center bgwhite clear jq-c-account">
+                    <!-- 左边栏导航 -->
+                    <div class="user_body_left">
+                        <div class="user_menu">
+                            <div class="user_menu_title">
+                                <span class="icon-person user_menu_icon inline-block"></span>
+                                <h4 class="inline-block f16">我的账户</h4>
+                            </div>
+                            <div class="user_menu_item active" id="mainPage" href="#index">账户主页</div>
+                            <div class="user_menu_item" id="wallet" href="#wallet">我的钱包</div>
+                            <div class="user_menu_item" id="transaction" href="#transaction">交易记录</div>
+                        </div>
+                        <div class="user_menu">
+                            <div class="user_menu_title">
+                                <span class="icon-cart user_menu_icon inline-block"></span>
+                                <h4 class="inline-block f16 ">策略商城</h4>
+                            </div>
+                            <div class="user_menu_item" id="favorite">我的收藏</div>
+                            <div class="user_menu_item" id="courage">我的打赏</div>
+                            <div class="user_menu_item" id="subscribe">我的订阅</div>
+                            <div class="user_menu_item" id="mStrategy">我的策略</div>
+                            <div class="user_menu_item" id="IntroStrategy">策略推荐</div>
+                        </div>
+                        <div class="user_menu">
+                            <div class="user_menu_title">
+                                <span class="icon-gear user_menu_icon inline-block"></span>
+                                <h4 class="inline-block f16 ">设置</h4>
+                            </div>
+                            <div class="user_menu_item" id="setting" href="#setting">账户设置</div>
+                            <div class="user_menu_item" id="password" href="#password">登录密码</div>
+                        </div>
+                    </div>
+                    <!-- 右边栏内容 -->
+                    <div class="user_body_right">
+                        <div class="profile relative" id="index">
+                            <!-- 账户主页 -->
+                            <div class="profile mainPage" style="height: 0px;">
+                                <div class="avatar jq-head" id="crop-avatar">
+                                    <a class="avatar-view user-photo-box" id="image-container">
+                                        <img src="./账号详情 - JoinQuant_files/default_header.png" alt="" id="user-photo">
+                                    </a>
+                                    <!-- 设置头像 -->
+                                    <div class="text-center set-head" style="opacity: 0;"><a data-toggle="modal" data-target="#changeModal" id="btn-set-head">设置头像</a></div>
+                                    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    <h4 class="modal-title text-primary">更换头像</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="tip-info text-center">未选择图片</p>
+                                                    <div class="img-container hidden">
+                                                        <img src="" alt="" id="photo">
+                                                    </div>
+                                                    <div class="img-preview-box hidden">
+                                                        <hr>
+                                                        <span>150*150:</span>
+                                                        <div class="img-preview img-preview-lg">
+                                                        </div>
+                                                        <span>100*100:</span>
+                                                        <div class="img-preview img-preview-md">
+                                                        </div>
+                                                        <span>30*30:</span>
+                                                        <div class="img-preview img-preview-sm">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <label class="btn btn-danger pull-left" for="photoInput">
+                                                        <input type="file" class="sr-only" id="photoInput" accept="image/*">
+                                                        <span>打开图片</span>
+                                                    </label>
+                                                    <button class="btn btn-primary disabled" disabled="true" onclick="sendPhoto();">提交</button>
+                                                    <button class="btn btn-close" aria-hidden="true" data-dismiss="modal">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Loading state -->
+                                    <div class="loading" role="img" tabindex="-1"></div>
+                                </div>
+                                <div class="infobox jq-infobox">
+                                    <h2 class="name inline-block">
+                                        <span class="icon-pencil btn_edit inline-block" onclick="changePage('setting')" title="编辑账号" style="opacity: 0">
+                                        </span>
+                                    </h2>
+                                    <!-- 个人简介 -->
+                                    <!-- <div class="about">
+                                        <div class="output cursor inline-block" id="introduction" href="textarea">
+                                            写点什么，介绍一下自己
+                                            <span class="btn_edit inline-block cursor" href="textarea" title="编辑账号" style="opacity: 1;margin-left:3px;top:3px"></span>
+                                        </div>
+                                        <div class="edit_ctrl text-right hidden">
+                                            <form name="UserModel">
+                                                <input type="hidden" name="editType" value="introduction">
+                                                <textarea rows="5" name="UserModel[introduction]"></textarea>
+                                                <button type="button" class="btn btn-sm btn-default btn_white_gradient btn_cancel">取消</button>
+                                                <button type="button" class="btn btn-sm btn-primary btn_blue_gradient btn_save">保存</button>
+                                            </form>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="js-jq-content">
+                                    <div class="stats clearfix f18" style="margin-top: 30px;">
+                                        <div class="stats-title f16 mo_none">
+                                            <div class="inline-block shuxian"></div>
+                                            <span>我的策略</span>
+                                        </div>
+                                        <span class="fleft item "><b><a onclick="changePage('mStrategy')">5</a></b><br>我的策略</span>
+                                        <span class="fleft item"><b><a onclick="changePage('favorite')">5</a></b><br>收藏的策略 </span>
+                                        <span class="fleft item"><b><a onclick="changePage('subscribe')">0</a></b><br>订阅的策略</span>
+                                        <span class="fleft item"><b><a onclick="changePage('transaction')">2</a></b><br>交易记录
+                                            <span class="message-badge message-badge-account">2</span></span>
+                                    </div>
+                                    <!-- 累计登陆 -->
+                                    <div class="clearfix f18">
+                                        <div class="stats-title f16 mo_none">
+                                            <div class="inline-block shuxian"></div>
+                                            <span>累计登录</span>
+                                        </div>
+                                        <div>
+                                            <div class="loadDayContainer" style="position: relative;font-size: 14px;">
+                                                <div class="lastMonthBox monthContainer">
+                                                    <p class="monthCount">上月 : 累计登陆<span class="dayCount">3</span>天，获得<span class="numCont">0</span>个模拟交易</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 常见问题 -->
+                                    <div class="user_faq mo_none" style="margin-top: 20px;">
+                                        <div class="stats-title f16 mo-none">
+                                            <div class="inline-block shuxian"></div>
+                                            <span>常见问题</span>
+                                            <a href="https://www.joinquant.com/faq?f=account" class="more" target="_blank">查看更多</a>
+                                        </div>
+                                        <div class="user_faq_content">
+                                            <div class="user_faq_item">
+                                                <a target="_blank" href="https://www.joinquant.com/post/2750?f=account">
+                                                    <p class="user_faq_item_p">数据常见疑问汇总</p>
+                                                </a>
+                                            </div>
+                                            <div class="user_faq_item">
+                                                <a target="_blank" href="https://www.joinquant.com/post/3630?f=account">
+                                                    <p class="user_faq_item_p">真实价格下的分红拆股处理</p>
+                                                </a>
+                                            </div>
+                                            <div class="user_faq_item">
+                                                <a target="_blank" href="https://www.joinquant.com/post/3406?f=account">
+                                                    <p class="user_faq_item_p">模拟盘替换代码注意事项</p>
+                                                </a>
+                                            </div>
+                                            <div class="user_faq_item">
+                                                <a target="_blank" href="https://www.joinquant.com/post/3341?f=account">
+                                                    <p class="user_faq_item_p">教你如何调试程序(Debug)</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 我的钱包 -->
+                            <div class="profile wallet hidden">
+                                <div class="wallet-head clear">
+                                    <div class="wallet-head-balance fleft">
+                                        <h4 class="mb_20 f20">余额：<span class="balance mr_3 f24">0</span>元</h4>
+                                        <p class="grey-word f14 balance-tips">每次提现最小额度为10.00元</p>
+                                        <p class="grey-word f14 balance-tips">每次提现收取5%手续费</p>
+                                    </div>
+                                    <div class="wallet-head-kiting fleft">
+                                        <button class="kiting btn btn-warning">提现</button>
+                                        <p class="grey-word f14">*当前余额不足以提现</p>
+                                    </div>
+                                </div>
+                                <div class="wallet-table transaction">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>时间</td>
+                                                <td>详情</td>
+                                                <td>金额</td>
+                                                <td>状态</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 交易记录 -->
+                            <div class="profile strategy_mall hidden transaction">
+                                <div class="mall_table">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>时间</td>
+                                                <td>策略名称</td>
+                                                <td>金额</td>
+                                                <td>状态</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2018.1.18</td>
+                                                <td>订阅策略</td>
+                                                <td>500</td>
+                                                <td>成功</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 我的收藏 -->
+                            <div class="profile strategy_mall hidden favorite">
+                                <div class="mall_table">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>策略名称</td>
+                                                <td>类型</td>
+                                                <td>年化收益</td>
+                                                <td>收藏日期</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 我的打赏 -->
+                            <div class="profile strategy_mall hidden courage">
+                                <div class="mall_table">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>策略名称</td>
+                                                <td>类型</td>
+                                                <td>打赏金额</td>
+                                                <td>打赏时间</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 我的订阅 -->
+                            <div class="profile strategy_mall hidden subscribe">
+                                <div class="mall_table">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>策略名称</td>
+                                                <td>类型</td>
+                                                <td>收益率</td>
+                                                <td>订阅日期</td>
+                                                <td>剩余天数</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 我的策略 -->
+                            <div class="profile strategy_mall hidden mStrategy">
+                                <div class="mall_table">
+                                    <table class="table" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <td>策略名称</td>
+                                                <td>类型</td>
+                                                <td>已订阅人数</td>
+                                                <td>售价</td>
+                                                <td>创建日期</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 策略推荐 -->
+                            <div class="profile celue IntroStrategy hidden">
+                                <div class="celuebox auto_w clearfix m_0a">
+                                    <div class="item-header">
+                                        <span class="title inline-block">智能投顾推荐</span><a class="subtitle inline-block" href="#">更多>></a>
+                                    </div>
+                                    <div class="celue_box">
+                                        <div class="item celue_item1" postId_backtestId="4755_2587783">
+                                            <div class="title clearfix">
+                                                <p class="fleft title_p">
+                                                    <a href="specificStrategy.html" target="_blank">次新择时进取</a>
+                                                </p>
+                                                <span class="fright inline-block title_span trade f12">小市值</span>
+                                                <span class="fright inline-block title_span backtest f12">人工智能</span>
+                                                <div class="user_box clear">
+                                                    <img src="https://image.joinquant.net/bd67eadbaff9803ae4c6f02323bcc7c0" class="IntroAvatar">
+                                                    <span class="f14">阿尔法熊</span>
+                                                </div>
+                                            </div>
+                                            <div class="celue_item_tile">
+                                                <span class="f12 celue_blue"><span></span>策略收益</span>
+                                                <span class="f12 celue_red"><span></span>基准收益</span>
+                                                <a href="/post/4755?f=home&m=alg_example" target="_blank"> <img class="imgUrl" src="https://image.joinquant.net/backtest_27f55244e86bdbce3e51f5d4c76de0bc.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">年化收益</p>
+                                                <p class="perc red f16 profitYear">113.49%</p>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">最大回撤</p>
+                                                <p class="perc  f16 withdraw">22.46%</p>
+                                            </div>
+                                            <div class="items last">
+                                                <p class="f12">初始资金</p>
+                                                <p class="perc f16 money" >￥50000</p>
+                                            </div>
+                                            <div class="items_last clear">
+                                                <span class="f14">策略限额<span class="red f20 limit">4/20</span>人</span>
+                                                <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">288元/月</button>
+                                            </div>
+                                        </div>
+                                        <div class="item celue_item2" postId_backtestId="3594_1810351">
+                                            <div class="title clear">
+                                                <p class="fleft title_p">
+                                                    <a href="/post/3594?f=home&m=alg_example" target="_blank">银行日内</a>
+                                                </p>
+                                                <span class="fright inline-block title_span trade f12">大市值</span>
+                                                <div class="user_box clear">
+                                                    <img src="https://image.joinquant.net/634e7bca35fa442aefbba7d053168779" class="IntroAvatar">
+                                                    <span class="f14">囚徒之爱</span>
+                                                </div>
+                                            </div>
+                                            <div class="celue_item_tile">
+                                                <span class="f12 celue_blue"><span></span>策略收益</span>
+                                                <span class="f12 celue_red"><span></span>基准收益</span>
+                                                <a href="/post/3594?f=home&m=alg_example" target="_blank"> <img class="imgUrl" src="https://image.joinquant.net/backtest_36f8cddda954da207237dc2d72d880e7.png?date=f9b8cb220a4ba7132b151db83682d153" alt=""></a>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">年化收益</p>
+                                                <p class="perc red f16 profitYear">64.46%</p>
+                                            </div>
+                                            <div class="items">
+                                                <p class="f12">最大回撤</p>
+                                                <p class="perc  f16 withdraw">8.62%</p>
+                                            </div>
+                                            <div class="items last">
+                                                <p class="f12">初始资金</p>
+                                                <p class="perc f16 money">￥30000</p>
+                                            </div>
+                                            <div class="items_last clear">
+                                                <span class="f14">策略限额<span class="red f20 limit">7/20</span>人</span>
+                                                <button class="fright f14 get_code getCode" _backtestId="773598" _postId="1587">500元/月</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 账户设置 -->
+                            <div class="profile hidden setting">
+                                <div class="tab-pane pl_40" role="tabpanel" id="myAccount">
+                                    <h3 class="f18">账户设置</h3>
+                                    <form name="UserModel" id="accountForm">
+                                        <div class="input-group">
+                                            <label for="">手机号：</label>
+                                            <input type="text" class="form-control" disabled="disabled" validate="true" value="13486192688">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">昵称：</label>
+                                            <input id="user-alias" type="text" class="form-control" validate="true" name="UserModel[alias]" value="Apiao">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">个人简介：</label>
+                                            <div class="edit_ctrl text-right">
+                                                <!-- <input type="hidden" name="editType" value="introduction"> -->
+                                                <textarea class="form-control" rows="5" name="UserModel[introduction]" value=""></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="mt_20">
+                                        <button id="btnAccountSubmit" class="btn btn-primary  btn_update">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 修改密码 -->
+                            <div class="profile hidden password">
+                                <div class="tab-pane pl_40" role="tabpanel" id="changePsw">
+                                    <h3 class="f18">编辑您的登录密码</h3>
+                                    <form name="UserModel" id="PwdForm">
+                                        <div class="input-group">
+                                            <label for="">当前密码：</label>
+                                            <input type="password" class="form-control" name="oldPsd">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">新密码：</label>
+                                            <input type="password" class="form-control" name="newPsd">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">确认新密码：</label>
+                                            <input type="password" class="form-control" name="confirmPsd">
+                                        </div>
+                                        <div class="mt_20">
+                                            <button id="btnPwdSubmit" class="btn btn-primary btn_update">更新密码</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img id="loading" class="hidden" src="./账号详情 - JoinQuant_files/loading.gif">
+                </div>
+            </div>
+    </body>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $('.name,#introduction').hover(function() {
+        $(this).find('.btn_edit').css({ opacity: 1 })
+    }, function() {
+        $(this).find('.btn_edit').css({ opacity: 0 })
+    })
+    $('#crop-avatar').hover(function() {
+        $('.set-head').css({ opacity: 1 })
+    }, function() {
+        $('.set-head').css({ opacity: 0 })
+    })
+    </script>
+    <script src="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/userCenter.js"></script>
+    <script src="js/cropperfunc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>欢迎进入管理员系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="vendors/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
+    <link href="assets/styles.css" rel="stylesheet" media="screen">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body>
+    <header class="specificHead">
+        <div class="top inner-wrap clearfix ">
+            <a href="#" class="logo"><img src="img/logo11.png" alt=""></a>
+            <ul class="clearfix" id="menu">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">量化策略</a>
+                    <div class="sub">
+                        <a href="celue.html">策略商场</a>
+                        <a href="celue.html">售卖我的策略</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="feature.html">特色功能</a>
+                    <div class="sub">
+                        <a href="feature.html#AR">AR增强显示</a>
+                        <a href="feature.html#wordCloud">热门股票词云</a>
+                        <a href="feature.html#imageIdentity">随手拍 出股票</a>
+                        <a href="feature.html#recommend">智能策略推荐</a>
+                        <a href="feature.html#news">舆情分析</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="help">量化选股</a>
+                </li>
+                <li class="help">
+                    <a href="javascript:;">帮助</a>
+                    <div class="sub">
+                        <a href="#">关于御宽</a>
+                        <a href="#">团队概况</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">反馈</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+                <li id="admin" class="help">
+                    <a href="admin.html">管理中心</a>
+                    <div class="sub">
+                        <a href="index.html" class="cancel">注销</a>
+                        <span class="arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3" id="sidebar">
+                <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                    <li>
+                        <a href="admin.html"><i class="icon-chevron-right"></i> 用户管理</a>
+                    </li>
+                    <li class="active">
+                        <a href="calendar.html"><i class="icon-chevron-right"></i> 日志记录</a>
+                    </li>
+                    <li>
+                        <a href="receiveSgy.html"><span class="badge badge-success pull-right">3</span> 上架管理</a>
+                    </li>
+                    <li>
+                        <a href="stats.html"><i class="icon-chevron-right"></i> 数据分析</a>
+                    </li>
+                    <li>
+                        <a href="receive.html"><span class="badge badge-success pull-right">7</span> 用户反馈</a>
+                    </li>
+                    <li>
+                        <a href="suConfig.html"><i class="icon-chevron-right"></i> 参数配置（超级管理员）</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/span-->
+            <div class="span9" id="content">
+                <div class="row-fluid">
+                    <!-- block -->
+                    <div class="block">
+                        <div class="navbar navbar-inner block-header">
+                            <div class="muted pull-left">日志记录</div>
+                        </div>
+                    </div>
+                    <div class="block-content collapse in">
+                        <div class="span2">
+                            <div id='external-events'>
+                                <h4>拖拽事件</h4>
+                                <div class='external-event'>例行维护</div>
+                                <div class='external-event'>备份</div>
+                                <div class='external-event'>回滚测试</div>
+                                <div class='external-event'>变更管理</div>
+                                <div class='external-event'>权限管理</div>
+                                <div class='external-event'>服务器错误</div>
+                                <div class='external-event'>数据库错误</div>
+                                <div class='external-event'>网络故障</div>
+                                <div class='external-event'>流量峰值警告</div>
+                                <p>
+                                    <input type='checkbox' id='drop-remove' />
+                                    <label for='drop-remove'>拖走后清除</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="span10">
+                            <div id='calendar'></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /block -->
+            </div>
+        </div>
+    </div>
+    <hr>
+    </div>
+    <style>
+    #external-events {
+        float: left;
+        width: 150px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background: #eee;
+        text-align: left;
+    }
+
+    #external-events h4 {
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    .external-event {
+        /* try to mimick the look of a real event */
+        margin: 10px 0;
+        padding: 2px 4px;
+        background: #3366CC;
+        color: #fff;
+        font-size: .85em;
+        cursor: pointer;
+        z-index: 99999999;
+    }
+
+    #external-events p {
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #666;
+    }
+
+    #external-events p input {
+        margin: 0;
+        vertical-align: middle;
+    }
+    </style>
+    <!--/.fluid-container-->
+    <script src="vendors/jquery-1.9.1.min.js"></script>
+    <script src="vendors/jquery-ui-1.10.3.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/fullcalendar/fullcalendar.js"></script>
+    <script src="vendors/fullcalendar/gcal.js"></script>
+    <script src="assets/scripts.js"></script>
+    <script>
+    $(function() {
+        // Easy pie charts
+        var calendar = $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            selectable: true,
+            selectHelper: true,
+            select: function(start, end, allDay) {
+                var title = prompt('Event Title:');
+                if (title) {
+                    calendar.fullCalendar('renderEvent', {
+                            title: title,
+                            start: start,
+                            end: end,
+                            allDay: allDay
+                        },
+                        true // make the event "stick"
+                    );
+                }
+                calendar.fullCalendar('unselect');
+            },
+            droppable: true, // this allows things to be dropped onto the calendar !!!
+            drop: function(date, allDay) { // this function is called when something is dropped
+
+                // retrieve the dropped element's stored Event Object
+                var originalEventObject = $(this).data('eventObject');
+
+                // we need to copy it, so that multiple events don't have a reference to the same object
+                var copiedEventObject = $.extend({}, originalEventObject);
+
+                // assign it the date that was reported
+                copiedEventObject.start = date;
+                copiedEventObject.allDay = allDay;
+
+                // render the event on the calendar
+                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
+                // is the "remove after drop" checkbox checked?
+                if ($('#drop-remove').is(':checked')) {
+                    // if so, remove the element from the "Draggable Events" list
+                    $(this).remove();
+                }
+
+            },
+            editable: true,
+            // US Holidays
+            events: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'
+
+        });
+    });
+
+    $('#external-events div.external-event').each(function() {
+
+        // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+        // it doesn't need to have a start or end
+        var eventObject = {
+            title: $.trim($(this).text()) // use the element's text as the event title
+        };
+
+        // store the Event Object in the DOM element so we can get to it later
+        $(this).data('eventObject', eventObject);
+
+        // make the event draggable using jQuery UI
+        $(this).draggable({
+            zIndex: 999999999,
+            revert: true, // will cause the event to go back to its
+            revertDuration: 0 //  original position after the drag
+        });
+
+    });
+    </script>
+</body>
+
+</html>
